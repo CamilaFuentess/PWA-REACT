@@ -1,7 +1,7 @@
 import style from './EliminarModificar.module.css' 
 
-const Boton = () => {
-    return <button className= {style.estiloBoton}>Entrar</button> 
+const BotonEliminarModificar = () => {
+    return <button className = {style.estiloBotonEliminarModificar}>Eliminar / Modificar</button> 
 }; 
 
-export default Boton
+export default BotonEliminarModificar
