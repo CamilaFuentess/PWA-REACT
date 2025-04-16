@@ -1,5 +1,18 @@
 .estiloBarraDeInicio{
     background-color: #92af5a;
     width: 90%;
-    height: 5vh;
+    height: 8vh;
+    display: flex; /* Flexbox para alinear los elementos */
+    justify-content: space-around; /* Espaciado equitativo entre los botones */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 0 10px; 
 }
+button {
+    background-color: #92af5a; /* Color de fondo de los botones */
+    border: none; /* Elimina el borde del botón */
+    color: white; /* Color del texto en los botones */
+    padding: 8px 16px; /* Espaciado dentro del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 1rem; /* Tamaño de la fuente */
+  }
