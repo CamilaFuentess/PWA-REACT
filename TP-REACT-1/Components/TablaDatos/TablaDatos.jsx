@@ -4,21 +4,27 @@ import style from './TablaDatos.module.css'
 const Pelicula = ['Titulo','Director','Genero',2020,"./imagen.png"]
 const Director = ""
 
-const TablaDatos = () => {
+const TablaDatos = ({arregloPelicula}) => {
   return (
     <>
       <table className= {style.estilo}>
         <tr>
-          <th>Titulo</th><td>{Pelicula[0]}</td>
+          <th>Titulo: </th><td>{arregloPelicula.titulo}</td>
         </tr>
         <tr>
-          <th>Director</th><td>{Pelicula[1]}</td>
+          <th>Director: </th><td>{arregloPelicula.director}</td>
         </tr> 
         <tr>
-          <th>G&eacute;nero</th><td>{Pelicula[2]}</td>
+          <th>Rating: </th><td>{arregloPelicula.rating}</td>
         </tr>
         <tr>
-          <th>Estreno</th><td>{Pelicula[3]}</td>
+          <th>G&eacute;nero: </th><td>{arregloPelicula.genero}</td>
+        </tr>
+        <tr>
+          <th>Tipo: </th><td>{arregloPelicula.tipo}</td>
+        </tr>
+        <tr>
+          <th>Estreno: </th><td>{arregloPelicula.anio}</td>
         </tr> 
 
       </table>

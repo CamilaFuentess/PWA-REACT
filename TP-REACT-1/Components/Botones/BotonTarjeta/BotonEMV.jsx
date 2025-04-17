@@ -1,6 +1,6 @@
-import style from './EliminarModificar.module.css' 
+import style from './BotonEMV.module.css' 
 
-const Boton = ({texto, visto}) => {
+const BotonEMV = ({texto, visto}) => {
     if(texto=="Modificar"){
         return <button className= {style.estiloModificar}>{texto}</button> 
     }
@@ -17,4 +17,4 @@ const Boton = ({texto, visto}) => {
     }
 }; 
 
-export default Boton
+export default BotonEMV
