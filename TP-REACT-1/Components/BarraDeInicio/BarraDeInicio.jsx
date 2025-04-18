@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import style from './BarraDeInicio.module.css'; 
+
 const BarraInicio = ({ manejarFiltro }) => {
   const [mostrarSubmenu, setMostrarSubmenu] = useState(null);
 
@@ -28,6 +29,7 @@ const BarraInicio = ({ manejarFiltro }) => {
           </div>
         )}
       </div>
+
     </div>
   );
 };

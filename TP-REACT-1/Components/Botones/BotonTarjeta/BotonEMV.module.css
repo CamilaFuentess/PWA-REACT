@@ -1,20 +1,22 @@
 
 button{
-    font-size:large;
+    font-size:small;
     padding: 10px;
-    margin: 20px;
-    width: 100px;
+    margin: 10px;
+    width: 80px;
 }
 
 .estiloModificar{
     background-color: #404866;
 }
 .estiloEliminar{
-    background-color: #604866;
+    background-color: red;
 }
 .estiloVista{
-    background-color: #4a761a;
+    color: black;
+    background-color: #d4edda;
 }
 .estiloNoVista{
-    background-color: #Fa761a;
+    color: black;
+    background-color: #f4abb1;
 }

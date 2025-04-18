@@ -1,6 +1,16 @@
 
-.estilo{
-    border: 2px solid color(white);
+table{
     border-radius: 3px;
     padding: 5px;
 }
+
+th{
+    text-align: left;
+    width: 100px;
+}
+
+.est_td{
+    text-align: left;
+    width: 300px;
+}
+

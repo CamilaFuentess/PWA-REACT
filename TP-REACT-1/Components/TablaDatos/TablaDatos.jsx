@@ -1,32 +1,32 @@
-import React from 'react'
+//import React from 'react'
 import style from './TablaDatos.module.css'
 
-const Pelicula = ['Titulo','Director','Genero',2020,"./imagen.png"]
-const Director = ""
+
 
 const TablaDatos = ({arregloPelicula}) => {
   return (
     <>
-      <table className= {style.estilo}>
-        <tr>
-          <th>Titulo: </th><td>{arregloPelicula.titulo}</td>
-        </tr>
-        <tr>
-          <th>Director: </th><td>{arregloPelicula.director}</td>
-        </tr> 
-        <tr>
-          <th>Rating: </th><td>{arregloPelicula.rating}</td>
-        </tr>
-        <tr>
-          <th>G&eacute;nero: </th><td>{arregloPelicula.genero}</td>
-        </tr>
-        <tr>
-          <th>Tipo: </th><td>{arregloPelicula.tipo}</td>
-        </tr>
-        <tr>
-          <th>Estreno: </th><td>{arregloPelicula.anio}</td>
-        </tr> 
-
+      <table >
+        <tbody>
+          <tr>
+            <td>Titulo: </td><td className= {style.est_td}>{arregloPelicula.titulo}</td>
+          </tr>
+          <tr>
+            <td>Director: </td><td >{arregloPelicula.director}</td>
+          </tr> 
+          <tr>
+            <td>Rating: </td><td className= {style.est_td}>{arregloPelicula.rating}</td>
+          </tr>
+          <tr>
+            <td>G&eacute;nero: </td><td className= {style.est_td}>{arregloPelicula.genero}</td>
+          </tr>
+          <tr>
+            <td>Tipo: </td><td className= {style.est_td}>{arregloPelicula.tipo}</td>
+          </tr>
+          <tr>
+            <td>Estreno: </td><td className= {style.est_td}>{arregloPelicula.anio}</td>
+          </tr> 
+        </tbody>
       </table>
 
     </>

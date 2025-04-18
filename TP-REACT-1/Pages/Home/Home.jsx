@@ -3,7 +3,7 @@ import ContenedorPelis from '../../Components/ContenedorPelis/ContenedorPelis'; 
 import BarraDeInicio from '../../Components/BarraDeInicio/BarraDeInicio';
 import InputBusqueda from '../../Components/InputBusqueda/InputBusqueda';
 import Mati from './Mati.jsx'
-  
+
 const peli1 = {
   tipo: "Serie", 
   titulo: "Flash",
@@ -37,12 +37,21 @@ const peli3 = {
   visto: true
 }; 
 
-
 const pelis = [peli1, peli2, peli3]
+// Guardar datos en Local Storage
+const guardar = ({pelis}) =>{
+  localStorage.setItem('peliculasYSeries', JSON.stringify(pelis));
+}
+
+// Recuperar datos de Local Storage
+const cargar = () =>{
+  const peYse = JSON.parse(localStorage.getItem('peliculasYSeries'));
+  return peYse
+}
 
 const Home = () => {
   const [filtro, setFiltro] = useState({ tipo: '', valor: '' });
-  const [peliculasYSeries, setPeliculasYSeries] = useState([peli1, peli2, peli3]); 
+  const [peliculasYSeries, setPeliculasYSeries] = useState(pelis); 
   const manejarFiltro = (tipo, valor) => {
     setFiltro({ tipo, valor });
   };
@@ -56,6 +65,8 @@ const Home = () => {
       
       <ContenedorPelis filtro={filtro} peliculasYSeries={peliculasYSeries}/>
 
+      <div> <Mati arregloPelis={cargar()} /> <button onClick={() => guardar({pelis})}>Guardar</button><button onClick={() => cargar()}>Cargar</button></div>
+  
     </div>
   );
 };

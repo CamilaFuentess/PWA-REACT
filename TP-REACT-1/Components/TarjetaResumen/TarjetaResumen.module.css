@@ -1,5 +1,18 @@
 
-table{
+.esttabla{
     padding: 5px;
+    width: 500px;
+    background-color: aqua;
     
+}
+td{
+    width: 300px;
+    text-align: left;
+}
+.estBotones{
+    height: auto;
+}
+.estDato{
+    padding: 10px;
+
 }

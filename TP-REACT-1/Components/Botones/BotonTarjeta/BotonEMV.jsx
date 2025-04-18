@@ -8,11 +8,9 @@ const BotonEMV = ({texto, visto}) => {
         return <button className= {style.estiloEliminar}>{texto}</button> 
     }else if(texto == "Vista"){
         if (visto){
-            //setVisto(false);
-            return <button className= {style.estiloVista}>Vista</button> 
+            return <button className= {style.estiloVista}>Visto</button> 
         }else{
-           // setVisto(true);
-            return <button className= {style.estiloNoVista}>No Vista</button>
+            return <button className= {style.estiloNoVista}>No Visto</button>
         } 
     }
 }; 
