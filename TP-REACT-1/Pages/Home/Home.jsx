@@ -62,10 +62,13 @@ const Home = () => {
     setOrden(valor);
   };
   return (
-    <div >
-    <header>
-      <BarraDeInicio manejarFiltro={manejarFiltro} />
-    </header>
+    <div className={style.recuadro}>
+      <div className={style.header}> 
+        <header className={style.header}>
+        <BarraDeInicio manejarFiltro={manejarFiltro} />
+        </header>
+      </div>
+    
     <div className={style.contenedorPrincipal}> 
       <div className={style.contenedorPelis}> 
         <ContenedorPelis filtro={filtro} peliculasYSeries={peliculasYSeries} orden={orden}/>
