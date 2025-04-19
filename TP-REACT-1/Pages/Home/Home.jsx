@@ -65,7 +65,6 @@ const Home = () => {
     <div >
     <header>
       <BarraDeInicio manejarFiltro={manejarFiltro} />
-      <InputBusqueda manejarFiltro={manejarFiltro}/> 
     </header>
     <div className={style.contenedorPrincipal}> 
       <div className={style.contenedorPelis}> 
