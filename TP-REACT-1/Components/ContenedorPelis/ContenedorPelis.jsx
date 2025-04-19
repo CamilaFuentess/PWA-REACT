@@ -2,7 +2,7 @@ import React from 'react';
 import style from './ContenedorPelis.module.css';
 import Tarjeta from '../Tarjeta/Tarjeta';
 
-const ContenedorPelis = ({filtro, peliculasYSeries}) => {
+const ContenedorPelis = ({filtro, peliculasYSeries, orden}) => {
    
   const filtrar = () => {
     let resultado = peliculasYSeries; 
@@ -21,17 +21,41 @@ const ContenedorPelis = ({filtro, peliculasYSeries}) => {
     return resultado; 
   }; 
 
+  const aplicarOrden = (lista) => {
+    let resultado = [...lista];  console.log('Orden:', orden);
+    console.log('Datos antes del ordenamiento:', resultado);
+  switch (orden) {
+    case 'anioAsc':
+      resultado.sort((a, b) => b.anio - a.anio);
+      break;
+    case 'anioDes':
+      resultado.sort((a, b) => a.anio - b.anio);
+      break;
+    case 'ratingAsc':
+      resultado.sort((a, b) => b.rating - a.rating);
+      break;
+    case 'ratingDes':
+      resultado.sort((a, b) => a.rating - b.rating);
+      break;
+    default:
+      resultado = lista;
+      break;
+  }
+  return resultado;
+  };
+
   const resultados = filtrar(); 
+  const resultadosOrdenados = aplicarOrden(resultados); 
   if (filtro && (filtro.tipo == 'visto' || filtro.tipo == 'novisto')){
-    const vistos = peliculasYSeries.filter(p=>p.visto);
-    const noVistos = peliculasYSeries.filter(p=>!p.visto);
+    const vistos = aplicarOrden(peliculasYSeries.filter(p=>p.visto));
+    const noVistos = aplicarOrden(peliculasYSeries.filter(p=>!p.visto));
     return (
       <div className={style.contenedorPelis}>
         <div>
           <h3>Vistas ({vistos.length})</h3>
           <div className={style.filaHorizontal}>
             {vistos.length > 0
-              ? vistos.map((peli, i) => <Tarjeta peli={peli} i={i}/>)
+              ? vistos.map((peli) => <Tarjeta peli={peli}/>)
               : <div className={style.mensajeError}>No hay películas o series vistas.</div>}
           </div>
         </div>
@@ -39,7 +63,7 @@ const ContenedorPelis = ({filtro, peliculasYSeries}) => {
           <h3>No vistas ({noVistos.length})</h3>
           <div className={style.filaHorizontal}>
             {noVistos.length > 0
-              ? noVistos.map((peli, i) => <Tarjeta  peli={peli}  i={i}/>)
+              ? noVistos.map((peli) => <Tarjeta  peli={peli} />)
               : <div className={style.mensajeError}>No hay películas o series no vistas.</div>}
           </div>
         </div>
@@ -54,8 +78,7 @@ const ContenedorPelis = ({filtro, peliculasYSeries}) => {
       <h3> Resultados para {filtro.valor} ({resultados.length}) </h3>
     )}
     <div className={style.filaHorizontal}>
-      {resultados.length > 0
-        ? resultados.map((peli, i)=><Tarjeta peli={peli}  i={i}/>)
+      {resultadosOrdenados.length > 0 ? resultadosOrdenados.map((peli)=><Tarjeta peli={peli}/>)
         : <div className={style.mensajeError}>No se encontraron resultados para el filtro seleccionado.</div>}
     </div>
   </div>

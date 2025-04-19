@@ -2,3 +2,28 @@
     border: 2px solid white;
     border-radius: 1%;
 }
+
+.contenedorPrincipal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+.contenedorPelis {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex: 1;
+    max-width: 75%;
+}
+
+.ordenamiento {
+    margin-top: 20px;
+    background-color: #92af5a;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 200px;
+  max-width: 25%; /* Evita que sea más ancho de lo necesario */
+  height: fit-content;
+}
