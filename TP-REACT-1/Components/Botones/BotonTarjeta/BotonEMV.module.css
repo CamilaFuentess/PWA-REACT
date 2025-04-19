@@ -12,6 +12,12 @@ button{
 .estiloEliminar{
     background-color: red;
 }
+.estiloCerrar{
+    background-color: green;
+}
+.estiloAceptar{
+    background-color: blue;
+}
 .estiloVista{
     color: black;
     background-color: #d4edda;

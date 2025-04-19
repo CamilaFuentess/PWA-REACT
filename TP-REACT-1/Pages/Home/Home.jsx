@@ -76,7 +76,7 @@ const Home = () => {
       <div className={style.ordenamiento}> 
         <Ordenamiento manejarOrden={manejarOrden} />
       </div>
-         {/**<div> <Mati arregloPelis={cargar()} /> <button onClick={() => guardar({pelis})}>Guardar</button><button onClick={() => cargar()}>Cargar</button></div>*/}
+         {/*<div> <Mati arregloPelis={cargar()} /> <button onClick={() => guardar({pelis})}>Guardar</button><button onClick={() => cargar()}>Cargar</button></div>*/}
     </div>
   </div>  
    
