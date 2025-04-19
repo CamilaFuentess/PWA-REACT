@@ -11,11 +11,11 @@ const InputBusqueda = ({ manejarFiltro }) => {
 
   return (
     <div className={style.inputContenedor}>
-      <label className={style.label}>Buscar por título o director</label>
-      <input className={style.inputBusqueda} type="text" value={busqueda} onChange={(eBusqueda) => setBusqueda(eBusqueda.target.value)}/>
+      <input className={style.inputBusqueda} type="text" placeholder="Buscar por título o director" value={busqueda} onChange={(eBusqueda) => setBusqueda(eBusqueda.target.value)}/>
       <button onClick={buscar}>Buscar</button>
     </div>
   );
 };
 
 export default InputBusqueda;
+

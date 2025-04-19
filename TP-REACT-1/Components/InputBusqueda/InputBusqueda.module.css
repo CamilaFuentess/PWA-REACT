@@ -1,18 +1,6 @@
-.inputContenedor {
-    background-color: #92af5a;
-    padding: 1.5rem;
-    border-radius: 12px;
-    width: 80%;
-    max-width: 450px;
-    margin: 1rem auto;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    border: 1px solid #d0dfff;
-    
-  }
+
 .label {
     display: block;
-    margin-bottom: 0.5rem;
     font-weight: bold;
     font-size: 1.1rem;
     color: #e5ebd2;
@@ -21,7 +9,7 @@
     padding: 0.5rem 1rem;
     font-size: 1rem;
     border-radius: 8px;
-    border: 1px solid #92af5a;
+    border: none;
     width: 60%;
     color: #404866;
     max-width: 400px;

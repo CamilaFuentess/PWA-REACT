@@ -1,37 +1,53 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import style from './BarraDeInicio.module.css'; 
+import InputBusqueda from '../InputBusqueda/InputBusqueda';
 
 const BarraInicio = ({ manejarFiltro }) => {
-  const [mostrarSubmenu, setMostrarSubmenu] = useState(null);
+  const [mostrarSubmenu, setMostrarSubmenu] = useState(false);
+  const submenuRef = useRef(null);
 
   const generos = ['Accion', 'Comedia', 'Drama', 'Terror'];
+
+  useEffect(() => {
+    const manejarClickFuera = (event) => {
+      if (submenuRef.current && !submenuRef.current.contains(event.target)) {
+        setMostrarSubmenu(false);
+      }
+    };
+
+    document.addEventListener('mousedown', manejarClickFuera);
+    return () => {
+      document.removeEventListener('mousedown', manejarClickFuera);
+    };
+  }, []);
 
   return (
     <div className={style.estiloBarraDeInicio}>
       <button onClick={() => manejarFiltro('tipo', '')}>Inicio</button>
       <button onClick={() => manejarFiltro('tipo', 'Pelicula')}>Películas</button>
       <button onClick={() => manejarFiltro('tipo', 'Serie')}>Series</button>
-      <button onClick={() => manejarFiltro('visto', true)}>Visto /No visto</button>
-      <div >
-        <button onClick={() => setMostrarSubmenu(!mostrarSubmenu)}>Género</button>
+      <button onClick={() => manejarFiltro('visto', true)}>Visto / No visto</button>
+
+        <button onClick={() => setMostrarSubmenu((prev) => !prev)}>
+          Género {mostrarSubmenu ? '▲' : '▼'}
+        </button>
         {mostrarSubmenu && (
-          <div>
+          <div className={style.submenu}>
             {generos.map((g) => (
-              <div key={g}>
-                <button onClick={() => {
-                  manejarFiltro('genero', g);
-                  setMostrarSubmenu(false); 
-                }}>
-                  {g}
-                </button>
-              </div>
+              <button key={g} onClick={() => {
+                manejarFiltro('genero', g);
+                setMostrarSubmenu(false);
+              }}>
+                {g}
+              </button>
             ))}
           </div>
         )}
-      </div>
 
+      <InputBusqueda manejarFiltro={manejarFiltro} />
     </div>
   );
 };
 
 export default BarraInicio;
+

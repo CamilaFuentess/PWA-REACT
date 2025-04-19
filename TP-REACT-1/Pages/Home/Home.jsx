@@ -2,7 +2,7 @@ import {useState} from 'react';
 import ContenedorPelis from '../../Components/ContenedorPelis/ContenedorPelis'; // Asegúrate de importar tu componente
 import BarraDeInicio from '../../Components/BarraDeInicio/BarraDeInicio';
 import InputBusqueda from '../../Components/InputBusqueda/InputBusqueda';
-import Mati from './Mati.jsx'
+//import Mati from './Mati.jsx'
 
 const peli1 = {
   tipo: "Serie", 
@@ -60,12 +60,11 @@ const Home = () => {
     <div >
       <header>
         <BarraDeInicio manejarFiltro={manejarFiltro} />
-        <InputBusqueda manejarFiltro={manejarFiltro}/>
       </header>
       
       <ContenedorPelis filtro={filtro} peliculasYSeries={peliculasYSeries}/>
 
-      <div> <Mati arregloPelis={cargar()} /> <button onClick={() => guardar({pelis})}>Guardar</button><button onClick={() => cargar()}>Cargar</button></div>
+      
   
     </div>
   );

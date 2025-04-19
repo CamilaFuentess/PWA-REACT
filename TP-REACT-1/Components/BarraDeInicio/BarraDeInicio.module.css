@@ -5,7 +5,7 @@
     display: flex; 
     justify-content: space-around; 
     align-items: center; 
-    padding: 0 10px; 
+    padding: 0 10px;
 }
 button {
     background-color: #92af5a; 
@@ -14,5 +14,24 @@ button {
     padding: 8px 16px; 
     border-radius: 5px; 
     cursor: pointer; 
-    font-size: 1rem; 
-  }
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.submenu{
+    display: 'inline-block';
+    position: 'relative';
+}
+
+.submenu2{
+    position: 'absolute';
+    background-color: '#fff';
+    z-index: 100;
+    box-shadow: '0 4px 8px rgba(0,0,0,0.1)';
+    margin-top: '5px';
+}
+
+.boton{
+    display: inline-block;
+    margin-right: 10px;
+}
