@@ -4,7 +4,7 @@
 
 //ACA IRIA EL POP, MOSTRANDO EL TARJETA RESUMEN. 
 //CUANDO SE AGREGA UNA PELI, SE VA AL LOCALSTORAGE. 
-// 
+// seria poner en una funcion el arreglo que esta en el home. para usarlo en el localstorage. 
 
 import React from "react";
 import style from '../ContenedorPelis/ContenedorPelis.module.css'; 
