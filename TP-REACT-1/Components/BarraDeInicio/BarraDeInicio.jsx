@@ -26,7 +26,7 @@ const BarraInicio = ({ manejarFiltro }) => {
       <button onClick={() => manejarFiltro('tipo', '')}>Inicio</button>
       <button onClick={() => manejarFiltro('tipo', 'Pelicula')}>Películas</button>
       <button onClick={() => manejarFiltro('tipo', 'Serie')}>Series</button>
-      <button onClick={() => manejarFiltro('visto', true)}>Visto / No visto</button>
+      <button onClick={() => manejarFiltro('visto', true)}>Visto&nbsp;/&nbsp;No&nbsp;visto</button>
 
         <button onClick={() => setMostrarSubmenu((prev) => !prev)}>
           Género {mostrarSubmenu ? '▲' : '▼'}
