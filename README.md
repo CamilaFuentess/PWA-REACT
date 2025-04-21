@@ -6,7 +6,8 @@ Riveiro Matías FAI-4438
   
   
   
-  
+  # Ejercicios del práctico.  
+
 2) a) i) Explicar la función de los siguientes archivos iniciales: index.js, App.js, index.css y package-json.js.  
 
   ## index.js o main.jsx
@@ -32,4 +33,76 @@ Y en el index.js, esta línea:
 document.getElementById('root')
   
   
-## App.js
+## App.js  
+
+App.js es uno de los archivos más importantes en una app React. Es como el centro de control de la aplicación: el componente principal desde el cual se estructura todo lo demás.  
+Es un componente de React (normalmente una función) que representa la interfaz base de la aplicación. Todo lo que se ve en pantalla parte desde ahí.  
+Es como el "escenario principal" donde se armo y muestro todo lo que compone mi app.  
+
+  ### ¿Para qué sirve?  
+
+  1. Organiza y muestra otros componentes: Dentro de App.js puede tener componentes como <Navbar />, <Footer />, <Home />, etc.  
+
+  2. Lógica de estado principal (opcional): Puedo manejar estados globales o lógicos que afecten varias partes de la app.  
+
+  3. Establece el diseño base: Suele contener el layout principal o los estilos generales.  
+
+    ### Por ejemplo  
+
+// App.js  
+import React from 'react'  
+  
+function App(){  
+  return (  
+    <div>  
+      <h1>Bienvenido a mi app React</h1>  
+      <p>¡Hola mundo!</p>  
+    </div>  
+  )  
+}  
+  
+export default App  
+  
+  Este componente se muestra cuando React lo renderiza desde index.js:  
+    
+  import App from './App'  
+    
+  
+  ## index.css  
+
+    El archivo index.css en un proyecto React sirve para definir estilos globales que se aplican a toda la aplicación. Es como una hoja de estilo general que se carga al inicio del proyecto.  
+    Sirve para definir como se ven los elementos básicos y dejar la aplicación con una base visual coherente.  
+    Son los estilos globales que afectan a toda la app.  
+
+### ¿Qué hace?  
+  
+  1. Aplica estilos base para todos los elementos HTML (body, h1, p, etc.)  
+  
+  2. Puede reiniciar estilos por defecto del navegador (como márgenes o paddings)  
+  
+  3. Establece fuentes, colores, espaciado o cualquier configuración visual general.  
+  
+  4. Lo uso para personalizar la apariencia global de mi aplicación React.  
+  
+  ### ¿Dónde se usa?  
+  
+Está importado normalmente en el archivo index.js (o main.jsx) así:  
+import './index.css'  
+Con esa línea, el navegador carga los estilos definidos ahí y los aplica a toda la app.  
+  
+  
+  ## package.json  
+  
+  Es el archivo central de configuración de cualquier proyecto hecho con Node.js o herramientas basadas en Node, como React, Vite, Next, etc.  
+  Es el "cerebro administrativo" del proyecto.  
+  Me dice qué librerías tiene, como se corre, como se construye, y como se llama la app.  
+  
+  ### ¿Para qué sirve?  
+  
+  1. Define el nombre, versión y descripción del proyecto.  
+  
+  2. Lista todas las dependencias (librerías instaladas)  
+  
+  3. Define scripts que Puedo ejecutar con npm run o yarn.  
+  
+  4. Contiene configuraciones para herramientas como Babel, ESLint, Vite, etc.  
