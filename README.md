@@ -49,7 +49,7 @@ Es como el "escenario principal" donde se armo y muestro todo lo que compone mi 
 
     ### Por ejemplo  
 
-// App.js  
+<pre>´´´// App.js  
 import React from 'react'  
   
 function App(){  
@@ -61,10 +61,12 @@ function App(){
   )  
 }  
   
-export default App  
+export default App ´´´</pre>  
   
+    
   Este componente se muestra cuando React lo renderiza desde index.js:  
     
+      
   import App from './App'  
     
   
