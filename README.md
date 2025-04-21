@@ -8,7 +8,7 @@ Riveiro Matías FAI-4438
   
   # Ejercicios del práctico.  
 
-##Ejercicio 2) a) i)  
+## Ejercicio 2) a) i)  
 Explicar la función de los siguientes archivos iniciales: index.js, App.js, index.css y package-json.js.  
 
   ## index.js o main.jsx
