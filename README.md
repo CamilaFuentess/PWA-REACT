@@ -16,14 +16,14 @@ Riveiro Matías FAI-4438
 
   ### ¿Qué hace normalmente index.js?   
 
-    1. Importa React y ReactDOM (la librería que renderiza React en el navegador).  
+    1. Importa React y ReactDOM (la librería que renderiza React en el navegador)  
 
-    2. Importa tu componente principal (por ejemplo, App.jsx).  
+    2. Importa el componente principal (por ejemplo, App.jsx)  
 
-    3. Conecta tu app al HTML, insertándola en un div con id "root" (que está en index.html).  
+    3. Conecta la app al HTML, insertándola en un div con id "root" (que está en el index.html)
 
-    4. A veces también aplica estilos globales o configura otras cosas como contextos o providers. 
-  
+    4. A veces también aplica estilos globales o configura otras cosas como contextos o providers.
+
 ### ¿Y cómo se conecta con el index.html?  
 En el index.html está este div:  
 <div id="root"></div>
@@ -31,4 +31,5 @@ En el index.html está este div:
 Y en el index.js, esta línea:
 document.getElementById('root')
   
-### App.js
+  
+## App.js
