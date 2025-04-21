@@ -5,26 +5,20 @@ import TablaDatos from '../TablaDatos/TablaDatos.jsx'
 import TarjetaModificar from '../TarjetaModificar/TarjetaModificar.jsx'
 
 
-const TarjetaResumen = ( {peOse, cerrar} ) => {
+const TarjetaResumen = ( {peOse, cerrarTR} ) => {
   
-  const fBotonEMV = (peOse, texto) =>{
-    if (texto == "Visto"){
+  const abrirTM = ({peOse}) => {
+    console.log("Hola");
+    <TarjetaModificar peOse={peOse}/>
+    {/*cerrarTR();*/}
       
-    }else if (texto == "Eliminar"){
-  
-    }else if (texto == "Modificar"){
-        <>
-        {  <TarjetaModificar peOse={peOse}/> }
-        </>
-  
-      
-    } 
+     
   }
 
   return (
     <>
-      <div className={style.ModalBackArea} >
-        <div className={style.ModalArea}>
+      <div className={style.TRBackArea} >
+        <div className={style.TRArea}>
           <table className= {style.estTabla}>
             <tbody>
               <tr>
@@ -32,15 +26,15 @@ const TarjetaResumen = ( {peOse, cerrar} ) => {
               </tr>
               <tr>
                 <td colSpan={2} className= {style.estBotones}>
-                  <BotonEMV texto={"Modificar"} visto = {false} accion={fBotonEMV(peOse, "Modificar")} />
-                  <BotonEMV texto={"Eliminar"} visto = {false} accion={() => fBotonEMV(peOse, "Eliminar")}/>
-                  <BotonEMV texto={"Vista"} visto = {peOse.visto} accion={() => fBotonEMV(peOse, "Visto")}/>
-                  <BotonEMV texto={"Cerrar"} visto = {false} accion={cerrar}/>
+                  {/*<BotonEMV texto={"Modificar"} visto = {false} accion={() => abrirTM({peOse})} /> */}
+                  <BotonEMV texto={"Eliminar"} visto = {false} />
+                  <BotonEMV texto={"Vista"} visto = {peOse.visto} />
+                  <BotonEMV texto={"Cerrar"} visto = {false} accion={cerrarTR}/>
                 </td>
               </tr>
             </tbody>
           </table>
-          {  <TarjetaModificar peOse={peOse}/> }
+          { /* <TarjetaModificar peOse={peOse}/> */}
         </div>
       </div>
     </>

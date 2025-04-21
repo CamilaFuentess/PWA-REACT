@@ -4,7 +4,7 @@ import style from './TarjetaModificar.module.css'
 import BotonEMV from '../Botones/BotonTarjeta/BotonEMV.jsx'
 
 
-const TarjetaResumen = ({peOse}) => {
+const TarjetaResumen = ({peOse, cerrarTM}) => {
 
   const [mTitulo, setMTitulo] = useState(peOse.titulo);
   const [mDirector, setMDirector] = useState(peOse.director);
@@ -12,27 +12,36 @@ const TarjetaResumen = ({peOse}) => {
   const [mRating, setMRating] = useState(peOse.rating);
   const [mGenero, setMGenero] = useState(peOse.genero);
   const [mTipo, setMTipo] = useState(peOse.tipo);
+  const [mImagen, setMImagen] = useState(peOse.imagen);
   
   return (
     <>
-        <form>
-            <label>Titulo: 
-            <input type="text" value={mTitulo} onChange={(e) => setMTitulo(e.target.value)}            /></label>
-            <label>Director: 
-            <input type="text" value={mDirector} onChange={(e) => setMDirector(e.target.value)}            /></label>
-            <label>Estreno: 
-            <input type="text" value={mEstreno} onChange={(e) => setMEstreno(e.target.value)}            /></label>
-            <label>Rating: 
-            <input type="text" value={mRating} onChange={(e) => setMRating(e.target.value)}            /></label>
-            <label>Genero: 
-            <input type="text" value={mGenero} onChange={(e) => setMGenero(e.target.value)}            /></label>
-            <label>Tipo: 
-            <input type="text" value={mTipo} onChange={(e) => setMTipo(e.target.value)}            /></label>
+      <div className={style.TMBackArea} >
+        <div className={style.TMArea}>
+          <form>
+            <label className={style.TMLabel}>Titulo: </label>
+            <input className={style.TMInput} type="text" value={mTitulo} onChange={(e) => setMTitulo(e.target.value)}            /><br />
+            <label className={style.TMLabel}>Director: </label>
+            <input className={style.TMInput} type="text" value={mDirector} onChange={(e) => setMDirector(e.target.value)}            /><br />
+            <label className={style.TMLabel}>Estreno: </label>
+            <input className={style.TMInput} type="text" value={mEstreno} onChange={(e) => setMEstreno(e.target.value)}            /><br />
+            <label className={style.TMLabel}>Rating: </label>
+            <input className={style.TMInput} type="text" value={mRating} onChange={(e) => setMRating(e.target.value)}            /><br />
+            <label className={style.TMLabel}>Genero: </label>
+            <input className={style.TMInput} type="text" value={mGenero} onChange={(e) => setMGenero(e.target.value)}            /><br />
+            <label className={style.TMLabel}>Tipo: </label>
+            <input className={style.TMInput} type="text" value={mTipo} onChange={(e) => setMTipo(e.target.value)}            /><br />
+            <label className={style.TMLabel}>Imagen URL: </label>
+            <input className={style.TMInput} type="text" value={mImagen} onChange={(e) => setMImagen(e.target.value)}            /><br />
 
 
 
 
-        </form>
+          </form>
+          <BotonEMV texto={"Cerrar"} visto = {false} accion={cerrarTM}/>
+          <BotonEMV texto={"Aceptar"} visto = {false} />
+        </div>
+      </div>
     </>
   )
 }
