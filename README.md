@@ -47,21 +47,21 @@ Es como el "escenario principal" donde se armo y muestro todo lo que compone mi 
 
   3. Establece el diseño base: Suele contener el layout principal o los estilos generales.  
 
-    ### Por ejemplo  
-
-<pre>´´´// App.js  
+  ### Por ejemplo  
+  
+// App.js  
 import React from 'react'  
   
 function App(){  
   return (  
-    <div>  
-      <h1>Bienvenido a mi app React</h1>  
-      <p>¡Hola mundo!</p>  
-    </div>  
+    &lt;div&gt;  
+      &lt;h1&gt;Bienvenido a mi app React&lt;/h1&gt;  
+      &lt;p&gt;¡Hola mundo!&lt;/p&gt;  
+    &lt;/div&gt; 
   )  
 }  
   
-export default App ´´´</pre>  
+export default App 
   
     
   Este componente se muestra cuando React lo renderiza desde index.js:  
