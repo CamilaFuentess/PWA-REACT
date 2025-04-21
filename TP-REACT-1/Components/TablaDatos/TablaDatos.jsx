@@ -3,28 +3,28 @@ import style from './TablaDatos.module.css'
 
 
 
-const TablaDatos = ({arregloPelicula}) => {
+const TablaDatos = ({peOse}) => {
   return (
     <>
       <table >
         <tbody>
           <tr>
-            <td>Titulo: </td><td className= {style.est_td}>{arregloPelicula.titulo}</td>
+            <td>Titulo: </td><td className= {style.est_td}>{peOse.titulo}</td>
           </tr>
           <tr>
-            <td>Director: </td><td >{arregloPelicula.director}</td>
+            <td>Director: </td><td >{peOse.director}</td>
           </tr> 
           <tr>
-            <td>Rating: </td><td className= {style.est_td}>{arregloPelicula.rating}</td>
+            <td>Rating: </td><td className= {style.est_td}>{peOse.rating}</td>
           </tr>
           <tr>
-            <td>G&eacute;nero: </td><td className= {style.est_td}>{arregloPelicula.genero}</td>
+            <td>G&eacute;nero: </td><td className= {style.est_td}>{peOse.genero}</td>
           </tr>
           <tr>
-            <td>Tipo: </td><td className= {style.est_td}>{arregloPelicula.tipo}</td>
+            <td>Tipo: </td><td className= {style.est_td}>{peOse.tipo}</td>
           </tr>
           <tr>
-            <td>Estreno: </td><td className= {style.est_td}>{arregloPelicula.anio}</td>
+            <td>Estreno: </td><td className= {style.est_td}>{peOse.anio}</td>
           </tr> 
         </tbody>
       </table>

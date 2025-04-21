@@ -5,13 +5,23 @@
 //ACA IRIA EL POP, MOSTRANDO EL TARJETA RESUMEN. 
 //CUANDO SE AGREGA UNA PELI, SE VA AL LOCALSTORAGE. 
 // seria poner en una funcion el arreglo que esta en el home. para usarlo en el localstorage. 
-
+import {useState} from 'react';
 import React from "react";
 import style from '../ContenedorPelis/ContenedorPelis.module.css'; 
+import TarjetaResumen from '../TarjetaResumen/TarjetaResumen';
+
 
 const Tarjeta = ({peli}) => {
+
+    const [isOpenTR, setIsOpenTR] = useState(false);
+
+    const handleTR = () =>{
+        setIsOpenTR(!isOpenTR)
+    };
+    
     return (
-        <div className={style.cartaContenido}>
+        <>
+        <div className={style.cartaContenido} onClick={handleTR}>
             <div className={`${style.estado} ${peli.visto ? style.visto : style['no-visto']}`}>
                 {peli.visto ? 'Visto' : 'No visto'}
             </div>
@@ -21,6 +31,9 @@ const Tarjeta = ({peli}) => {
                 <span className={style.tipo}>{peli.tipo}</span>
             </div>
         </div>
+            {isOpenTR && <TarjetaResumen peOse={peli} cerrar={handleTR}/> }
+        
+        </>
     );
 };
 

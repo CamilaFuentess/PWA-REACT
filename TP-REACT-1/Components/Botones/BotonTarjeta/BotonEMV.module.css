@@ -1,28 +1,45 @@
 
-button{
+.estiloModificar{
+    background-color: #404866;
     font-size:small;
     padding: 10px;
     margin: 10px;
     width: 80px;
 }
-
-.estiloModificar{
-    background-color: #404866;
-}
 .estiloEliminar{
     background-color: red;
+    font-size:small;
+    padding: 10px;
+    margin: 10px;
+    width: 80px;
 }
 .estiloCerrar{
     background-color: green;
+    font-size:small;
+    padding: 10px;
+    margin: 10px;
+    width: 80px;
 }
 .estiloAceptar{
     background-color: blue;
+    font-size:small;
+    padding: 10px;
+    margin: 10px;
+    width: 80px;
 }
 .estiloVista{
     color: black;
     background-color: #d4edda;
+    font-size:small;
+    padding: 10px;
+    margin: 10px;
+    width: 80px;
 }
 .estiloNoVista{
     color: black;
     background-color: #f4abb1;
+    font-size:small;
+    padding: 10px;
+    margin: 10px;
+    width: 80px;
 }
