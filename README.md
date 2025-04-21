@@ -71,11 +71,11 @@ export default App
     
   
   ## index.css  
-
-    El archivo index.css en un proyecto React sirve para definir estilos globales que se aplican a toda la aplicación. Es como una hoja de estilo general que se carga al inicio del proyecto.  
-    Sirve para definir como se ven los elementos básicos y dejar la aplicación con una base visual coherente.  
-    Son los estilos globales que afectan a toda la app.  
-
+  
+  El archivo index.css en un proyecto React sirve para definir estilos globales que se aplican a toda la aplicación. Es como una hoja de estilo general que se carga al inicio del proyecto.  
+  Sirva para definir como se ven los elementos básicos y dejar la aplicación con una base visual coherente.  
+  Son los estilos globales que afectan a toda la app.  
+  
 ### ¿Qué hace?  
   
   1. Aplica estilos base para todos los elementos HTML (body, h1, p, etc.)  
