@@ -6,6 +6,7 @@ import Mati from './Mati.jsx'
 import Ordenamiento from '../../Components/Ordenamiento/Ordenamiento'; 
 import style from './Home.module.css'; 
 
+
 const peli1 = {
   tipo: "Serie", 
   titulo: "Flash",
@@ -52,8 +53,11 @@ const cargar = () =>{
 }
 
 const Home = () => {
+  if (cargar()==null){
+    guardar({pelis});
+  }
   const [filtro, setFiltro] = useState({ tipo: '', valor: '' });
-  const [peliculasYSeries, setPeliculasYSeries] = useState(pelis); 
+  const [peliculasYSeries, setPeliculasYSeries] = useState(cargar()); 
   const manejarFiltro = (tipo, valor) => {
     setFiltro({ tipo, valor });
   };
@@ -69,16 +73,16 @@ const Home = () => {
         </header>
       </div>
     
-    <div className={style.contenedorPrincipal}> 
-      <div className={style.contenedorPelis}> 
-        <ContenedorPelis filtro={filtro} peliculasYSeries={peliculasYSeries} orden={orden}/>
+      <div className={style.contenedorPrincipal}> 
+        <div className={style.contenedorPelis}> 
+          <ContenedorPelis filtro={filtro} peliculasYSeries={peliculasYSeries} orden={orden}/>
+        </div>
+        <div className={style.ordenamiento}> 
+          <Ordenamiento manejarOrden={manejarOrden} />
+        </div>
+          {/*<div> <Mati arregloPelis={cargar()} /> <button onClick={() => guardar({pelis})}>Guardar</button><button onClick={() => cargar()}>Cargar</button></div>*/}
       </div>
-      <div className={style.ordenamiento}> 
-        <Ordenamiento manejarOrden={manejarOrden} />
-      </div>
-         {/*<div> <Mati arregloPelis={cargar()} /> <button onClick={() => guardar({pelis})}>Guardar</button><button onClick={() => cargar()}>Cargar</button></div>*/}
-    </div>
-  </div>  
+    </div>  
    
 
   );

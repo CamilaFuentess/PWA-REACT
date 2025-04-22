@@ -78,7 +78,7 @@ const ContenedorPelis = ({filtro, peliculasYSeries, orden}) => {
       <h3> Resultados para {filtro.valor} ({resultados.length}) </h3>
     )}
     <div className={style.filaHorizontal}>
-      {resultadosOrdenados.length > 0 ? resultadosOrdenados.map((peli)=><Tarjeta peli={peli}/>)
+      {resultadosOrdenados.length > 0 ? resultadosOrdenados.map((peli)=><Tarjeta peli={peli} arrPelis={peliculasYSeries}/>)
         : <div className={style.mensajeError}>No se encontraron resultados para el filtro seleccionado.</div>}
     </div>
   </div>
