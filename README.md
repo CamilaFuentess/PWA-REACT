@@ -10,7 +10,7 @@
   
 <p align="center">
   <img src="TP-REACT-1/ImagenesREADME/logo-UNCo.png" width="150" />
-  <img src="TP-REACT-1/ImagenesREADME/logo-FAI.png.png" width="150" />
+  <img src="TP-REACT-1/ImagenesREADME/logo-FAI.png" width="150" />
 </p>  
   
   
