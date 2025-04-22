@@ -9,8 +9,8 @@
 # <p align="center">PWA-REACT</p>  
   
 <p align="center">
-  <img src="ImagenesREADME/logo-UNCo.png" width="150" />
-  <img src="ImagenesREADME/logo-FAI.png.png" width="150" />
+  <img src="TP-REACT-1/ImagenesREADME/logo-UNCo.png" width="150" />
+  <img src="TP-REACT-1/ImagenesREADME/logo-FAI.png.png" width="150" />
 </p>  
   
   
