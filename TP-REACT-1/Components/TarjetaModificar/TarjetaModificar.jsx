@@ -4,7 +4,7 @@ import style from './TarjetaModificar.module.css'
 import BotonEMV from '../Botones/BotonTarjeta/BotonEMV.jsx'
 
 
-const TarjetaResumen = ({peOse, cerrarTM, flagAgregar, accionTM}) => {
+const TarjetaResumen = ({peOse, cerrarTM, flagAgregar, peliculasYSeries}) => {
 
   const [mTitulo, setMTitulo] = flagAgregar ? useState() : useState(peOse.titulo);
   const [mDirector, setMDirector] = flagAgregar ? useState() : useState(peOse.director);
@@ -13,7 +13,37 @@ const TarjetaResumen = ({peOse, cerrarTM, flagAgregar, accionTM}) => {
   const [mGenero, setMGenero] = flagAgregar ? useState() : useState(peOse.genero);
   const [mTipo, setMTipo] = flagAgregar ? useState() : useState(peOse.tipo);
   const [mImagen, setMImagen] = flagAgregar ? useState() : useState(peOse.imagen);
-  
+
+
+  const [peliculas, setPeliculas] = useState(
+      peliculasYSeries
+  );
+  function modificarPeli (peOse) {
+ 
+    const nuevoPeliculas = peliculas.map(pYs => {
+      console.log("Peose: ", peOse);
+      console.log("peliculas: ", peliculas);
+      if (pYs.titulo == peOse.peOse.titulo){
+        console.log("Peose: ", peOse);
+          return {
+                  ...pYs,
+                  titulo: mTitulo,
+                  director: mDirector,
+                  anio: mEstreno,
+                  tipo: mTipo,
+                  rating: mRating,
+                  genero: mGenero,
+              }
+      }else{
+          return pYs;
+      }
+});
+  setPeliculas(nuevoPeliculas);
+  console.log("Nuevo",nuevoPeliculas);
+  localStorage.setItem('peliculasYSeries', JSON.stringify(nuevoPeliculas));
+}
+
+
   return (
     <>
       <div className={style.TMBackArea} >
@@ -35,8 +65,13 @@ const TarjetaResumen = ({peOse, cerrarTM, flagAgregar, accionTM}) => {
             <input className={style.TMInput} type="text" value={mImagen} onChange={(e) => setMImagen(e.target.value)}            /><br />
           </form>
           
+  
+
           <BotonEMV texto={"Cerrar"} visto = {false} accion={cerrarTM}/>
-          <BotonEMV texto={"Aceptar"} visto = {false} accion={accionTM} />
+          {(flagAgregar) ? <BotonEMV texto={"Aceptar"} visto = {truee} accion={() => modificarPeli({peOse})}/> :
+             <BotonEMV texto={"Aceptar"} visto = {false} accion={() => modificarPeli({peOse})}/>}
+
+
         </div>
       </div>
     </>

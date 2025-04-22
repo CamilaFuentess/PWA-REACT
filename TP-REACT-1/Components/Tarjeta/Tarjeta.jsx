@@ -36,7 +36,7 @@ const Tarjeta = ({peli, peliculasYSeries}) => {
             { peOse }
           ]);*/
     }
-
+/*
     const [peliculas, setPeliculas] = useState(
         peliculasYSeries
     );
@@ -59,7 +59,7 @@ const Tarjeta = ({peli, peliculasYSeries}) => {
     });
         setPeliculas(nuevoPeliculas);
         localStorage.setItem('peliculasYSeries', JSON.stringify(nuevoPeliculas));
-    }
+    }*/
 
     return (
         <>
@@ -75,7 +75,7 @@ const Tarjeta = ({peli, peliculasYSeries}) => {
             <button onClick={handleTM_A}>---</button>
         </div>
             {isOpenTR && <TarjetaResumen peOse={peli} cerrarTR={handleTR}/> }
-            {isOpenTM && <TarjetaModificar peOse={peli} cerrarTM={handleTM}  flagAgregar={false} accionTM={() => modificarPeli({peli})}/> }
+            {isOpenTM && <TarjetaModificar peOse={peli} cerrarTM={handleTM}  flagAgregar={false} peliculasYSeries={peliculasYSeries}/> }
             {isOpenTM_A && <TarjetaModificar cerrarTM={handleTM_A}  flagAgregar={true} accionTM={() => agregarPeli({peli}, {peliculasYSeries})}/> }
         </>
     );
