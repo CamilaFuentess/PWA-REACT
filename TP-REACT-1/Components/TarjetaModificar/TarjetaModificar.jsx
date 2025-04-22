@@ -34,6 +34,7 @@ const TarjetaResumen = ({peOse, cerrarTM, flagAgregar, accionTM}) => {
             <label className={style.TMLabel}>Imagen URL: </label>
             <input className={style.TMInput} type="text" value={mImagen} onChange={(e) => setMImagen(e.target.value)}            /><br />
           </form>
+          
           <BotonEMV texto={"Cerrar"} visto = {false} accion={cerrarTM}/>
           <BotonEMV texto={"Aceptar"} visto = {false} accion={accionTM} />
         </div>

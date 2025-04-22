@@ -2,7 +2,7 @@ import React from 'react';
 import style from './ContenedorPelis.module.css';
 import Tarjeta from '../Tarjeta/Tarjeta';
 
-const ContenedorPelis = ({filtro, peliculasYSeries, orden}) => {
+const ContenedorPelis = ({filtro, peliculasYSeries, orden, setPeliculasYSeries}) => {
    
   const filtrar = () => {
     let resultado = peliculasYSeries; 
@@ -55,7 +55,7 @@ const ContenedorPelis = ({filtro, peliculasYSeries, orden}) => {
           <h3>Vistas ({vistos.length})</h3>
           <div className={style.filaHorizontal}>
             {vistos.length > 0
-              ? vistos.map((peli) => <Tarjeta peli={peli}/>)
+              ? vistos.map((peli) => <Tarjeta peli={peli} peliculasYSeries={peliculasYSeries} setPeliculasYSeries={setPeliculasYSeries}/>)
               : <div className={style.mensajeError}>No hay películas o series vistas.</div>}
           </div>
         </div>
@@ -63,7 +63,7 @@ const ContenedorPelis = ({filtro, peliculasYSeries, orden}) => {
           <h3>No vistas ({noVistos.length})</h3>
           <div className={style.filaHorizontal}>
             {noVistos.length > 0
-              ? noVistos.map((peli) => <Tarjeta  peli={peli} />)
+              ? noVistos.map((peli) => <Tarjeta peli={peli} peliculasYSeries={peliculasYSeries} setPeliculasYSeries={setPeliculasYSeries}/>)
               : <div className={style.mensajeError}>No hay películas o series no vistas.</div>}
           </div>
         </div>
@@ -78,7 +78,7 @@ const ContenedorPelis = ({filtro, peliculasYSeries, orden}) => {
       <h3> Resultados para {filtro.valor} ({resultados.length}) </h3>
     )}
     <div className={style.filaHorizontal}>
-      {resultadosOrdenados.length > 0 ? resultadosOrdenados.map((peli)=><Tarjeta peli={peli} arrPelis={peliculasYSeries}/>)
+      {resultadosOrdenados.length > 0 ? resultadosOrdenados.map((peli)=><Tarjeta peli={peli} peliculasYSeries={peliculasYSeries} setPeliculasYSeries={setPeliculasYSeries}/>)
         : <div className={style.mensajeError}>No se encontraron resultados para el filtro seleccionado.</div>}
     </div>
   </div>

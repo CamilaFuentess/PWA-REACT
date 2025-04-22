@@ -75,7 +75,7 @@ const Home = () => {
     
       <div className={style.contenedorPrincipal}> 
         <div className={style.contenedorPelis}> 
-          <ContenedorPelis filtro={filtro} peliculasYSeries={peliculasYSeries} orden={orden}/>
+          <ContenedorPelis filtro={filtro} peliculasYSeries={peliculasYSeries} orden={orden} setPeliculasYSeries={setPeliculasYSeries}/>
         </div>
         <div className={style.ordenamiento}> 
           <Ordenamiento manejarOrden={manejarOrden} />
