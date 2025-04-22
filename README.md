@@ -1,17 +1,17 @@
-# Universidad Nacional del Comahue
-# Facultad de Informatica
+# <p align="center">Universidad Nacional del Comahue</p>
+# <p align="center">Facultad de Informatica</p>
 
-# Programacion Web Avanzada
+# <p align="center">Programacion Web Avanzada</p>
 
 
-# PWA-REACT
+# <p align="center">PWA-REACT</p>
 
 ## Integrantes: 
 * Fuentes Camila FAI-4241  
 * Fuentealba Dario FAI-4424  
 * Riveiro Matías FAI-4438  
   
-# Aplicacion: Gestion de peliculas y series. 
+# <p align="center">Aplicacion: Gestion de peliculas y series.</p> 
 La aplicacion permite gestionar un catalogo de peliculas y series de manera sencilla e intuitiva.
 Cuenta con una barra de navegacion que incluye los siguientes filtros:
 inicio, peliculas, series, vista / No vista, buscar y agregar. 
@@ -24,7 +24,7 @@ Al hacer click sobre la imagen de una  pelicula o serie, se abre un cuadro infor
 Tambien esta la opcion de hacer click sobre el titulo del contenido y se abre un formulario para modificar los datos de la pelicula/serie. 
   
     
-  # Ejercicios del práctico.  
+  # <p align="center">Ejercicios del práctico.  
   
     
 # Ejercicio 7) c)
