@@ -6,7 +6,7 @@
 
 # PWA-REACT
 
-Integrantes: 
+## Integrantes: 
 * Fuentes Camila FAI-4241  
 * Fuentealba Dario FAI-4424  
 * Riveiro Matías FAI-4438  
@@ -22,23 +22,23 @@ Al hacer click sobre la imagen de una  pelicula o serie, se abre un cuadro infor
 * Cerrar: cierra la carta del contenido 
 
 Tambien esta la opcion de hacer click sobre el titulo del contenido y se abre un formulario para modificar los datos de la pelicula/serie. 
-
-# Ejercicio 7) c)
-1- Clonamos el repositorio: 
-git clone https://github.com/CamilaFuentess/PWA-REACT
-2- Ingresamos al directorio del proyecto: 
-cd C:\REACT\PWA-REACT\TP-REACT-1
-3- Instalamos las dependencias: 
-npm install
-4- Se ejecuta el comando (inicia la aplicacion): 
-npm run dev 
-
-
-
   
+    
   # Ejercicios del práctico.  
-
-## Ejercicio 2) a) i)  
+  
+    
+# Ejercicio 7) c)
+1. Clonamos el repositorio:
+git clone https://github.com/CamilaFuentess/PWA-REACT  
+2. Ingresamos al directorio del proyecto: 
+cd C:\REACT\PWA-REACT\TP-REACT-1  
+3. Instalamos las dependencias: 
+npm install  
+4. Se ejecuta el comando (inicia la aplicacion): 
+npm run dev  
+  
+  
+# Ejercicio 2) a) i)  
 Explicar la función de los siguientes archivos iniciales: index.js, App.js, index.css y package-json.js.  
 
   ## index.js o main.jsx
