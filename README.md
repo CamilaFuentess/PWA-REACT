@@ -1,11 +1,19 @@
+
+
 # <p align="center">Universidad Nacional del Comahue</p>
 # <p align="center">Facultad de Informatica</p>
 
 # <p align="center">Programacion Web Avanzada</p>
 
 
-# <p align="center">PWA-REACT</p>
-
+# <p align="center">PWA-REACT</p>  
+  
+<p align="center">
+  <img src="ImagenesREADME/logo-UNCo.png" width="150" />
+  <img src="ImagenesREADME/logo-FAI.png.png" width="150" />
+</p>  
+  
+  
 ## Integrantes: 
 * Fuentes Camila FAI-4241  
 * Fuentealba Dario FAI-4424  
