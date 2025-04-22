@@ -21,10 +21,7 @@ const TarjetaResumen = ({peOse, cerrarTM, flagAgregar, peliculasYSeries}) => {
   function modificarPeli (peOse) {
  
     const nuevoPeliculas = peliculas.map(pYs => {
-      console.log("Peose: ", peOse);
-      console.log("peliculas: ", peliculas);
       if (pYs.titulo == peOse.peOse.titulo){
-        console.log("Peose: ", peOse);
           return {
                   ...pYs,
                   titulo: mTitulo,
@@ -39,7 +36,6 @@ const TarjetaResumen = ({peOse, cerrarTM, flagAgregar, peliculasYSeries}) => {
       }
 });
   setPeliculas(nuevoPeliculas);
-  console.log("Nuevo",nuevoPeliculas);
   localStorage.setItem('peliculasYSeries', JSON.stringify(nuevoPeliculas));
 }
 
