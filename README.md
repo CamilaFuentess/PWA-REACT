@@ -1,10 +1,40 @@
+# Universidad Nacional del Comahue
+# Facultad de Informatica
+
+# Programacion Web Avanzada
+
+
 # PWA-REACT
 
-Fuentes Camila FAI-4241  
-Fuentealba Dario FAI-4424  
-Riveiro Matías FAI-4438  
+Integrantes: 
+* Fuentes Camila FAI-4241  
+* Fuentealba Dario FAI-4424  
+* Riveiro Matías FAI-4438  
   
-  
+# Aplicacion: Gestion de peliculas y series. 
+La aplicacion permite gestionar un catalogo de peliculas y series de manera sencilla e intuitiva.
+Cuenta con una barra de navegacion que incluye los siguientes filtros:
+inicio, peliculas, series, vista / No vista, buscar y agregar. 
+
+Al hacer click sobre la imagen de una  pelicula o serie, se abre un cuadro informativo con todos sus detalles: titulo, director, año, rating, genero e url de una imagen. Dentro de este cuadro se encuentran tres botones:
+* Eliminar: elimina la pelicula o serie del catalogo.
+* Marcar como vista/no vista: cambia el estado de visualizacion.
+* Cerrar: cierra la carta del contenido 
+
+Tambien esta la opcion de hacer click sobre el titulo del contenido y se abre un formulario para modificar los datos de la pelicula/serie. 
+
+# Ejercicio 7) c)
+1- Clonamos el repositorio: 
+git clone https://github.com/CamilaFuentess/PWA-REACT
+2- Ingresamos al directorio del proyecto: 
+cd C:\REACT\PWA-REACT\TP-REACT-1
+3- Instalamos las dependencias: 
+npm install
+4- Se ejecuta el comando (inicia la aplicacion): 
+npm run dev 
+
+
+
   
   # Ejercicios del práctico.  
 

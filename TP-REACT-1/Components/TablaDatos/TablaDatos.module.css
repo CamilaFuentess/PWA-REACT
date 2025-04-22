@@ -3,14 +3,20 @@ table{
     border-radius: 3px;
     padding: 5px;
 }
+.titulo{
+    font-weight: bold;
+    padding: 5px;
+}
 
 th{
     text-align: left;
     width: 100px;
+    color: #e5ebd2;
 }
 
 .est_td{
     text-align: left;
     width: 300px;
+    color: #e5ebd2;
 }
 
