@@ -70,7 +70,6 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
               <input className={style.TMInput} type="text" value={mEstreno} onChange={(e) => setMEstreno(e.target.value)}/></label><br />
             <label className={style.TMLabel}>Rating: 
               <input className={style.TMInput} type="text" value={mRating} onChange={(e) => setMRating(e.target.value)}/></label><br />
-
             <label className={style.TMLabel}>Genero: 
               <select name="genero" className={style.TMSelect} defaultValue={mGenero} onChange={(e) => setMGenero(e.target.value)}>
                 <option value="Accion">Accion</option>
@@ -79,10 +78,12 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
                 <option value="Terror">Terror</option>
               </select>
             </label><br />
-
-
-            <label className={style.TMLabel}>Tipo:
-              <input className={style.TMInput} type="text" value={mTipo} onChange={(e) => setMTipo(e.target.value)}/> </label><br />
+            <label className={style.TMLabel}>Tipo: 
+              <select name="tipo" className={style.TMSelect} defaultValue={mTipo} onChange={(e) => setMTipo(e.target.value)}>
+                <option value="Pelicula">Pelicula</option>
+                <option value="Serie">Serie</option>
+              </select>
+            </label><br />
             <label className={style.TMLabel}>Imagen URL: 
               <input className={style.TMInput} type="text" value={mImagen} onChange={(e) => setMImagen(e.target.value)}/></label><br />
           </form>
