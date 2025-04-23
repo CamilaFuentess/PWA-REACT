@@ -10,7 +10,7 @@ import React from "react";
 import style from '../ContenedorPelis/ContenedorPelis.module.css'; 
 import TarjetaResumen from '../TarjetaResumen/TarjetaResumen';
 import TarjetaModificar from '../TarjetaModificar/TarjetaModificar'
-
+import styleTarjeta from './Tarjeta.module.css';
 
 const Tarjeta = ({peli, peliculasYSeries, setPeliculasYSeries}) => {
 
@@ -38,6 +38,10 @@ const Tarjeta = ({peli, peliculasYSeries, setPeliculasYSeries}) => {
             <div className={style.informacion} onClick={handleTM}>
                 <strong>{peli.titulo}</strong> ({peli.anio})<br />
                 <span className={style.tipo}>{peli.tipo}</span>
+            </div>
+            <div className={styleTarjeta.iconos} > 
+                <img src="https://images.icon-icons.com/2786/PNG/512/cat_eye_silhouette_hand_drawn_abstraction_icon_177445.png" alt="Ver resumen" onClick={handleTR} className={styleTarjeta.icono}/>
+                <img src="https://images.icon-icons.com/1744/PNG/512/3643749-edit-pen-pencil-write-writing_113397.png" alt="Modificar" onClick={handleTM} className={styleTarjeta.icono}/>
             </div>
         </div>
             {isOpenTR && <TarjetaResumen peOse={peli} cerrarTR={handleTR} peliculasYSeries={peliculasYSeries} actualizarPeliculasYSeries={setPeliculasYSeries}/> }
