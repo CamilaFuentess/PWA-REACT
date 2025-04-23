@@ -14,25 +14,6 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
   const [mTipo, setMTipo] = flagAgregar ? useState() : useState(peOse.tipo);
   const [mImagen, setMImagen] = flagAgregar ? useState() : useState(peOse.imagen);
 
-  const [peliOse, setPeliOse] = useState([]);
-
-  const crearPeli = () => {
-    console.log("Tit: ", mTitulo)
-    setPeliOse([
-      ...peliOse,
-      {
-        titulo: mTitulo,
-        director: mDirector,
-        anio: mEstreno,
-        tipo: mTipo,
-        rating: mRating,
-        genero: mGenero,
-        imagen: mImagen,
-        visto: false,
-      }
-    ]);
-    return peliOse
-  }
 
   const [peliculas, setPeliculas] = useState(
       peliculasYSeries
@@ -61,7 +42,6 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
   };
 
   function agregarPeli () {
-    //const p = crearPeli();
     const p = {
       tipo: mTipo, 
       titulo: mTitulo,
@@ -72,11 +52,6 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
       imagen: mImagen || "https://es.web.img2.acsta.net/pictures/17/09/29/21/15/4233147.jpg",
       visto: false
     };
-    console.log("PeliOse: ", p)
-    console.log("Peliculas: ", peliculas)
-    setPeliculas([
-      ...peliculas, p,
-    ])
     const nuevasPeliculas = [...peliculasYSeries, p];
     actualizarPeliculasYSeries(nuevasPeliculas);
     cerrarTM();
@@ -87,20 +62,31 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
       <div className={style.TMBackArea} >
         <div className={style.TMArea}>
           <form>
-            <label className={style.TMLabel}>Titulo: </label>
-            <input className={style.TMInput} type="text" value={mTitulo} onChange={(e) => setMTitulo(e.target.value)}            /><br />
-            <label className={style.TMLabel}>Director: </label>
-            <input className={style.TMInput} type="text" value={mDirector} onChange={(e) => setMDirector(e.target.value)}        /><br />
-            <label className={style.TMLabel}>Estreno: </label>
-            <input className={style.TMInput} type="text" value={mEstreno} onChange={(e) => setMEstreno(e.target.value)}          /><br />
-            <label className={style.TMLabel}>Rating: </label>
-            <input className={style.TMInput} type="text" value={mRating} onChange={(e) => setMRating(e.target.value)}            /><br />
-            <label className={style.TMLabel}>Genero: </label>
-            <input className={style.TMInput} type="text" value={mGenero} onChange={(e) => setMGenero(e.target.value)}            /><br />
-            <label className={style.TMLabel}>Tipo: </label>
-            <input className={style.TMInput} type="text" value={mTipo} onChange={(e) => setMTipo(e.target.value)}                /><br />
-            <label className={style.TMLabel}>Imagen URL: </label>
-            <input className={style.TMInput} type="text" value={mImagen} onChange={(e) => setMImagen(e.target.value)}            /><br />
+            <label className={style.TMLabel}>Titulo: 
+              <input className={style.TMInput} type="text" value={mTitulo} onChange={(e) => setMTitulo(e.target.value)}/></label><br />
+            <label className={style.TMLabel}>Director: 
+              <input className={style.TMInput} type="text" value={mDirector} onChange={(e) => setMDirector(e.target.value)}/></label><br />
+            <label className={style.TMLabel}>Estreno: 
+              <input className={style.TMInput} type="text" value={mEstreno} onChange={(e) => setMEstreno(e.target.value)}/></label><br />
+            <label className={style.TMLabel}>Rating: 
+              <input className={style.TMInput} type="text" value={mRating} onChange={(e) => setMRating(e.target.value)}/></label><br />
+
+            <label className={style.TMLabel}>Genero: 
+              <select name="genero" className={style.TMInput} defaultValue={mGenero} onChange={(e) => setMGenero(e.target.value)}>
+                <option value="Accion">Accion</option>
+                <option value="Belica">Belica</option>
+                <option value="Ciencia Ficcion">Ciencia Ficcion</option>
+                <option value="Comedia">Comedia</option>
+                <option value="Drama">Drama</option>
+                <option value="Terror">Terror</option>
+              </select>
+            </label><br />
+
+
+            <label className={style.TMLabel}>Tipo:
+              <input className={style.TMInput} type="text" value={mTipo} onChange={(e) => setMTipo(e.target.value)}/> </label><br />
+            <label className={style.TMLabel}>Imagen URL: 
+              <input className={style.TMInput} type="text" value={mImagen} onChange={(e) => setMImagen(e.target.value)}/></label><br />
           </form>
           
   
@@ -117,3 +103,7 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
 }
 
 export default TarjetaModificar;
+
+
+/*            <label className={style.TMLabel}>Genero: </label>
+            <input className={style.TMInput} type="text" value={mGenero} onChange={(e) => setMGenero(e.target.value)}            /><br />*/

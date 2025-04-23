@@ -46,7 +46,6 @@ const eliminarPeli = () => {
               </tr>
               <tr>
                 <td colSpan={2} className= {style.estBotones}>
-                  {/*<BotonEMV texto={"Modificar"} visto = {false} accion={() => abrirTM({peOse})} /> */}
                   {!confirmacion ? (
                     <>
                     <BotonEMV texto={"Eliminar"} visto = {false} accion={() => setConfirmacion(true)}/>
@@ -68,7 +67,6 @@ const eliminarPeli = () => {
               </tr>
             </tbody>
           </table>
-          { /* <TarjetaModificar peOse={peOse}/> */}
         </div>
       </div>
     </>
