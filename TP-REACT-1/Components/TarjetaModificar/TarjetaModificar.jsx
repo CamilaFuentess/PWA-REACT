@@ -72,10 +72,8 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
               <input className={style.TMInput} type="text" value={mRating} onChange={(e) => setMRating(e.target.value)}/></label><br />
 
             <label className={style.TMLabel}>Genero: 
-              <select name="genero" className={style.TMInput} defaultValue={mGenero} onChange={(e) => setMGenero(e.target.value)}>
+              <select name="genero" className={style.TMSelect} defaultValue={mGenero} onChange={(e) => setMGenero(e.target.value)}>
                 <option value="Accion">Accion</option>
-                <option value="Belica">Belica</option>
-                <option value="Ciencia Ficcion">Ciencia Ficcion</option>
                 <option value="Comedia">Comedia</option>
                 <option value="Drama">Drama</option>
                 <option value="Terror">Terror</option>
