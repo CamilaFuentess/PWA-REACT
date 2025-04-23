@@ -6,7 +6,7 @@ import TablaDatos from '../TablaDatos/TablaDatos.jsx'
 import TarjetaModificar from '../TarjetaModificar/TarjetaModificar.jsx'
 
 
-const TarjetaResumen = ( {peOse, cerrarTR, peliculasYSeries} ) => {
+const TarjetaResumen = ( {peOse, cerrarTR, peliculasYSeries, actualizarPeliculasYSeries} ) => {
   
   const [peliculas, setPeliculas] = useState(
       peliculasYSeries
@@ -23,7 +23,7 @@ const TarjetaResumen = ( {peOse, cerrarTR, peliculasYSeries} ) => {
           return pYs;
       }
 });
-  setPeliculas(nuevoPeliculas);
+  actualizarPeliculasYSeries(nuevoPeliculas);
   localStorage.setItem('peliculasYSeries', JSON.stringify(nuevoPeliculas));
 }
 

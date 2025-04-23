@@ -74,7 +74,7 @@ const Tarjeta = ({peli, peliculasYSeries, setPeliculasYSeries}) => {
             </div>
             <button onClick={handleTM_A}>---</button>
         </div>
-            {isOpenTR && <TarjetaResumen peOse={peli} cerrarTR={handleTR} peliculasYSeries={peliculasYSeries}/> }
+            {isOpenTR && <TarjetaResumen peOse={peli} cerrarTR={handleTR} peliculasYSeries={peliculasYSeries} actualizarPeliculasYSeries={setPeliculasYSeries}/> }
             {isOpenTM && <TarjetaModificar peOse={peli} cerrarTM={handleTM}  flagAgregar={false} peliculasYSeries={peliculasYSeries} actualizarPeliculasYSeries={setPeliculasYSeries}/> }
             {isOpenTM_A && <TarjetaModificar cerrarTM={handleTM_A}  flagAgregar={true} accionTM={() => agregarPeli({peli}, {peliculasYSeries})}/> }
         </>
