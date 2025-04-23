@@ -65,6 +65,10 @@ const Home = () => {
   const manejarOrden = (valor) => {
     setOrden(valor);
   };
+  const actualizarPeliculasYSeries = (nuevasPeliculas) => {
+    setPeliculasYSeries(nuevasPeliculas);
+    guardar({ pelis: nuevasPeliculas }); 
+  };
   return (
     <div className={style.recuadro}>
       <div className={style.header}> 
@@ -75,7 +79,7 @@ const Home = () => {
     
       <div className={style.contenedorPrincipal}> 
         <div className={style.contenedorPelis}> 
-          <ContenedorPelis filtro={filtro} peliculasYSeries={peliculasYSeries} orden={orden} setPeliculasYSeries={setPeliculasYSeries}/>
+          <ContenedorPelis filtro={filtro} peliculasYSeries={peliculasYSeries} orden={orden} setPeliculasYSeries={actualizarPeliculasYSeries}/>
         </div>
         <div className={style.ordenamiento}> 
           <Ordenamiento manejarOrden={manejarOrden} />

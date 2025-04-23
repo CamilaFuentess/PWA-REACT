@@ -4,7 +4,7 @@ import style from './TarjetaModificar.module.css'
 import BotonEMV from '../Botones/BotonTarjeta/BotonEMV.jsx'
 
 
-const TarjetaResumen = ({peOse, cerrarTM, flagAgregar, peliculasYSeries}) => {
+const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actualizarPeliculasYSeries}) => {
 
   const [mTitulo, setMTitulo] = flagAgregar ? useState() : useState(peOse.titulo);
   const [mDirector, setMDirector] = flagAgregar ? useState() : useState(peOse.director);
@@ -30,14 +30,15 @@ const TarjetaResumen = ({peOse, cerrarTM, flagAgregar, peliculasYSeries}) => {
                   tipo: mTipo,
                   rating: mRating,
                   genero: mGenero,
-              }
+              };
       }else{
           return pYs;
       }
 });
-  setPeliculas(nuevoPeliculas);
+actualizarPeliculasYSeries(nuevoPeliculas);
   localStorage.setItem('peliculasYSeries', JSON.stringify(nuevoPeliculas));
-}
+  cerrarTM();
+};
 
 
   return (
@@ -64,7 +65,7 @@ const TarjetaResumen = ({peOse, cerrarTM, flagAgregar, peliculasYSeries}) => {
   
 
           <BotonEMV texto={"Cerrar"} visto = {false} accion={cerrarTM}/>
-          {(flagAgregar) ? <BotonEMV texto={"Aceptar"} visto = {truee} accion={() => modificarPeli({peOse})}/> :
+          {(flagAgregar) ? <BotonEMV texto={"Aceptar"} visto = {true} accion={() => modificarPeli({peOse})}/> :
              <BotonEMV texto={"Aceptar"} visto = {false} accion={() => modificarPeli({peOse})}/>}
 
 
@@ -74,4 +75,4 @@ const TarjetaResumen = ({peOse, cerrarTM, flagAgregar, peliculasYSeries}) => {
   )
 }
 
-export default TarjetaResumen
+export default TarjetaModificar;

@@ -22,8 +22,7 @@ const ContenedorPelis = ({filtro, peliculasYSeries, orden, setPeliculasYSeries})
   }; 
 
   const aplicarOrden = (lista) => {
-    let resultado = [...lista];  console.log('Orden:', orden);
-    console.log('Datos antes del ordenamiento:', resultado);
+    let resultado = [...lista]; 
   switch (orden) {
     case 'anioAsc':
       resultado.sort((a, b) => b.anio - a.anio);
@@ -46,6 +45,7 @@ const ContenedorPelis = ({filtro, peliculasYSeries, orden, setPeliculasYSeries})
 
   const resultados = filtrar(); 
   const resultadosOrdenados = aplicarOrden(resultados); 
+  
   if (filtro && (filtro.tipo == 'visto' || filtro.tipo == 'novisto')){
     const vistos = aplicarOrden(peliculasYSeries.filter(p=>p.visto));
     const noVistos = aplicarOrden(peliculasYSeries.filter(p=>!p.visto));
@@ -55,7 +55,7 @@ const ContenedorPelis = ({filtro, peliculasYSeries, orden, setPeliculasYSeries})
           <h3>Vistas ({vistos.length})</h3>
           <div className={style.filaHorizontal}>
             {vistos.length > 0
-              ? vistos.map((peli) => <Tarjeta peli={peli} peliculasYSeries={peliculasYSeries} setPeliculasYSeries={setPeliculasYSeries}/>)
+              ? vistos.map((peli) => <Tarjeta key={peli.titulo} peli={peli} peliculasYSeries={peliculasYSeries} setPeliculasYSeries={setPeliculasYSeries}/>)
               : <div className={style.mensajeError}>No hay películas o series vistas.</div>}
           </div>
         </div>
@@ -63,7 +63,7 @@ const ContenedorPelis = ({filtro, peliculasYSeries, orden, setPeliculasYSeries})
           <h3>No vistas ({noVistos.length})</h3>
           <div className={style.filaHorizontal}>
             {noVistos.length > 0
-              ? noVistos.map((peli) => <Tarjeta peli={peli} peliculasYSeries={peliculasYSeries} setPeliculasYSeries={setPeliculasYSeries}/>)
+              ? noVistos.map((peli) => <Tarjeta key={peli.titulo}  peli={peli} peliculasYSeries={peliculasYSeries} setPeliculasYSeries={setPeliculasYSeries}/>)
               : <div className={style.mensajeError}>No hay películas o series no vistas.</div>}
           </div>
         </div>
@@ -78,7 +78,7 @@ const ContenedorPelis = ({filtro, peliculasYSeries, orden, setPeliculasYSeries})
       <h3> Resultados para {filtro.valor} ({resultados.length}) </h3>
     )}
     <div className={style.filaHorizontal}>
-      {resultadosOrdenados.length > 0 ? resultadosOrdenados.map((peli)=><Tarjeta peli={peli} peliculasYSeries={peliculasYSeries} setPeliculasYSeries={setPeliculasYSeries}/>)
+      {resultadosOrdenados.length > 0 ? resultadosOrdenados.map((peli)=><Tarjeta key={peli.titulo}  peli={peli} peliculasYSeries={peliculasYSeries} setPeliculasYSeries={setPeliculasYSeries}/>)
         : <div className={style.mensajeError}>No se encontraron resultados para el filtro seleccionado.</div>}
     </div>
   </div>

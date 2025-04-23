@@ -12,7 +12,7 @@ import TarjetaResumen from '../TarjetaResumen/TarjetaResumen';
 import TarjetaModificar from '../TarjetaModificar/TarjetaModificar'
 
 
-const Tarjeta = ({peli, peliculasYSeries}) => {
+const Tarjeta = ({peli, peliculasYSeries, setPeliculasYSeries}) => {
 
     const [isOpenTR, setIsOpenTR] = useState(false);
     const handleTR = () =>{
@@ -75,7 +75,7 @@ const Tarjeta = ({peli, peliculasYSeries}) => {
             <button onClick={handleTM_A}>---</button>
         </div>
             {isOpenTR && <TarjetaResumen peOse={peli} cerrarTR={handleTR} peliculasYSeries={peliculasYSeries}/> }
-            {isOpenTM && <TarjetaModificar peOse={peli} cerrarTM={handleTM}  flagAgregar={false} peliculasYSeries={peliculasYSeries}/> }
+            {isOpenTM && <TarjetaModificar peOse={peli} cerrarTM={handleTM}  flagAgregar={false} peliculasYSeries={peliculasYSeries} actualizarPeliculasYSeries={setPeliculasYSeries}/> }
             {isOpenTM_A && <TarjetaModificar cerrarTM={handleTM_A}  flagAgregar={true} accionTM={() => agregarPeli({peli}, {peliculasYSeries})}/> }
         </>
     );
