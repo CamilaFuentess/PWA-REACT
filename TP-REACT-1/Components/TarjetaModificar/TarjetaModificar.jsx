@@ -10,8 +10,8 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
   const [mDirector, setMDirector] = flagAgregar ? useState() : useState(peOse.director);
   const [mEstreno, setMEstreno] = flagAgregar ? useState() : useState(peOse.anio);
   const [mRating, setMRating] = flagAgregar ? useState() : useState(peOse.rating);
-  const [mGenero, setMGenero] = flagAgregar ? useState() : useState(peOse.genero);
-  const [mTipo, setMTipo] = flagAgregar ? useState() : useState(peOse.tipo);
+  const [mGenero, setMGenero] = flagAgregar ? useState('Accion') : useState(peOse.genero);
+  const [mTipo, setMTipo] = flagAgregar ? useState('Pelicula') : useState(peOse.tipo);
   const [mImagen, setMImagen] = flagAgregar ? useState() : useState(peOse.imagen);
 
 
@@ -80,7 +80,7 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
               </select>
             </label><br />
             <label className={style.TMLabel}>Tipo: 
-              <select name="tipo" className={style.TMSelect} defaultValue={mTipo} onChange={(e) => setMTipo(e.target.value)}>
+              <select name="tipo" className={style.TMSelect} defaultValue={mTipo}  onChange={(e) => setMTipo(e.target.value)}>
               <option value="Elegir">Elegir</option>
                 <option value="Pelicula">Pelicula</option>
                 <option value="Serie">Serie</option>
@@ -90,8 +90,6 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
               <input className={style.TMInput} type="text" value={mImagen} onChange={(e) => setMImagen(e.target.value)}/></label><br />
           </form>
           
-  
-
           <BotonEMV texto={"Cerrar"} visto = {false} accion={cerrarTM}/>
           {(flagAgregar) ? <BotonEMV texto={"Aceptar"} accion={agregarPeli}/> :
              <BotonEMV texto={"Aceptar"} accion={() => modificarPeli({peOse})}/>}
@@ -104,7 +102,3 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
 }
 
 export default TarjetaModificar;
-
-
-/*            <label className={style.TMLabel}>Genero: </label>
-            <input className={style.TMInput} type="text" value={mGenero} onChange={(e) => setMGenero(e.target.value)}            /><br />*/
