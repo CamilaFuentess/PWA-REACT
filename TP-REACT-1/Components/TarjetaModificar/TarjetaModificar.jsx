@@ -50,6 +50,7 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
                   tipo: mTipo,
                   rating: mRating,
                   genero: mGenero,
+                  imagen: mImagen,
               };
       }else{
           return pYs;
@@ -68,7 +69,7 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
       anio: mEstreno, 
       genero: mGenero,
       rating: mRating, 
-      imagen: "https://es.web.img2.acsta.net/pictures/17/09/29/21/15/4233147.jpg",
+      imagen: mImagen || "https://es.web.img2.acsta.net/pictures/17/09/29/21/15/4233147.jpg",
       visto: false
     };
     console.log("PeliOse: ", p)
@@ -76,8 +77,9 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
     setPeliculas([
       ...peliculas, p,
     ])
-    actualizarPeliculasYSeries(peliculas);
-    //cerrarTM();
+    const nuevasPeliculas = [...peliculasYSeries, p];
+    actualizarPeliculasYSeries(nuevasPeliculas);
+    cerrarTM();
   }
  
   return (
