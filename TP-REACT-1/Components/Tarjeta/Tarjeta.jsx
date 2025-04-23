@@ -27,39 +27,6 @@ const Tarjeta = ({peli, peliculasYSeries, setPeliculasYSeries}) => {
         setIsOpenTM_A(!isOpenTM_A)
     };
   
-    
-    const agregarPeli = (peOse, peliculasYSeries) => {
-        console.log("Hola Agregar: ", {peOse})
-
-      /*  setPeliculasYSeries([
-            ...peliculasYSeries,
-            { peOse }
-          ]);*/
-    }
-/*
-    const [peliculas, setPeliculas] = useState(
-        peliculasYSeries
-    );
-
-    function modificarPeli (peOse) {
-          const nuevoPeliculas = peliculas.map(pYs => {
-            if (pYs.titulo == peOse.peli.titulo){
-                return {
-                        ...pYs,
-                        director: peOse.peli.director,
-                        anio: peOse.peli.anio,
-                        tipo: peOse.peli.tipo,
-                        rating: peOse.peli.rating,
-                        genero: peOse.peli.genero,
-                        visto: true,
-                    }
-            }else{
-                return pYs;
-            }
-    });
-        setPeliculas(nuevoPeliculas);
-        localStorage.setItem('peliculasYSeries', JSON.stringify(nuevoPeliculas));
-    }*/
 
     return (
         <>
@@ -76,7 +43,7 @@ const Tarjeta = ({peli, peliculasYSeries, setPeliculasYSeries}) => {
         </div>
             {isOpenTR && <TarjetaResumen peOse={peli} cerrarTR={handleTR} peliculasYSeries={peliculasYSeries} actualizarPeliculasYSeries={setPeliculasYSeries}/> }
             {isOpenTM && <TarjetaModificar peOse={peli} cerrarTM={handleTM}  flagAgregar={false} peliculasYSeries={peliculasYSeries} actualizarPeliculasYSeries={setPeliculasYSeries}/> }
-            {isOpenTM_A && <TarjetaModificar cerrarTM={handleTM_A}  flagAgregar={true} accionTM={() => agregarPeli({peli}, {peliculasYSeries})}/> }
+            {isOpenTM_A && <TarjetaModificar cerrarTM={handleTM_A}  flagAgregar={true} peliculasYSeries={peliculasYSeries} actualizarPeliculasYSeries={setPeliculasYSeries}/> }
         </>
     );
 };

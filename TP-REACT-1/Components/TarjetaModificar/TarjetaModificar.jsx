@@ -14,10 +14,29 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
   const [mTipo, setMTipo] = flagAgregar ? useState() : useState(peOse.tipo);
   const [mImagen, setMImagen] = flagAgregar ? useState() : useState(peOse.imagen);
 
+  const [peliOse, setPeliOse] = useState([]);
+
+  const crearPeli = () => {
+    console.log("Tit: ", mTitulo)
+    setPeliOse([
+      {
+        titulo: mTitulo,
+        director: mDirector,
+        anio: mEstreno,
+        tipo: mTipo,
+        rating: mRating,
+        genero: mGenero,
+        imagen: mImagen,
+        visto: false,
+      }
+    ]);
+    return peliOse
+  }
 
   const [peliculas, setPeliculas] = useState(
       peliculasYSeries
   );
+  
   function modificarPeli (peOse) {
  
     const nuevoPeliculas = peliculas.map(pYs => {
@@ -34,13 +53,22 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
       }else{
           return pYs;
       }
-});
-actualizarPeliculasYSeries(nuevoPeliculas);
-  localStorage.setItem('peliculasYSeries', JSON.stringify(nuevoPeliculas));
-  cerrarTM();
-};
+    });
+    actualizarPeliculasYSeries(nuevoPeliculas);
+    cerrarTM();
+  };
 
-
+  function agregarPeli () {
+    const p = crearPeli();
+    console.log("PeliOse: ", p)
+    console.log("Peliculas: ", peliculas)
+    setPeliculas([
+      ...peliculas, p
+    ])
+    actualizarPeliculasYSeries(peliculas);
+    //cerrarTM();
+  }
+ 
   return (
     <>
       <div className={style.TMBackArea} >
@@ -65,8 +93,8 @@ actualizarPeliculasYSeries(nuevoPeliculas);
   
 
           <BotonEMV texto={"Cerrar"} visto = {false} accion={cerrarTM}/>
-          {(flagAgregar) ? <BotonEMV texto={"Aceptar"} visto = {true} accion={() => modificarPeli({peOse})}/> :
-             <BotonEMV texto={"Aceptar"} visto = {false} accion={() => modificarPeli({peOse})}/>}
+          {(flagAgregar) ? <BotonEMV texto={"Aceptar"} accion={agregarPeli}/> :
+             <BotonEMV texto={"Aceptar"} accion={() => modificarPeli({peOse})}/>}
 
 
         </div>
