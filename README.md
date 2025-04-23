@@ -24,14 +24,22 @@ La aplicacion permite gestionar un catalogo de peliculas y series de manera senc
 Cuenta con una barra de navegacion que incluye los siguientes filtros:
 inicio, peliculas, series, vista / No vista. 
 
+![Ejemplo](./TP-REACT-1/screenshots/Img1.png)
+
 Al hacer click sobre la imagen de una  pelicula o serie, se abre un cuadro informativo con todos sus detalles: titulo, director, año, rating, genero e url de una imagen. Dentro de este cuadro se encuentran tres botones:
 * Eliminar: elimina la pelicula o serie del catalogo.
-* Marcar como vista/no vista: cambia el estado de visualizacion.
+* Vista/no vista: cambia el estado de visualizacion.
 * Cerrar: cierra la carta del contenido 
+![Ejemplo](./TP-REACT-1/screenshots//Img2.png)
 
 Tambien esta la opcion de hacer click sobre el titulo del contenido y se abre un formulario para modificar los datos de la pelicula/serie. 
-  
-    
+
+![Ejemplo](./TP-REACT-1/screenshots/Img3.png)
+
+Y la opcion agregar esta al costado. 
+![Ejemplo](./TP-REACT-1/screenshots/Img4.png)
+
+
   # <p align="center">Ejercicios del práctico.  
   
     

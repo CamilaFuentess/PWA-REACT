@@ -4,6 +4,7 @@ import BarraDeInicio from '../../Components/BarraDeInicio/BarraDeInicio';
 import Ordenamiento from '../../Components/Ordenamiento/Ordenamiento'; 
 import style from './Home.module.css'; 
 import TarjetaModificar from '../../Components/TarjetaModificar/TarjetaModificar.jsx';
+import Titulo from '../../Components/Titulo/Titulo.jsx';
 
 const peli1 = {
   tipo: "Serie", 
@@ -78,6 +79,7 @@ const Home = () => {
     <div className={style.recuadro}>
       <div className={style.header}> 
         <header className={style.header}>
+          <Titulo texto ={'Cinema'} />
         <BarraDeInicio manejarFiltro={manejarFiltro} />
         </header>
       </div>
