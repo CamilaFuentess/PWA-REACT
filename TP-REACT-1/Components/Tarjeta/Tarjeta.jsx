@@ -39,7 +39,6 @@ const Tarjeta = ({peli, peliculasYSeries, setPeliculasYSeries}) => {
                 <strong>{peli.titulo}</strong> ({peli.anio})<br />
                 <span className={style.tipo}>{peli.tipo}</span>
             </div>
-            <button onClick={handleTM_A}>---</button>
         </div>
             {isOpenTR && <TarjetaResumen peOse={peli} cerrarTR={handleTR} peliculasYSeries={peliculasYSeries} actualizarPeliculasYSeries={setPeliculasYSeries}/> }
             {isOpenTM && <TarjetaModificar peOse={peli} cerrarTM={handleTM}  flagAgregar={false} peliculasYSeries={peliculasYSeries} actualizarPeliculasYSeries={setPeliculasYSeries}/> }

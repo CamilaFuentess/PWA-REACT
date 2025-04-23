@@ -22,7 +22,7 @@
 # <p align="center">Aplicacion: Gestion de peliculas y series.</p> 
 La aplicacion permite gestionar un catalogo de peliculas y series de manera sencilla e intuitiva.
 Cuenta con una barra de navegacion que incluye los siguientes filtros:
-inicio, peliculas, series, vista / No vista, buscar y agregar. 
+inicio, peliculas, series, vista / No vista. 
 
 Al hacer click sobre la imagen de una  pelicula o serie, se abre un cuadro informativo con todos sus detalles: titulo, director, año, rating, genero e url de una imagen. Dentro de este cuadro se encuentran tres botones:
 * Eliminar: elimina la pelicula o serie del catalogo.

@@ -1,11 +1,9 @@
 import {useState} from 'react';
 import ContenedorPelis from '../../Components/ContenedorPelis/ContenedorPelis'; 
 import BarraDeInicio from '../../Components/BarraDeInicio/BarraDeInicio';
-import InputBusqueda from '../../Components/InputBusqueda/InputBusqueda';
-import Mati from './Mati.jsx'
 import Ordenamiento from '../../Components/Ordenamiento/Ordenamiento'; 
 import style from './Home.module.css'; 
-
+import TarjetaModificar from '../../Components/TarjetaModificar/TarjetaModificar.jsx';
 
 const peli1 = {
   tipo: "Serie", 
@@ -69,6 +67,13 @@ const Home = () => {
     setPeliculasYSeries(nuevasPeliculas);
     guardar({ pelis: nuevasPeliculas }); 
   };
+  const [mostrarTarjetaModificar, setMostrarTarjetaModificar] = useState(false);
+  const [modoAgregar, setModoAgregar] = useState(false);
+
+  const abrirFormularioAgregar = () => {
+    setModoAgregar(true);
+    setMostrarTarjetaModificar(true);
+  };
   return (
     <div className={style.recuadro}>
       <div className={style.header}> 
@@ -82,10 +87,20 @@ const Home = () => {
           <ContenedorPelis filtro={filtro} peliculasYSeries={peliculasYSeries} orden={orden} setPeliculasYSeries={actualizarPeliculasYSeries}/>
         </div>
         <div className={style.ordenamiento}> 
+          <div className={style.agregar}>
+            <button onClick={abrirFormularioAgregar}>Agregar pelicula/serie </button>
+          </div>
           <Ordenamiento manejarOrden={manejarOrden} />
-          <div><button onClick={() => guardar({pelis})}>Guardar</button><button onClick={() => cargar()}>Cargar</button></div>
         </div>
       </div>
+      {mostrarTarjetaModificar && (
+        <TarjetaModificar
+          flagAgregar={modoAgregar}
+          cerrarTM={() => setMostrarTarjetaModificar(false)}
+          peliculasYSeries={peliculasYSeries}
+          actualizarPeliculasYSeries={actualizarPeliculasYSeries}
+        />
+      )}
     </div>  
    
 
