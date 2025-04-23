@@ -19,6 +19,7 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
   const crearPeli = () => {
     console.log("Tit: ", mTitulo)
     setPeliOse([
+      ...peliOse,
       {
         titulo: mTitulo,
         director: mDirector,
@@ -59,11 +60,21 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
   };
 
   function agregarPeli () {
-    const p = crearPeli();
+    //const p = crearPeli();
+    const p = {
+      tipo: mTipo, 
+      titulo: mTitulo,
+      director: mDirector, 
+      anio: mEstreno, 
+      genero: mGenero,
+      rating: mRating, 
+      imagen: "https://es.web.img2.acsta.net/pictures/17/09/29/21/15/4233147.jpg",
+      visto: false
+    };
     console.log("PeliOse: ", p)
     console.log("Peliculas: ", peliculas)
     setPeliculas([
-      ...peliculas, p
+      ...peliculas, p,
     ])
     actualizarPeliculasYSeries(peliculas);
     //cerrarTM();
