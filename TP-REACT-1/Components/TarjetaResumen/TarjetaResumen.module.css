@@ -32,6 +32,7 @@ td{
 }
 
 .TRArea{
+    color: #eeebeb;
     border-radius: 2%;
     max-width: 90%;
     max-height: 90%;
@@ -99,4 +100,15 @@ td{
         background: #FFF;
         color: #ff757c;    
     }
+}
+
+.confirmacion {
+    border: 5px solid #cd0505;
+    text-align: center;
+    border-radius: 20px;
+}
+  
+.confirmacion p {
+    color: #eeebeb;
+    margin-bottom: 0.5rem;
 }

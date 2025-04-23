@@ -11,6 +11,8 @@ const TarjetaResumen = ( {peOse, cerrarTR, peliculasYSeries, actualizarPeliculas
   const [peliculas, setPeliculas] = useState(
       peliculasYSeries
   );
+  const [confirmacion, setConfirmacion]=useState(false);
+
   function vistoPeli (peOse) {
  
     const nuevoPeliculas = peliculas.map(pYs => {
@@ -25,7 +27,13 @@ const TarjetaResumen = ( {peOse, cerrarTR, peliculasYSeries, actualizarPeliculas
 });
   actualizarPeliculasYSeries(nuevoPeliculas);
   localStorage.setItem('peliculasYSeries', JSON.stringify(nuevoPeliculas));
-}
+}; 
+
+const eliminarPeli = () => {
+  const nuevasPeliculas = peliculasYSeries.filter(pYs => pYs.titulo !== peOse.titulo);
+  actualizarPeliculasYSeries(nuevasPeliculas);
+  cerrarTR();
+};
 
   return (
     <>
@@ -39,9 +47,23 @@ const TarjetaResumen = ( {peOse, cerrarTR, peliculasYSeries, actualizarPeliculas
               <tr>
                 <td colSpan={2} className= {style.estBotones}>
                   {/*<BotonEMV texto={"Modificar"} visto = {false} accion={() => abrirTM({peOse})} /> */}
-                  <BotonEMV texto={"Eliminar"} visto = {false} />
-                  <BotonEMV texto={"Vista"} visto = {peOse.visto} accion={() => vistoPeli({peOse})}/>
-                  <BotonEMV texto={"Cerrar"} visto = {false} accion={cerrarTR}/>
+                  {!confirmacion ? (
+                    <>
+                    <BotonEMV texto={"Eliminar"} visto = {false} accion={() => setConfirmacion(true)}/>
+                    <BotonEMV texto={"Vista"} visto = {peOse.visto} accion={() => vistoPeli({peOse})}/>
+                    <BotonEMV texto={"Cerrar"} visto = {false} accion={cerrarTR}/>
+                    </>
+                    
+                  ) : (
+                    <div className={style.confirmacion}>
+                        <p> Confirma que quiere eliminar <strong>{peOse.titulo}</strong>?</p>
+                        <div className= {style.estBotones}> 
+                        <BotonEMV texto={"Eliminar"} visto={false} accion={eliminarPeli} />
+                        <BotonEMV texto={"Cerrar"} visto={false} accion={() => setConfirmacion(false)} />
+                        </div>
+                    </div>
+                  )}
+                  
                 </td>
               </tr>
             </tbody>
