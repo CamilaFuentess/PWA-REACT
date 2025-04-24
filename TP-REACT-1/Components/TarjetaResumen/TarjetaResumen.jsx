@@ -8,6 +8,15 @@ import TarjetaModificar from '../TarjetaModificar/TarjetaModificar.jsx'
 
 const TarjetaResumen = ( {peOse, cerrarTR, peliculasYSeries, actualizarPeliculasYSeries} ) => {
   
+
+//peliculas en useState es innecesario
+//no se esta usando realmente para mutar 
+// el estado dentro del componente. 
+// se podria eliminar y usar peliculasYSeries 
+// directamente o mantenerlo solo si en el futuro 
+// va a cambiar internamente.
+//si se queda, hay que hacer setPeliculas al eliminar.
+ 
   const [peliculas, setPeliculas] = useState(
       peliculasYSeries
   );
@@ -49,7 +58,27 @@ const eliminarPeli = () => {
                   {!confirmacion ? (
                     <>
                     <BotonEMV texto={"Eliminar"} visto = {false} accion={() => setConfirmacion(true)}/>
-                    <BotonEMV texto={"Vista"} visto = {peOse.visto} accion={() => vistoPeli({peOse})}/>
+
+                    {/* vistoPeli({peOse}) está mal armado
+                    Le estan pasando un objeto {peOse} en vez de simplemente peOse y adentro acceden mal al .titulo y .visto usando peOse.peOse.
+                
+                    Deberia ser:
+                  <BotonEMV texto={"Vista"} visto={peOse.visto} accion={() => vistoPeli(peOse)} />
+
+                  Y dentro de la funcion:
+
+                  function vistoPeli(peOse) {
+                  const nuevoPeliculas = peliculas.map(pYs => {
+                    if (pYs.titulo === peOse.titulo) {
+                      return { ...pYs, visto: !peOse.visto };
+                    }
+                    return pYs;
+                  });
+                  actualizarPeliculasYSeries(nuevoPeliculas);
+                  localStorage.setItem('peliculasYSeries', JSON.stringify(nuevoPeliculas));
+                }
+                  
+                  */}  <BotonEMV texto={"Vista"} visto = {peOse.visto} accion={() => vistoPeli({peOse})}/>
                     <BotonEMV texto={"Cerrar"} visto = {false} accion={cerrarTR}/>
                     </>
                     

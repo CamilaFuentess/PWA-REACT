@@ -1,10 +1,16 @@
-import React from 'react'
-import { useState } from 'react'
+import React from 'react' //Linea 1
+import { useState } from 'react' //Linea 2. Pueden unir estas dos lineas en una
 import style from './TarjetaModificar.module.css'
 import BotonEMV from '../Botones/BotonTarjeta/BotonEMV.jsx'
 
 
 const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actualizarPeliculasYSeries}) => {
+ 
+  //uso de useState en ternario mal hecho. Esto no funciona correctamente. 
+  // Deberia ser: const [mTitulo, setMTitulo] = useState(flagAgregar ? '' : peOse.titulo);
+  // lo mismo para cada state
+
+
 
   const [mTitulo, setMTitulo] = flagAgregar ? useState() : useState(peOse.titulo);
   const [mDirector, setMDirector] = flagAgregar ? useState() : useState(peOse.director);
@@ -14,6 +20,7 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
   const [mTipo, setMTipo] = flagAgregar ? useState('Pelicula') : useState(peOse.tipo);
   const [mImagen, setMImagen] = flagAgregar ? useState() : useState(peOse.imagen);
 
+//esto state de peliculas esta de mas, pueden usar directamente peliculasYSeries
 
   const [peliculas, setPeliculas] = useState(
       peliculasYSeries
@@ -71,6 +78,7 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
             <label className={style.TMLabel}>Rating: 
               <input className={style.TMInput} type="text" value={mRating} onChange={(e) => setMRating(e.target.value)}/></label><br />
             <label className={style.TMLabel}>Genero: 
+              {/* Creo que en vez de defaultValue pueden usar la prop value directamente con el state del mGenero */}
               <select name="genero" className={style.TMSelect} defaultValue={mGenero} onChange={(e) => setMGenero(e.target.value)}>
                 <option value="Accion">Accion</option>
                 <option value="Comedia">Comedia</option>
@@ -92,7 +100,7 @@ const TarjetaModificar = ({peOse, cerrarTM, flagAgregar, peliculasYSeries, actua
           {(flagAgregar) ? <BotonEMV texto={"Aceptar"} accion={agregarPeli}/> :
              <BotonEMV texto={"Aceptar"} accion={() => modificarPeli({peOse})}/>}
 
-
+{/* No envien {peOse}, eso complica la funcion. Deje lo mismo detallado en otro componente que lo utilizan */}
         </div>
       </div>
     </>

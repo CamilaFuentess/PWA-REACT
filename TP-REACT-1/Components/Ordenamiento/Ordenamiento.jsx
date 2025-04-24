@@ -19,6 +19,7 @@ const Ordenamiento = ({manejarOrden}) => {
             <h1> Ordenar </h1>
             {opciones.map(op=> (
                 <div key={op.id}>
+                    {/* Una cosa de JS: Siempre comparen con === y no con ==, hay memes de los bugs que salen de eso :) */}
                     <input type="radio" name="orden" id={op.id} value={op.value} checked={seleccionado == op.value} onChange={cambio}/>
                     <label htmlFor={op.id}>{op.texto}</label>
                 </div>

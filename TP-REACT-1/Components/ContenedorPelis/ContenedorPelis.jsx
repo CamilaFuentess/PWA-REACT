@@ -45,7 +45,7 @@ const ContenedorPelis = ({filtro, peliculasYSeries, orden, setPeliculasYSeries})
 
   const resultados = filtrar(); 
   const resultadosOrdenados = aplicarOrden(resultados); 
-  
+  //comparen con ===
   if (filtro && (filtro.tipo == 'visto' || filtro.tipo == 'novisto')){
     const vistos = aplicarOrden(peliculasYSeries.filter(p=>p.visto));
     const noVistos = aplicarOrden(peliculasYSeries.filter(p=>!p.visto));
