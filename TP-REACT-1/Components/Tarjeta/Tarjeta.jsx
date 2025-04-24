@@ -1,3 +1,4 @@
+// Borren comentarios asi antes de cada entrega
 // Componente separado del contnedorpelis
 // RECIBE LA INFORMACION DE LA PELICULA A MOSTRAR A TRAVES DE UN ARREGLO
 // contnedorPelis, recibe el filtro del boton y el arreglo de TODAS LAS PELIS 
@@ -22,6 +23,7 @@ const Tarjeta = ({peli, peliculasYSeries, setPeliculasYSeries}) => {
     const handleTM = () =>{
         setIsOpenTM(!isOpenTM)
     };
+ 
     const [isOpenTM_A, setIsOpenTM_A] = useState(false);
     const handleTM_A = () =>{
         setIsOpenTM_A(!isOpenTM_A)

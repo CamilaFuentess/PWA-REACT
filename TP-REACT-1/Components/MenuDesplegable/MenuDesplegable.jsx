@@ -21,7 +21,9 @@ function MenuDesplegable() {
         };
     }, []);
 
+    // Se estan usando classnames aca pero no hay importacion a ningun css
     return (
+
         <div ref={menuRef} style={{ position: 'relative', display: 'inline-block' }}>
         <button onClick={toggleMenu} className="boton">
             Menú ▼

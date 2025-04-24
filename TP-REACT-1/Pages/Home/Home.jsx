@@ -52,7 +52,15 @@ const cargar = () =>{
 }
 
 const Home = () => {
+  //Esto deberia estar dentro de un useEffect con dependencias vacias para mejor performance:
+  //useEffect(() => {
+//   if (cargar() == null) {
+//     guardar(pelis);
+//   }
+// }, []);
+
   if (cargar()==null){
+    //no envien los objetos dentro de objetos,  guardar(pelis) deberia ser suficiente
     guardar({pelis});
   }
   const [filtro, setFiltro] = useState({ tipo: '', valor: '' });

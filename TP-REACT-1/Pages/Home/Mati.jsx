@@ -1,5 +1,8 @@
 
 
+//Cambiar el nombre de este archivo a algo mas cercano a lo que hace "ListadoPelis.jsx"
+//Eliminen todo el codigo comentado que exista antes de entregar
+
 import TarjetaResumen from '../../Components/TarjetaResumen/TarjetaResumen.jsx';
 
 const peli1 = {

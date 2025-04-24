@@ -20,7 +20,8 @@ const BarraInicio = ({ manejarFiltro }) => {
       document.removeEventListener('mousedown', manejarClickFuera);
     };
   }, []);
-
+// ojo aca: estan haciendo manejarFiltro('visto', true) pero despues en el componente de pelis comparan con 'visto' y 'novisto', no se si genera algun bug,
+//pero intenten mantener la consistencia.
   return (
     <div className={style.estiloBarraDeInicio}>
       <button onClick={() => manejarFiltro('tipo', '')}>Inicio</button>

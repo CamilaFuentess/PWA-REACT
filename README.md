@@ -1,4 +1,16 @@
 
+Observaciones generales:
+-Muy buen trabajo. Se nota que entendieron los conceptos claves de componentes y funciones. Buen manejo de responsabilidades. Estructura del proyecto clara y bien modularizada. Usan props de forma correcta y pasan funciones como callbacks.
+
+Posibles mejoras:
+
+- hay algunas inconsistencias menores con doble igualdad ==, nombre de funciones y manejo de objetos.
+- algunas cosas que se podrian unificar o simplificar para tener menos estados y handlers
+- los comentarios podrian estar mas claros o ser eliminados si no aportan
+- algunos imports innecesarios o mal ubicados
+- eliminar archivos que no son parte de la entrega final
+
+Nota: 9
 
 # <p align="center">Universidad Nacional del Comahue</p>
 # <p align="center">Facultad de Informatica</p>
@@ -88,7 +100,7 @@ Es como el "escenario principal" donde se armo y muestro todo lo que compone mi 
 
   ### ¿Para qué sirve?  
 
-  1. Organiza y muestra otros componentes: Dentro de App.js puede tener componentes como <Navbar />, <Footer />, <Home />, etc.  
+  1. Organiza y muestra otros componentes: Dentro de App.js puede tener componentes como <Navbar />, <Footer />, <Home />, (--> estos elementos no se visualizan en el readme )etc.  
 
   2. Lógica de estado principal (opcional): Puedo manejar estados globales o lógicos que afecten varias partes de la app.  
 
