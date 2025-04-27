@@ -19,6 +19,11 @@
 * Fuentealba Dario FAI-4424  
 * Riveiro Matías FAI-4438  
   
+  
+  
+# <p align="center">Trabajo Práctico N° 1</p>  
+  
+  
 # <p align="center">Aplicacion: Gestion de peliculas y series.</p> 
 La aplicacion permite gestionar un catalogo de peliculas y series de manera sencilla e intuitiva.
 Cuenta con una barra de navegacion que incluye los siguientes filtros:
@@ -155,3 +160,74 @@ Con esa línea, el navegador carga los estilos definidos ahí y los aplica a tod
   3. Define scripts que Puedo ejecutar con npm run o yarn.  
   
   4. Contiene configuraciones para herramientas como Babel, ESLint, Vite, etc.  
+  
+  
+  
+# <p align="center">Trabajo Práctico N° 2</p>  
+  
+  
+## <p align="center">Instalación Node.js y npm</p>  
+  
+1. Luego de instalar node.js y npm, verifico sus versiones para ver que estén instalados.  
+![Ejemplo](./TP-REACT-1/ImagenesREADME/Ej7/01.png)  
+  
+2. Ahora hago que me genere la estructura de carpetas, le pongo un nombre al proyecto, un nombre al archivo Package.json, elijo que quiero trabajar con React y con JavaScript + SWC
+![Ejemplo](TP-REACT-1/ImagenesREADME/Ej7/02.png)  
+![Ejemplo](TP-REACT-1/ImagenesREADME/Ej7/Estructura.png)  
+  
+3. Si sale este error es porque no estoy en la carpeta correcta.  
+Acá debo hacer cd TP-REACT-1 para colocarme en la carpeta correcta.  
+![Ejemplo](TP-REACT-1/ImagenesREADME/Ej7/03.png)  
+![Ejemplo](TP-REACT-1/ImagenesREADME/Ej7/04.png)  
+  
+4. Uso npm install para instalar todas las dependencias del proyecto, es decir, las librerías y paquetes que la aplicación necesita para funcionar.
+![Ejemplo](TP-REACT-1/ImagenesREADME/Ej7/05.png)  
+  
+5. Se ejecuta el comando npm run dev para iniciar la aplicacion.   
+![Ejemplo](TP-REACT-1/ImagenesREADME/Ej7/06.png)  
+  
+  
+## <p align="center">Instalación de react-i18next</p>  
+  
+1. Instalación de react-i18next.  
+![Ejemplo](./TP-REACT-1/ImagenesREADME/TP2/01.png)  
+  
+2. Si quiero que las traducciones se cargen desde archivos .json (lo más común)
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/02.png) 
+  
+3. Este i18next-http-backend permite que i18next busque las traducciones desde archivos en nuestro servidor.
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/03.png)  
+  
+  
+## <p align="center">Instalar Tailwind CSS y configurarlo dentro del proyecto</p>  
+  
+1. SIngresar a https://tailwindcss.com/docs/installation/using-vite.  
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/04.png)  
+  
+2. Iniciar la instalación de Tailwind.
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/05.png)  
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/06.png)  
+  
+3. Agrego ésto al script vite.config.ts.   
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/07.png)  
+Antes el script vite.config.ts era así:  
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/08.png)  
+Ahora quedará así:
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/09.png)  
+  
+4. Debo importar el Tailwind a mi script App.css  
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/10.png)  
+Antes estaba así:  
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/11.png)  
+Ahora se verá así:  
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/12.png)  
+  
+5. Uso Tailwind en mi index.html  
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/14.png)  
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/15.png)  
+  
+6. Comenzamos  
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/13.png)  
+  
+7. Verifico que funciona correctamente  
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/16.png)  
