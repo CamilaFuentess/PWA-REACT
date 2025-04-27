@@ -212,7 +212,7 @@ Acá debo hacer cd TP-REACT-1 para colocarme en la carpeta correcta.
 ![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/07.png)  
 Antes el script vite.config.ts era así:  
 ![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/08.png)  
-Ahora quedará así:
+Ahora quedará así:  
 ![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/09.png)  
   
 4. Debo importar el Tailwind a mi script App.css  
