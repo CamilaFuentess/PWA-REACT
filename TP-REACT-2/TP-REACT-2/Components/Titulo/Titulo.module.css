@@ -1,0 +1,11 @@
+.titulo{
+    width: 80%;
+    height: 10%;
+    position: relative;
+    display: block;
+    border: rgb(238, 125, 105) 2px solid;
+    background-color: #651f71;
+    border-radius: 10px;
+
+    
+}

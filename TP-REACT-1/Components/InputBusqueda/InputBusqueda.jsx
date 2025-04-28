@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import style from './InputBusqueda.module.css'; 
-import TarjetaModificar from '../TarjetaModificar/TarjetaModificar'
 
 const InputBusqueda = ({ manejarFiltro }) => {
 

@@ -1,12 +1,5 @@
-// Componente separado del contnedorpelis
-// RECIBE LA INFORMACION DE LA PELICULA A MOSTRAR A TRAVES DE UN ARREGLO
-// contnedorPelis, recibe el filtro del boton y el arreglo de TODAS LAS PELIS 
 
-//ACA IRIA EL POP, MOSTRANDO EL TARJETA RESUMEN. 
-//CUANDO SE AGREGA UNA PELI, SE VA AL LOCALSTORAGE. 
-// seria poner en una funcion el arreglo que esta en el home. para usarlo en el localstorage. 
-import {useState} from 'react';
-import React from "react";
+import React, {useState} from 'react';
 import style from '../ContenedorPelis/ContenedorPelis.module.css'; 
 import TarjetaResumen from '../TarjetaResumen/TarjetaResumen';
 import TarjetaModificar from '../TarjetaModificar/TarjetaModificar'

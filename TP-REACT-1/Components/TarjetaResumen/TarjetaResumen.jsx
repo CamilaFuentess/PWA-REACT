@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import style from './TarjetaResumen.module.css'
 import BotonEMV from '../Botones/BotonTarjeta/BotonEMV.jsx'
 import TablaDatos from '../TablaDatos/TablaDatos.jsx'
