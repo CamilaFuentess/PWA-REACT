@@ -2,12 +2,13 @@ import React from "react";
 import style from './Info.module.css';
 import Titulo from '../../Components/Titulo/Titulo';
 
-const Info = ({articulo}) => {
+const Info = () => {
 
     return (
         
             <div className={style.info}>
-                <Titulo texto={articulo.nombre}></Titulo>
+                <Titulo texto={"Hola"}></Titulo>
+                
 
             </div>
         
