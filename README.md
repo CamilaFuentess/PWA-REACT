@@ -189,6 +189,36 @@ Acá debo hacer cd TP-REACT-1 para colocarme en la carpeta correcta.
   
 ## <p align="center">Instalación de react-i18next</p>  
   
+1. Voy a la página https://www.i18next.com/overview/getting-started  
+![Ejemplo](./TP-REACT-1/ImagenesREADME/TP2/i18n/01.png)  
+  
+2. Copio esto en la consola de VSC. 
+![Ejemplo](./TP-REACT-1/ImagenesREADME/TP2/i18n/02.png)  
+Sucede ésto:  
+![Ejemplo](./TP-REACT-1/ImagenesREADME/TP2/i18n/03.png)  
+  
+3. Ingreso el siguiente comando: npm install i18next react-i18next  
+![Ejemplo](./TP-REACT-1/ImagenesREADME/TP2/i18n/04.png)  
+  
+4. Dentro de la carpeta src, creo el script i18n.js  
+![Ejemplo](./TP-REACT-1/ImagenesREADME/TP2/i18n/05.png)  
+![Ejemplo](./TP-REACT-1/ImagenesREADME/TP2/i18n/06.png)  
+  
+5. Lo importo en main.jsx  
+![Ejemplo](./TP-REACT-1/ImagenesREADME/TP2/i18n/07.png)  
+  
+6. Creo los archivos de translation.  
+  src/locales/en/translation.json  
+  src/locales/es/translation.json  
+![Ejemplo](./TP-REACT-1/ImagenesREADME/TP2/i18n/08.png)  
+  
+7. Agrego contenido a dichos scripts:  
+es/translation.json  
+![Ejemplo](./TP-REACT-1/ImagenesREADME/TP2/i18n/09.png)  
+en/translation.json  
+![Ejemplo](./TP-REACT-1/ImagenesREADME/TP2/i18n/10.png)  
+
+
 1. Instalación de react-i18next.  
 ![Ejemplo](./TP-REACT-1/ImagenesREADME/TP2/01.png)  
   

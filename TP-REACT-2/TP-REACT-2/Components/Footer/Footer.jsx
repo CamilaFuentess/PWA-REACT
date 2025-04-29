@@ -1,12 +1,18 @@
 //import style from './Footer.module.css';
+import { useNavigate } from 'react-router-dom';
 import BotonFooterImagen from '../Botones/BotonFooterImagen/BotonFooterImagen';
 import Logo from '../Logo/Logo';
 import BotonFooter from '../Botones/BotonFooter/BotonFooter';
 import { ROUTES } from '../../const/routes';
 
+import FacebookIcon from '../../Imagenes/Icons/facebook-redondo-negro.png';
+import XIcon from '../../Imagenes/Icons/x-redondo-negro.svg';
+import InstagramIcon from '../../Imagenes/Icons/instagram-redondo-negro.svg';
+import LogoImage from '../../Imagenes/Logo/Logo2.jpg';
 
 const Footer = () => {
 
+    const navigate = useNavigate();
 
     return(
         <footer className="bg-black text-white py-8">
@@ -16,17 +22,17 @@ const Footer = () => {
                     <BotonFooterImagen
                         alt="Logo Facebook"
                         href={ROUTES.facebook}
-                        src="../../Imagenes/Icons/facebook-redondo-negro.png"
+                        src={FacebookIcon}
                     />
                     <BotonFooterImagen
                         alt="Logo x"
                         href={ROUTES.x}
-                        src="../../Imagenes/Icons/x-redondo-negro.svg"
+                        src={XIcon}
                     />
                     <BotonFooterImagen
                         alt="Logo instagram"
                         href={ROUTES.instagram}
-                        src="../../Imagenes/Icons/instagram-redondo-negro.svg"
+                        src={InstagramIcon}
                     />
                 </div>
 
@@ -35,7 +41,7 @@ const Footer = () => {
                     <Logo 
                         alt="Logo blanco"
                         href={ROUTES.inicio}
-                        src="../../Imagenes/Logo/Logo2.jpg"
+                        src={LogoImage}
                     />
                 </div>
 
@@ -43,17 +49,17 @@ const Footer = () => {
                 <div className="flex flex-col items-center gap-2">
                     <BotonFooter
                         texto="Sobre nosotros"
-                        onClick={() => window.location.href = ROUTES.sobreNosotros}
+                        onClick={() => navigate(ROUTES.sobreNosotros)}
                     />
 
                     <BotonFooter
                         texto="Aviso legal"
-                        onClick={() => window.location.href = ROUTES.avisoLegal}
+                        onClick={() => navigate(ROUTES.avisoLegal)}
                     />
 
                     <BotonFooter
                         texto="Ayuda"
-                        onClick={() => window.location.href = ROUTES.ayuda}
+                        onClick={() => navigate(ROUTES.ayuda)}
                     />
                 </div>
 
