@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-//import style from './BarraDeInicio.module.css'; 
 
 const BarraInicio = ({ manejarFiltro }) => {
     const [mostrarSubmenu, setMostrarSubmenu] = useState(false);
@@ -21,7 +20,7 @@ const BarraInicio = ({ manejarFiltro }) => {
     }, []);
 
     return (
-        <div className={style.estiloBarraDeInicio}>
+        <div class="flex bg-[#92af5a] items-center w-full justify-around sticky h-[8vh]">
         <button onClick={() => manejarFiltro('tipo', '')}>Inicio</button>
         <button onClick={() => manejarFiltro('tipo', 'Pelicula')}>Películas</button>
         <button onClick={() => manejarFiltro('tipo', 'Serie')}>Series</button>
@@ -31,7 +30,7 @@ const BarraInicio = ({ manejarFiltro }) => {
             Género {mostrarSubmenu ? '▲' : '▼'}
             </button>
             {mostrarSubmenu && (
-            <div className={style.submenu}>
+            <div class="relative inline-block">
                 {generos.map((g) => (
                 <button key={g} onClick={() => {
                     manejarFiltro('genero', g);
