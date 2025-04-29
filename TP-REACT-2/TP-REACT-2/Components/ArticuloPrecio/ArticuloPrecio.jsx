@@ -1,12 +1,12 @@
 import React from "react";
-import style from './ArticuloPrecio.module.css';
+//import style from './ArticuloPrecio.module.css';
 
 
 const ArticuloPrecio = ({articulo}) => {
 
     return (
-        <div className={style.artPrecioDiv}>
-            <h1 className={style.artPrecioH1}>${articulo.precio}</h1>
+        <div class="bg-sky-500/50 flex">
+            <h1 class="gap-4">${articulo.precio}</h1>
         </div>
         
     );
