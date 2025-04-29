@@ -201,7 +201,7 @@ Acá debo hacer cd TP-REACT-1 para colocarme en la carpeta correcta.
   
 ## <p align="center">Instalar Tailwind CSS y configurarlo dentro del proyecto</p>  
   
-1. SIngresar a https://tailwindcss.com/docs/installation/using-vite.  
+1. Ingresar a https://tailwindcss.com/docs/installation/using-vite.  
 ![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/04.png)  
   
 2. Iniciar la instalación de Tailwind.
@@ -231,3 +231,19 @@ Ahora se verá así:
   
 7. Verifico que funciona correctamente  
 ![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/16.png)  
+  
+    
+  ## <p align="center">Instalar react router DOM</p>  
+  
+1. En la terminal ejecuto npm i react-router-dom.  
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/reactRouterDOM/01.png)  
+  
+2. Debo hacer ésto en el main.jsx.
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/reactRouterDOM/02.png)  
+  
+3. Ésto tengo originalmente en mi main.jsx.   
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/reactRouterDOM/03.png)  
+  
+4. Lo dejo así:  
+![Ejemplo](TP-REACT-1/ImagenesREADME/TP2/reactRouterDOM/04.png)  
+  
