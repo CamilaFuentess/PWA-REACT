@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter} from 'react-router';
 import Home from '../Pages/Home/Home';
 import Info from '../Pages/Info/Info'
 //import SobreNosotros from '../Pages/SobreNosotros/SobreNosotros';
@@ -9,7 +10,14 @@ import { ROUTES } from '../const/routes'
 import './App.css'
 
 function App() {
-  
+  const articulo = {
+    id: 1,
+    nombre: "Memoria",
+    precio: 23,
+    imagen: "https://acdn-us.mitiendanube.com/stores/001/156/703/products/disco-solido-nvme-1tb-wd-black-sn850-con-disipador-m2-gen4-copia-877e7aaa41601763ed17274715886318-1024-1024.webp"
+  }
+
+
   return (
     <div>
       <Info articulo={articulo}></Info>
@@ -17,6 +25,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<Home />} path={ROUTES.home}/>
+          <Route element={<Info />} path={ROUTES.info}/>
 
           {/*Footer*/}
           <Route element={<Facebook />} path={ROUTES.facebook}/>

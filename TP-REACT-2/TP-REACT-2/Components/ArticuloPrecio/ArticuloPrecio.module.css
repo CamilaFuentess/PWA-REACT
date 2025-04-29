@@ -1,0 +1,18 @@
+
+.artPrecioDiv{
+    border: 2px solid red;
+    border-radius: 10px;
+    width: 40%;
+    height: 100px;
+    top: auto;
+    padding: 1%;
+    margin: 1%;
+    justify-items: center;
+    background-color: aqua;
+}
+
+.artPrecioH1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font: 5em sans-serif;
+
+}

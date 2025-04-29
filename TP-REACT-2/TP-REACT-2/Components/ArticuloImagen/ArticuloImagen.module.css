@@ -1,0 +1,15 @@
+
+.artImagenDiv{
+    border: 2px solid red;
+    border-radius: 10px;
+    width: 40%;
+    height: 200px;
+    top: auto;
+    padding: 1%;
+    margin: 1%;
+}
+
+.artImagen{
+    width: 100%;
+    display: flex;
+}

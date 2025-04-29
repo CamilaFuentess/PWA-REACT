@@ -1,5 +1,6 @@
 export const ROUTES = {
     home: "/",
+    info: "/info/info",
 
     //footer
     facebook: "/facebook",
