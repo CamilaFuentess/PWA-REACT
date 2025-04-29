@@ -1,4 +1,3 @@
-//import style from './Footer.module.css';
 import { useNavigate } from 'react-router-dom';
 import BotonFooterImagen from '../Botones/BotonFooterImagen/BotonFooterImagen';
 import Logo from '../Logo/Logo';
