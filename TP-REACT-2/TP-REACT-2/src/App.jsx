@@ -20,21 +20,21 @@ function App() {
 
   return (
     <div>
-      <Info articulo={articulo}></Info>
+      
 
-      <BrowserRouter>
+      <BrowserRouter>     
         <Routes>
           <Route element={<Home />} path={ROUTES.home}/>
-          <Route element={<Info />} path={ROUTES.info}/>
+          <Route element={<Info articulo={articulo}/>} path={ROUTES.info}/>
 
-          {/*Footer*/}
+          {/*Footer
           <Route element={<Facebook />} path={ROUTES.facebook}/>
           <Route element={<X />} path={ROUTES.x}/>
           <Route element={<Instagram />} path={ROUTES.instagram}/>
           <Route element={<Logo />} path={ROUTES.logo}/>
           <Route element={<SobreNosotros />} path={ROUTES.sobreNosotros}/>
           <Route element={<AvisoLegal />} path={ROUTES.avisoLegal}/>
-          <Route element={<Ayuda />} path={ROUTES.ayuda}/>
+          <Route element={<Ayuda />} path={ROUTES.ayuda}/>    */}
         </Routes>
       </BrowserRouter>
     </div>
