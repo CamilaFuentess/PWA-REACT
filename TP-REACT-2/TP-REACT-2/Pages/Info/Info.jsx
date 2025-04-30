@@ -1,5 +1,4 @@
 import React from "react";
-//import style from './Info.module.css';
 import Titulo from '../../Components/Titulo/Titulo';
 import ArticuloImagen from "../../Components/ArticuloImagen/ArticuloImagen";
 import ArticuloPrecio from "../../Components/ArticuloPrecio/ArticuloPrecio";
@@ -9,7 +8,7 @@ const Info = ({articulo}) => {
 
     return (
         
-            <div class="block items-center bg-amber-400 ">
+            <div class="block items-center bg-blue-600 box-border rounded-2xl">
                 <div class="box-border border-4 p-1 rounded-2xl">
                     <Titulo texto={articulo.nombre}></Titulo>
                 </div>
