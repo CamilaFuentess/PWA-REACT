@@ -1,15 +1,13 @@
 import React from 'react';
 
-
-const BotonIdioma = () => {
+const BotonBarra = ({texto}) => {
 
     return(
         <div className="items-center p-2 bg-sky-500/40 self-center box-content rounded-2xl">
-            <img src="../../Imagenes/Icon/españa.png"/>
+            <h1 className="mx-auto">{texto}</h1>
         </div>
+
     )
-};
+}
 
-export default BotonIdioma;
-
-
+export default BotonBarra;
