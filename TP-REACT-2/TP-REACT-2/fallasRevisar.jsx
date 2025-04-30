@@ -12,4 +12,6 @@
     6. Ver el script routes.js
 
     7. ¿El componente Titulo va a ser una imagen o un texto?
+
+    8. Cambiar el nombre de Info a Details 
 */}
