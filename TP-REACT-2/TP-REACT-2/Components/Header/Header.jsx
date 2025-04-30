@@ -1,37 +1,32 @@
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import Logo from '../Logo/Logo';
 import BarraDeInicio from '../BarraDeInicio/BarraDeInicio';
 import { ROUTES } from '../../const/routes';
+//import BotonIdioma from '../../Components...QUE MAS???';
 
 import LogoImage from '../../Imagenes/Logo/Logo1.jpg';
-import TituloImage from '../../Imagenes/Titulo/titulo.png'
 
 const Header = () => {
 
     return(
-        <div className="sticky top-0 z-50 bg-[#1e0c42] grid grid-rows-2 grid-cols-3 gap-4 p-4 items-center">
+        <div className="sticky top-0 z-50 bg-[#1e0c42] grid grid-cols-5 gap-4 p-4 items-center">
 
-            {/*Fila 1, Columna 1: Logo*/}
-            <div className="row-start-1 col-start-1">
+            {/*Columna 1: Logo*/}
+            <div className="col-start-1">
                 <Logo 
                     alt="Logo principal"
-                    href={ROUTES.inicio}
                     src={LogoImage}
                 />
             </div>
 
-            {/*Fila 1, Columnas 2 y 3: Título (ocupa dos columnas)*/}
-            <div className="row-start-1 col-start-2 col-span-2 flex justify-center">
-                <Titulo
-                    alt="Titulo principal"
-                    href={ROUTES.inicio}
-                    src={TituloImage}
-                />
+            {/*Columna 2: BarraDeInicio (ocupa las 3 columnas)*/}
+            <div className="col-start-2 col-span-3 flex justify-center">
+                <BarraDeInicio />
             </div>
             
-            {/*Fila 2: BarraDeInicio (ocupa las 3 columnas)*/}
-            <div className="row-start-2 col-span-3">
-                <BarraDeInicio />
+            {/*Columna 3: Idioma*/}
+            <div className="col-start-5 col-span-1 flex justify-center">
+                {/*<BotonIdioma />*/}
             </div>
             
         </div>

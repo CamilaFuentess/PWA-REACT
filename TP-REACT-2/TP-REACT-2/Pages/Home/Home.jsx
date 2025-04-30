@@ -1,10 +1,10 @@
 //import {useState} from "react";
 import {ROUTES} from '../../const/routes';
-import Header from '../../Components/Header/Header';
-import ContenedorProductos from '../../Components/ContenedorProductos/ContenedorProductos';
-import TarjetaInfo from '../../Components/TarjetaInfo/TarjetaInfo';
-import Ordenamiento from '../../Components/Ordenamiento/Ordenamiento';
-import Footer from '../../Components/Footer/Footer';
+//import Header from '../../Components/Header/Header';
+//import ContenedorProductos from '../../Components/ContenedorProductos/ContenedorProductos';
+//import TarjetaInfo from '../../Components/TarjetaInfo/TarjetaInfo';
+//import Ordenamiento from '../../Components/Ordenamiento/Ordenamiento';
+//import Footer from '../../Components/Footer/Footer';
 
 
 

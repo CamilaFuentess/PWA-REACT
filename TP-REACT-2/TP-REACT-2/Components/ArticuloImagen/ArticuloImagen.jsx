@@ -4,8 +4,8 @@ import React from "react";
 const ArticuloImagen = ({articulo}) => {
 
     return (
-        <div class="">
-            <img src={articulo.imagen} alt="Producto" class="" />
+        <div className="">
+            <img src={articulo.imagen} alt="Producto" className="" />
         </div>
     );
 

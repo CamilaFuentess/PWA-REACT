@@ -20,37 +20,37 @@ const BarraInicio = ({ manejarFiltro }) => {
     }, []);
 
     return (
-        <div class="flex bg-[#92af5a] items-center w-full justify-around sticky h-[8vh]">
+        <div className="flex bg-[#92af5a] items-center w-full justify-around sticky h-[8vh]">
         <button 
-            class="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
+            className="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
             onClick={() => manejarFiltro('tipo', '')}>Inicio
         </button>
 
         <button 
-            class="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
+            className="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
             onClick={() => manejarFiltro('tipo', 'Pelicula')}>Películas
         </button>
 
         <button 
-            class="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
+            className="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
             onClick={() => manejarFiltro('tipo', 'Serie')}>Series
         </button>
 
         <button 
-            class="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
+            className="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
             onClick={() => manejarFiltro('visto', true)}>Visto&nbsp;/&nbsp;No&nbsp;visto
         </button>
 
         <button 
-            class="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
+            className="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
             onClick={() => setMostrarSubmenu((prev) => !prev)}>Género {mostrarSubmenu ? '▲' : '▼'}
         </button>
 
             {mostrarSubmenu && (
-            <div class="relative inline-block">
+            <div className="relative inline-block">
                 {generos.map((g) => (
                 <button 
-                    class="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" key={g} 
+                    className="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" key={g} 
                     onClick={() => {
                         manejarFiltro('genero', g);
                         setMostrarSubmenu(false);

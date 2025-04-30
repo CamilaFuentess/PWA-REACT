@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import BotonFooterImagen from '../Botones/BotonFooterImagen/BotonFooterImagen';
-import Logo from '../Logo/Logo';
+//import Logo from '../Logo/Logo';
 import BotonFooter from '../Botones/BotonFooter/BotonFooter';
 import { ROUTES } from '../../const/routes';
 
@@ -36,13 +36,13 @@ const Footer = () => {
                 </div>
 
                 {/*Columna 2*/}
-                <div className="flex justify-center">
+           {/*     <div className="flex justify-center">
                     <Logo 
                         alt="Logo blanco"
                         href={ROUTES.inicio}
                         src={LogoImage}
                     />
-                </div>
+                </div>*/}
 
                 {/*Columna 3*/}
                 <div className="flex flex-col items-center gap-2">
