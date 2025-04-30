@@ -8,6 +8,7 @@ import Info from '../Pages/Info/Info'
 //import Ayuda from '../Pages/Ayuda/Ayuda';
 import { ROUTES } from '../const/routes'
 import './App.css'
+import Favoritos from '../Pages/Favoritos/Favoritos';
 
 function App() {
   const articulo = {
@@ -26,7 +27,7 @@ function App() {
         <Routes>
           <Route element={<Home />} path={ROUTES.home}/>
           <Route element={<Info articulo={articulo}/>} path={ROUTES.info}/>
-
+          <Route element={<Favoritos/>} path={ROUTES.favoritos} />
           {/*Footer
           <Route element={<Facebook />} path={ROUTES.facebook}/>
           <Route element={<X />} path={ROUTES.x}/>

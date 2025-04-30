@@ -1,6 +1,7 @@
 export const ROUTES = {
     home: "/",
     info: "/info",
+    favoritos: "/favoritos",
 
     //footer
     facebook: "/facebook",
