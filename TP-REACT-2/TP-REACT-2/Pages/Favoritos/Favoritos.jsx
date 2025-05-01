@@ -1,7 +1,15 @@
+import Header from '../../Components/Header/Header';
+import Footer from '../../Components/Footer/Footer';
+
+
 const Favoritos = () => {
     return (
         
-        <h1> hola</h1> 
+        <div>
+            <Header />
+            <h1> Esto es FAVORITOS papá!!!</h1> 
+            <Footer />
+        </div>
     )    
 }
 

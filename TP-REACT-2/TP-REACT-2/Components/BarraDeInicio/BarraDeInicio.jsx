@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BotonBarra from '../Botones/BotonBarra/BotonBarra';
+import DropdownMenu from '../DropdownMenu/DropdownMenu';
 import BotonIdioma from '../Botones/BotonIdioma/BotonIdioma';
 
 const BarraInicio = () => {
@@ -24,12 +25,12 @@ const BarraInicio = () => {
             />
 
             {/*Drop Down*/}
-            <BotonBarra />
+            <DropdownMenu  />
 
             <BotonBarra
             texto="Favoritos" 
             className="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
-            onClick = {() => navigate('/favoritos')}
+            onClick={() => navigate('/favoritos')}
             />
 
             <BotonIdioma 
