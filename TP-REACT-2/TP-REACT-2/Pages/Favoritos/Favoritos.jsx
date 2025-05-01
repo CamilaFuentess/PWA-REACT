@@ -6,9 +6,9 @@ const Favoritos = () => {
     return (
         
         <div>
-            <Header />
+
             <h1> Esto es FAVORITOS papá!!!</h1> 
-            <Footer />
+
         </div>
     )    
 }

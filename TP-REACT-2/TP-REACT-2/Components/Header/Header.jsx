@@ -12,7 +12,7 @@ const Header = () => {
         <div className="sticky top-0 z-50 bg-[#1e0c42] grid grid-cols-5 gap-4 p-4 items-center">
 
             {/*Columna 1: Logo*/}
-            <div className="col-start-1">
+            <div className="col-start-1 w-20">
                 <Logo 
                     alt="Logo principal"
                     src={LogoImage}
@@ -21,7 +21,7 @@ const Header = () => {
 
             {/*Columnas 2 a 5: BarraDeInicio (ocupa las 4 columnas)*/}
             <div className="col-start-2 col-span-4 flex justify-center">
-                <BarraDeInicio />
+            <BarraDeInicio />
             </div>
             
         </div>

@@ -23,23 +23,23 @@ function App() {
 
   return (
     <div className="w-[70%]  justify-self-center">
-      <Header />
-      <BrowserRouter>     
-        <Routes>
-          <Route element={<Home />} path={ROUTES.home}/>
-          <Route element={<Info articulo={articulo}/>} path={ROUTES.info}/>
-          <Route element={<Favoritos/>} path={ROUTES.favoritos} />
-    
-          {/*Footer
-          <Route element={<Facebook />} path={ROUTES.facebook}/>
-          <Route element={<X />} path={ROUTES.x}/>
-          <Route element={<Instagram />} path={ROUTES.instagram}/>
-          <Route element={<Logo />} path={ROUTES.logo}/>
-          <Route element={<SobreNosotros />} path={ROUTES.sobreNosotros}/>
-          <Route element={<AvisoLegal />} path={ROUTES.avisoLegal}/>
-          <Route element={<Ayuda />} path={ROUTES.ayuda}/>    */}
-        </Routes>
-      </BrowserRouter>
+      <Header />  
+
+      <Routes>
+        <Route element={<Home />} path={ROUTES.home}/>
+        <Route element={<Info articulo={articulo}/>} path={ROUTES.info}/>
+        <Route element={<Favoritos/>} path={ROUTES.favoritos} />
+  
+        {/*Footer
+        <Route element={<Facebook />} path={ROUTES.facebook}/>
+        <Route element={<X />} path={ROUTES.x}/>
+        <Route element={<Instagram />} path={ROUTES.instagram}/>
+        <Route element={<Logo />} path={ROUTES.logo}/>
+        <Route element={<SobreNosotros />} path={ROUTES.sobreNosotros}/>
+        <Route element={<AvisoLegal />} path={ROUTES.avisoLegal}/>
+        <Route element={<Ayuda />} path={ROUTES.ayuda}/>    */}
+      </Routes>
+      <Footer />      
  
     </div>
   )

@@ -4,6 +4,8 @@ import BotonBarra from '../Botones/BotonBarra/BotonBarra';
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
 import BotonIdioma from '../Botones/BotonIdioma/BotonIdioma';
 
+
+
 const BarraInicio = () => {
 
     const navigate = useNavigate();
@@ -16,7 +18,7 @@ const BarraInicio = () => {
 
 
     return(
-
+     
         <div className="flex bg-[#92af5a] items-center w-full justify-around sticky h-[8vh]">
             <BotonBarra 
             texto="Inicio"
@@ -39,6 +41,7 @@ const BarraInicio = () => {
             onClick = {alternarIdioma}
             />
         </div>
+        
     );
   };
 

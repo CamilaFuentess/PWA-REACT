@@ -17,10 +17,6 @@ const Home = () => {
 
     return (
         <div className="sticky top-[0] z-0 m-0 bg-[rgb(25, 25, 25)]">
-
-            <div>
-                <Header />
-            </div>
             
             {/*Contenedor principal*/}
             <div className="flex justify-between items-start m-[50] flex-[1] max-w-[100%] gap-[20] bg-black">
@@ -43,9 +39,6 @@ const Home = () => {
 
             </div>
 
-            <div>
-                <Footer />
-            </div>
         </div>      
     );
 
