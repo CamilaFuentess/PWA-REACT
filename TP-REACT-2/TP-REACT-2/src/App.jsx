@@ -9,6 +9,8 @@ import Info from '../Pages/Info/Info'
 import { ROUTES } from '../const/routes'
 import './App.css'
 import Favoritos from '../Pages/Favoritos/Favoritos';
+import Header from '../Components/Header/Header'
+import Footer from '../Components/Footer/Footer';
 
 function App() {
   const articulo = {
@@ -20,14 +22,14 @@ function App() {
 
 
   return (
-    <div>
-      
-
+    <div className="w-[70%]  justify-self-center">
+      <Header />
       <BrowserRouter>     
         <Routes>
           <Route element={<Home />} path={ROUTES.home}/>
           <Route element={<Info articulo={articulo}/>} path={ROUTES.info}/>
           <Route element={<Favoritos/>} path={ROUTES.favoritos} />
+    
           {/*Footer
           <Route element={<Facebook />} path={ROUTES.facebook}/>
           <Route element={<X />} path={ROUTES.x}/>
@@ -38,6 +40,7 @@ function App() {
           <Route element={<Ayuda />} path={ROUTES.ayuda}/>    */}
         </Routes>
       </BrowserRouter>
+ 
     </div>
   )
 }
