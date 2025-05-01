@@ -19,14 +19,9 @@ const Header = () => {
                 />
             </div>
 
-            {/*Columna 2: BarraDeInicio (ocupa las 3 columnas)*/}
-            <div className="col-start-2 col-span-3 flex justify-center">
+            {/*Columnas 2 a 5: BarraDeInicio (ocupa las 4 columnas)*/}
+            <div className="col-start-2 col-span-4 flex justify-center">
                 <BarraDeInicio />
-            </div>
-            
-            {/*Columna 3: Idioma*/}
-            <div className="col-start-5 col-span-1 flex justify-center">
-                {/*<BotonIdioma />*/}
             </div>
             
         </div>

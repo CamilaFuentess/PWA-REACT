@@ -1,25 +1,47 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import BotonBarra from '../Botones/BotonBarra/BotonBarra';
 import BotonIdioma from '../Botones/BotonIdioma/BotonIdioma';
 
 const BarraInicio = () => {
 
+    const navigate = useNavigate();
+
+    const [idioma, setIdioma] = useState('es');
+
+    const alternarIdioma = () => {
+      setIdioma(prev => (prev === 'es' ? 'en' : 'es'));
+    };
+
+
     return(
-            <div className="flex bg-[#92af5a] items-center w-full justify-around sticky h-[8vh]">
-                <BotonBarra 
-                    className="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" />
 
-                <BotonBarra 
-                    className="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" />
+        <div className="flex bg-[#92af5a] items-center w-full justify-around sticky h-[8vh]">
+            <BotonBarra 
+            texto="Inicio"
+            className="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
+            onClick = {() => navigate('/')}
+            />
 
-                <BotonBarra 
-                    className="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" />
+            {/*Drop Down*/}
+            <BotonBarra />
 
-                <BotonIdioma 
-                    className="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" />
-            </div>
+            <BotonBarra
+            texto="Favoritos" 
+            className="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
+            onClick = {() => navigate('/favoritos')}
+            />
+
+            <BotonIdioma 
+            className="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
+            idiomaActual = {idioma}
+            onClick = {alternarIdioma}
+            />
+        </div>
     );
-};
+  };
+
 
 export default BarraInicio;
+
 

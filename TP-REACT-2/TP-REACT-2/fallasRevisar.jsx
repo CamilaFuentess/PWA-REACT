@@ -14,4 +14,6 @@
     7. ¿El componente Titulo va a ser una imagen o un texto?
 
     8. Cambiar el nombre de Info a Details 
+
+    9. Ver las direcciones a las que me llevan los botones en BarraDeInicio
 */}
