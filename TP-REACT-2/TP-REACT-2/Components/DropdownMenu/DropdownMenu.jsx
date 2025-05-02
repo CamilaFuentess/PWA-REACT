@@ -20,9 +20,10 @@ const DropdownMenu = () => {
         {/*Menú desplegable*/}
         {abierto && (
             <div className="absolute top-full mt-2 bg-[#ebeef3] shadow-lg rounded z-10">
-            <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left">Notebooks</button>
-            <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left">PC de escritorio</button>
-            <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left">Componentes</button>
+            <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left">Procesador</button>
+            <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left">Placa de video</button>
+            <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left">Memoria RAM</button>
+            <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left">Almacenamiento</button>
             </div>
         )}
         </div>
