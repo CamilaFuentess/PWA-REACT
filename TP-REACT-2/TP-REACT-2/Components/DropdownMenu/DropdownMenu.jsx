@@ -12,7 +12,7 @@ const DropdownMenu = () => {
     // Cierra el dropdown si se hace clic fuera del mismo
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (menuRef.current && !menuRef.current.contains(event.target)) {
+            if(menuRef.current && !menuRef.current.contains(event.target)){
                 setAbierto(false);
             }
         };
@@ -23,7 +23,7 @@ const DropdownMenu = () => {
         };
     }, []);
 
-    return (
+    return(
         <div className="relative" ref={menuRef}>
             {/* Botón principal */}
             <BotonBarra
