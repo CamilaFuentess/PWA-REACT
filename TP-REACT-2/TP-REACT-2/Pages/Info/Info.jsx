@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Titulo from '../../Components/Titulo/Titulo';
+import InputBusqueda from "../../Components/InputBusqueda/InputBusqueda.jsx";
+import BotonBarra from '../../Components/Botones/BotonBarra/BotonBarra.jsx';
+
 
 
 
@@ -34,13 +37,30 @@ const Info = ({articulo}) => {
     //details("1")
     console.log(computadora);
 
-
+    const onSearchChangeHandler = (valor) => {
+        setSearchValue(valor);
+    };
+    
+    const onSearchClickHandler = () => {
+        getComputadoras();
+    };
+    
     if (computadora === undefined) {
         return <h1>Loading....</h1>;
-      }
+    }
+
+
     return (
         
             <div className="block items-center bg-blue-600 box-border p-4">
+
+                <div>
+                    <InputBusqueda value={searchValue} onChange={onSearchChangeHandler} />
+                    <BotonBarra texto="Buscar Pokémon" onClick={onSearchClickHandler} />
+                    <h1>DETAILS {computadora.name}</h1>
+                    <img src={computadora.sprites.front_default} />
+                </div>
+
                 <div className="box-border border-4 p-1 m-1 rounded-2xl">
                     <Titulo texto={articulo.name}></Titulo>
                 </div>
@@ -59,6 +79,7 @@ const Info = ({articulo}) => {
                         <h1 className="text-2xl text-white">{computadora.modelo}</h1>
                         <h1 className="text-2xl text-white">{computadora.especificaciones}</h1>
                     </div>
+
                 </div>
 
             </div>
@@ -68,3 +89,7 @@ const Info = ({articulo}) => {
 };
 
 export default Info;
+
+
+
+
