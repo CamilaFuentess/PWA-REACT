@@ -12,7 +12,7 @@ import InputBusqueda from "../InputBusqueda/InputBusqueda";
     const ContenedorProductos = ({ productos }) => {
         const [filtro, setFiltro] = useState("");
     
-        if (!productos || !Array.isArray(productos)) {
+        if(!productos || !Array.isArray(productos)){
             return <p>Cargando productos...</p>;
         }
         
