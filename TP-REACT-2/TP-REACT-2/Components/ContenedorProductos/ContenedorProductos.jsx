@@ -13,9 +13,10 @@ import InputBusqueda from "../InputBusqueda/InputBusqueda";
         const [filtro, setFiltro] = useState("");
     
         const filtrados = productos.filter(prod =>
-            prod.name.toLowerCase().includes(filtro.toLowerCase())
+            prod.name.toLowerCase().includes(filtro.toLowerCase()) ||
+            prod.categoria.toLowerCase().includes(filtro.toLowerCase())
         );
-        
+
     if (filtrados.length === 0) {
         return <p>No se encontraron elementos</p>;
     }   

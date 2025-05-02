@@ -1,9 +1,9 @@
 //import {useState} from "react";
 import {ROUTES} from '../../const/routes';
-import Header from '../../Components/Header/Header';
-//import ContenedorProductos from '../../Components/ContenedorProductos/ContenedorProductos';
+//import Header from '../../Components/Header/Header';
+import ContenedorProductos from '../../Components/ContenedorProductos/ContenedorProductos';
 //import TarjetaInfo from '../../Components/TarjetaInfo/TarjetaInfo';
-import Footer from '../../Components/Footer/Footer';
+//import Footer from '../../Components/Footer/Footer';
 
 //import { useTranslation } from 'react-i18next';
 
@@ -21,7 +21,8 @@ const Home = () => {
             {/*Contenedor principal*/}
             <div className="flex justify-between items-start m-[50] flex-[1] max-w-[100%] gap-[20] bg-black">
                 <div className="flex flex-wrap gap-[20]">
-                    {/*<ContenedorProductos />*/}
+                    <ContenedorProductos />
+                    <h1>lalala</h1>
                 </div>
                 
                 {/*<div>
@@ -33,8 +34,8 @@ const Home = () => {
                         {t('button')}
                 </button>*/}
 
-                <div className="bg-green">
-                    {/*<TarjetaInfo />*/}
+                <div>
+                    {/*<ContenedorProductos />*/}
                 </div>
 
             </div>
