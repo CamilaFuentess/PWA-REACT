@@ -7,7 +7,6 @@ import { useLocation } from 'react-router-dom';
 
 
 const Info = () => {
-  //  const { id } = useParams();
     const location = useLocation();
     const id = location.state?.id;
     console.log("id: ", id)
@@ -51,24 +50,8 @@ const Info = () => {
     //}
     
 
-    if (computadora === undefined) {
-        const d = 
-        {
-            id: "1",
-            idComputadora: "1",
-            marca: "AMD",
-            modelo: "Ryzen 5 5600X",
-            fechaLanzamiento: "2020-11-05",
-            especificaciones: [
-              "Socket AM4",
-              "6 núcleos / 12 hilos",
-              "Frecuencia base 3.7GHz",
-              "Frecuencia turbo 4.6GHz",
-              "TDP 65W",
-              "Tecnología de 7nm"
-            ]
-          }
-        return <h1>Loading....</h1>;
+    if (computadora === undefined || detalle === undefined) { 
+        return <h1>Loading...</h1>;
     }
 
 
