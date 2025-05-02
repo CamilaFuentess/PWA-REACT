@@ -9,7 +9,7 @@ const InputBusqueda = ({ onChange, value }) => {
             value={value} 
             onChange={handleChange} 
             placeholder="Buscar producto..."
-            className="p-2 border rounded w-full"
+            className="p-2 border-5 rounded w-full border-[#91adca]"
         />
     );
 };
