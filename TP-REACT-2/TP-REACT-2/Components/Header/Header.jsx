@@ -9,7 +9,7 @@ import LogoImage from '../../Imagenes/Logo/Logo1.jpg';
 const Header = () => {
 
     return(
-        <div className="sticky top-0 z-50 bg-[#1e0c42] grid grid-cols-5 gap-4 p-4 items-center">
+        <div className="sticky top-0 z-50 bg-[#262626] grid grid-cols-5 gap-4 p-4 items-center">
 
             {/*Columna 1: Logo*/}
             <div className="col-start-1 w-20">

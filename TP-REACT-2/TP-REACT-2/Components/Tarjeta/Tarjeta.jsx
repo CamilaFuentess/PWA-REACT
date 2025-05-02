@@ -29,7 +29,7 @@ const Tarjeta = ({ producto }) => {
     };
   
     const clickTarjeta = () => {
-      navigate(`/detalle/`)   //completar con idproducto 
+      navigate(`/info`)   //completar con idproducto 
     }
 
     return (

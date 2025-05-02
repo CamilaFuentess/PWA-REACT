@@ -19,10 +19,10 @@ const BarraInicio = () => {
 
     return(
      
-        <div className="flex bg-[#92af5a] items-center w-full justify-around sticky h-[8vh]">
+        <div className="flex bg-[#262626] items-center w-full justify-around sticky h-[8vh]">
             <BotonBarra 
             texto="Inicio"
-            className="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
+            className="bg-[#262626] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
             onClick = {() => navigate('/')}
             />
 
@@ -31,12 +31,15 @@ const BarraInicio = () => {
 
             <BotonBarra
             texto="Favoritos" 
-            className="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
+            className="bg-[#262626] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
             onClick={() => navigate('/favoritos')}
             />
 
             <BotonIdioma 
-            className="bg-[#92af5a] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
+            className="bg-[#262626] rounded-full cursor-pointer text-base inline-block 
+            border-2 border-[#f9fafc]
+            [box-shadow:0_0_10px_#f9fafc,0_0_6px_#f9fafc]
+            hover:[box-shadow:0_0_15px_#f9fafc,0_0_8px_#f9fafc]"
             idiomaActual = {idioma}
             onClick = {alternarIdioma}
             />

@@ -14,7 +14,7 @@ const Footer = () => {
     const navigate = useNavigate();
 
     return(
-        <footer className="bg-[#1e0c42] text-white py-8">
+        <footer className="bg-[#262626] text-white py-8">
             <div className="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
                 {/*Columna 1*/}
                 <div className="flex flex-col items-center gap-4">
