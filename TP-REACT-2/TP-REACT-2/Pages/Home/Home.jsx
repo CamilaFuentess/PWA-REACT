@@ -13,18 +13,18 @@ import ContenedorProductos from '../../Components/ContenedorProductos/Contenedor
 
 //const { t, i18n } = useTranslation();
 
-const Home = () => {
+{/*const Home = () => {
 
     return (
-        <div className="sticky top-[0] z-0 m-0 bg-[rgb(25, 25, 25)]">
+        <div className="sticky top-[0] z-0 m-0 bg-[rgb(25, 25, 25)]">*/}
             
             {/*Contenedor principal*/}
-            <div className="flex justify-between items-start m-[50] flex-[1] max-w-[100%] gap-[20] bg-black">
+           {/*} <div className="flex justify-between items-start m-[50] flex-[1] max-w-[100%] gap-[20] bg-black">
                 <div className="flex flex-wrap gap-[20]">
                     <ContenedorProductos />
                     <h1>lalala</h1>
                 </div>
-                
+                */}
                 {/*<div>
                     <h1>{t('welcome')}</h1>
                 </div>
@@ -34,15 +34,15 @@ const Home = () => {
                         {t('button')}
                 </button>*/}
 
-                <div>
+               {/* <div> */}
                     {/*<ContenedorProductos />*/}
-                </div>
+             {/*   </div>
 
             </div>
 
         </div>      
     );
 
-};
+};*/}
 
 export default Home;
