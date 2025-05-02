@@ -1,16 +1,34 @@
-import Header from '../../Components/Header/Header';
-import Footer from '../../Components/Footer/Footer';
 
+import ContenedorProductos from "../../Components/ContenedorProductos/ContenedorProductos";
+import Titulo from "../../Components/Titulo/Titulo";
+import { useEffect, useState } from 'react';
 
 const Favoritos = () => {
-    return (
-        
-        <div>
+  const [favoritos, setFavoritos] = useState([]);
 
-            <h1> Esto es FAVORITOS papá!!!</h1> 
+  useEffect(() => {
+    const cargarFavoritos = () => {
+      const favs = JSON.parse(localStorage.getItem('favoritos')) || [];
+      setFavoritos(favs);
+    };
+    cargarFavoritos(); 
+    window.addEventListener("favoritosActualizados", cargarFavoritos);
 
-        </div>
-    )    
-}
+    return () => {
+      window.removeEventListener("favoritosActualizados", cargarFavoritos);
+    };
+  }, []);
 
-export default Favoritos; 
+  return (
+    <div>
+      <Titulo texto={"Favoritos"} /> 
+      {favoritos.length > 0 ? (
+        <ContenedorProductos productos={favoritos} />
+      ) : (
+        <p>No tenés favoritos todavía.</p>
+      )}
+    </div>
+  );
+};
+
+export default Favoritos;
