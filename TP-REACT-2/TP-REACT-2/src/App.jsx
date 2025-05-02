@@ -13,12 +13,21 @@ import Header from '../Components/Header/Header'
 import Footer from '../Components/Footer/Footer';
 
 function App() {
-  const articulo = {
+  const articulo1 = {
     id: 1,
     nombre: "Memoria",
     precio: 23,
     imagen: "https://acdn-us.mitiendanube.com/stores/001/156/703/products/disco-solido-nvme-1tb-wd-black-sn850-con-disipador-m2-gen4-copia-877e7aaa41601763ed17274715886318-1024-1024.webp"
   }
+  const articulo = {
+    id: "1",
+    name: "AMD Ryzen 5 5600X",
+    coverImage: "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/Items/100-100000065BOX_800.jpg",
+    categoria: "Procesador",
+    descripcion: "CPU de 6 núcleos ideal para gaming y tareas exigentes.",
+    precio: 85000
+  }
+
 
 
   return (
