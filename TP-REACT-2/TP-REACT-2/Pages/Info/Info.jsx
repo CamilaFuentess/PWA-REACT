@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Titulo from '../../Components/Titulo/Titulo';
 import { useLocation } from 'react-router-dom';
 import { apiComputadoras, apiDetalles } from "../../services/getApi";
@@ -6,7 +6,6 @@ import { apiComputadoras, apiDetalles } from "../../services/getApi";
 const Info = () => {
     const location = useLocation();
     const id = location.state?.id;
-    console.log("id: ", id)
 
     const [computadora, setComputadora] = useState();
     const [detalle, setDetalle] = useState();
@@ -15,7 +14,11 @@ const Info = () => {
     apiDetalles(setDetalle, id)
                    
     if (computadora === undefined || detalle === undefined) { 
-        return <h1>Loading...</h1>;
+        return (
+            <div className="bg-[#f9fafc] border border-[#e1e8ef] rounded-2xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)] text-center max-w-screen-lg mx-auto">
+            <h1 className="text-6xl font-bold font-mono tracking-widest text-[#262626] text-center mb-4 ">Buscando componente ...</h1>
+        </div>
+        )
     }
 
     return (

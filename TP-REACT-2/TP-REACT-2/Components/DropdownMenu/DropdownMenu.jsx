@@ -1,9 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import BotonBarra from '../Botones/BotonBarra/BotonBarra';
 
 const DropdownMenu = () => {
     const [abierto, setAbierto] = useState(false);
     const menuRef = useRef(null);
+
+    const navigate = useNavigate();
 
     const toggleDropdown = () => {
         setAbierto(!abierto);
@@ -23,6 +26,10 @@ const DropdownMenu = () => {
         };
     }, []);
 
+    const clickTarjeta = (cat) => {
+        navigate(`/categoria`, { state: { cat: cat }});   
+      };
+
     return(
         <div className="relative" ref={menuRef}>
             {/* Botón principal */}
@@ -35,10 +42,10 @@ const DropdownMenu = () => {
             {/* Menú desplegable */}
             {abierto && (
                 <div className="absolute top-full mt-2 bg-[#ebeef3] shadow-lg rounded z-10">
-                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left">Procesador</button>
-                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left">Placa de video</button>
-                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left">Memoria RAM</button>
-                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left">Almacenamiento</button>
+                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickTarjeta("Procesador")}>Procesador</button>
+                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickTarjeta("Placa")}>Placa de video</button>
+                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickTarjeta("Memoria")}>Memoria RAM</button>
+                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickTarjeta("Almacenamiento")}>Almacenamiento</button>
                 </div>
             )}
         </div>
