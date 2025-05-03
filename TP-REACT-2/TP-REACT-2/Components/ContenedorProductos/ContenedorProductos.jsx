@@ -20,24 +20,23 @@ import InputBusqueda from "../InputBusqueda/InputBusqueda";
             prod.name.toLowerCase().includes(filtro.toLowerCase()) ||
             prod.categoria.toLowerCase().includes(filtro.toLowerCase())
         );
-
+/*
     if (filtrados.length === 0) {
         return <p>No se encontraron elementos</p>;
     }   
-    
+    */
     return(
         <div>
             <div className="p-4 m-4">
                 <InputBusqueda value={filtro} onChange={setFiltro} />
-            </div>
-            
-        
+            </div>                 
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-4 mt-8"> 
-
-                
-                {filtrados.map(producto => (
-                    <Tarjeta key={producto.id} producto={producto} />
-                ))}
+                {filtrados.length ? 
+                    filtrados.map(producto => (
+                        <Tarjeta key={producto.id} producto={producto} />
+                    )) :                    
+                    <span className='text-4xl w-2xl'>No hay resultados para: {filtro}</span>
+    }
             </div>
         </div>
     );

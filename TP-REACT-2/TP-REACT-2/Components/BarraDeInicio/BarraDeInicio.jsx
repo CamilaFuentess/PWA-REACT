@@ -23,7 +23,7 @@ const BarraInicio = () => {
             <BotonBarra 
             texto="Inicio"
             className="bg-[#262626] text-white px-4 py-2 rounded cursor-pointer text-base inline-block border-none" 
-            onClick = {() => navigate('/')}
+            onClick = {() => navigate('/home')}
             />
 
             {/*Drop Down*/}
