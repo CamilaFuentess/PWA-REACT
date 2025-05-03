@@ -1,7 +1,6 @@
-const BotonFooter = ({texto, onClick}) => {
+const BotonFooter = ({texto}) => {
     return(
         <button
-            onClick={onClick}
             className="text-white hover:underline transition duration-200 bg-transparent border-none cursor-pointer"
         >
         {texto}

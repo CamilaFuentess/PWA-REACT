@@ -1,11 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Titulo from '../../Components/Titulo/Titulo';
 import { useLocation } from 'react-router-dom';
 import { apiComputadoras, apiDetalles } from "../../services/getApi";
+import Animacion from "../../Components/Animacion/Animacion";
 
 const Info = () => {
     const location = useLocation();
     const id = location.state?.id;
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+        setLoading(false);
+        }, 7000);
+
+        return () => clearTimeout(timer); 
+    }, []);
 
     const [computadora, setComputadora] = useState();
     const [detalle, setDetalle] = useState();
@@ -15,10 +26,8 @@ const Info = () => {
                    
     if (computadora === undefined || detalle === undefined) { 
         return (
-            <div className="bg-[#f9fafc] border border-[#e1e8ef] rounded-2xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)] text-center max-w-screen-lg mx-auto">
-            <h1 className="text-6xl font-bold font-mono tracking-widest text-[#262626] text-center mb-4 ">Buscando componente ...</h1>
-        </div>
-        )
+            <Animacion texto="Cargando..." src={"https://lottie.host/b0948dd4-c963-4263-a185-abcab8b58280/a63R6sEPRz.json"}/>
+        );
     }
 
     return (

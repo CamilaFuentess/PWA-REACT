@@ -1,45 +1,42 @@
 import { useState } from 'react';
 import Tarjeta from "../Tarjeta/Tarjeta";
 import InputBusqueda from "../InputBusqueda/InputBusqueda";
+import Animacion from '../Animacion/Animacion';
 
-{/*const ContenedorProductos = ({productos, filtro=null}) => {
-
-    const [filtro, setFiltro] = useState("");
-    
-    const filtrados = filtro ? productos.filter
-    (prod => prod.name.toLowerCase().includes(filtro.toLowerCase())) : productos;*/}
 
     const ContenedorProductos = ({ productos }) => {
         const [filtro, setFiltro] = useState("");
     
         if(!productos || !Array.isArray(productos)){
-            return <p>Cargando productos...</p>;
+            return (
+                <Animacion texto="Cargando..." src={"https://lottie.host/b0948dd4-c963-4263-a185-abcab8b58280/a63R6sEPRz.json"}/>
+            )
         }
         
         const filtrados = productos.filter(prod =>
             prod.name.toLowerCase().includes(filtro.toLowerCase()) ||
             prod.categoria.toLowerCase().includes(filtro.toLowerCase())
         );
-/*
-    if (filtrados.length === 0) {
-        return <p>No se encontraron elementos</p>;
-    }   
-    */
-    return(
-        <div>
-            <div className="p-4 m-4">
-                <InputBusqueda value={filtro} onChange={setFiltro} />
-            </div>                 
-            <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-4 mt-8"> 
-                {filtrados.length ? 
-                    filtrados.map(producto => (
+
+        return(
+            <div>
+                <div className="p-4 m-4">
+                    <InputBusqueda value={filtro} onChange={setFiltro} />
+                </div>
+                {filtrados.length===0 ? (
+                     <Animacion texto={`No hay resultados para: "${filtro}"`} src={"https://lottie.host/e77a65c3-25d1-423b-9dd6-e6774ff153c3/zGThR5teVM.json"}/> 
+                ) : (
+                    <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-4 mt-8"> 
+    
+                    
+                    {filtrados.map(producto => (
                         <Tarjeta key={producto.id} producto={producto} />
-                    )) :                    
-                    <span className='text-4xl w-2xl'>No hay resultados para: {filtro}</span>
-    }
+                    ))}
+                </div>
+                )}
             </div>
-        </div>
-    );
+        );
+    
 };
 
 export default ContenedorProductos;
