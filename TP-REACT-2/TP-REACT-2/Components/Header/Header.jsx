@@ -12,7 +12,7 @@ const Header = () => {
         <div className="sticky top-0 z-50 bg-[#262626] grid grid-cols-5 gap-4 p-4 items-center">
 
             {/*Columna 1: Logo*/}
-            <div className="col-start-1 w-20">
+            <div className="col-start-1 w-15">
                 <Logo 
                     alt="Logo principal"
                     src={LogoImage}
