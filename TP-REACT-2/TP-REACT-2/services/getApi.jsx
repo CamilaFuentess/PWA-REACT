@@ -1,58 +1,40 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
 
-/*
-const apis = () => {
-   
+export function apiComputadoras (setComputadora, searchValue) {
     const getComputadoras = async () => {
-        const computadorasRes = await fetch(
-            "https://6810f18027f2fdac24136e06.mockapi.io/api/v1/computadoras"
-        );
-        const computadorasParsed = await computadorasRes.json(); 
-        console.log(computadorasParsed);
+        try {
+            const computadoraResultado = await fetch(
+                `https://6810f18027f2fdac24136e06.mockapi.io/api/v1/computadoras/${searchValue}`
+            );
+            const compu = await computadoraResultado.json(); 
+            setComputadora(compu);
+
+        } catch (error){
+            console.log('0020', error);
+        }
     }
-    useEffect(()=> {
-        getComputadoras(); 
-    })
-    
-    
-    const getDetallesComputadora = async () => {
-        const dettaleComputadora = await fetch(
-            "https://6810f18027f2fdac24136e06.mockapi.io/api/v1/detalleComputadoras/1"
-        );
-        const detalleParsed = await dettaleComputadora.json(); 
-        console.log(detalleParsed);
-        
-    }
-    useEffect(()=> {
-        getDetallesComputadora(); 
-    })
-*/
 
-    //const navigate = useNavigate();    //averiguar como funciona y como usarla
-
-    //ejemplo del profe, ver como funca 
-    const details = () => {
-        const [computadora, setComputadora] = useState();
+    useEffect(() => {
+        getComputadoras();
+    }, []);
+}
 
 
-        const getComputadoras = async () => {
+
+export function apiDetalles (setDetalle, searchValue) {
+        const getDetalles = async () => {
             try {
-                const computadoraResultado = await fetch(
-                    `https://6810f18027f2fdac24136e06.mockapi.io/api/v1/computadoras/${busqueda}`
+                const detallesResultado = await fetch(
+                    `https://6810f18027f2fdac24136e06.mockapi.io/api/v1/detalleComputadoras/${searchValue}`
                 );
-                const compu = await computadoraResultado.json(); 
-
-                setComputadora(compu);
+                const deta = await detallesResultado.json(); 
+                setDetalle(deta);
             } catch (error){
                 console.log('0020', error);
             }
         }
-        useEffect(()=> {
-            getComputadoras();
-        })
-        console.log(computadora);
-    }
-
-
-export default details;
+     
+        useEffect(() => {
+            getDetalles();
+        }, []);    
+}
