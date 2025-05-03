@@ -26,7 +26,7 @@ const Tarjeta = ({ producto }) => {
         <div className="relative">
           <img src={producto.imagen} className="w-full h-44 rounded-3xl object-cover"/>
           <div className="absolute top-2 right-4 z-10">
-            <Icono activo={esFavorito} onClick={handleToggleFavorito} />
+            <Icono activo={esFav} onClick={handleToggleFavorito} />
           </div>
         </div>
         <div className="text-center mt-2">
