@@ -3,8 +3,6 @@ import {ROUTES} from '../../const/routes';
 import ContenedorProductos from '../../Components/ContenedorProductos/ContenedorProductos';
 import Titulo from '../../Components/Titulo/Titulo';
 import { useLocation, useParams } from 'react-router-dom';
-import { apiCategoria } from "../../services/getApi";
-import { useLocation } from 'react-router-dom';
 import { apicategory } from "../../services/getApi";
 
 
@@ -18,17 +16,14 @@ const Category = () => {
     const location = useLocation();
     const cat = location.state?.cat;
 
-  const [categoria, setCategoria] = useState();
+  const [category, setCategory] = useState();
   
-  apiCategoria(setCategoria, cat);
-    const [category, setcategory] = useState();
- 
-    apicategory(setcategory, cat)
+  apicategory(setCategory, cat)
 
   return (
     <div>
       <Titulo texto={cat} /> 
-        <ContenedorProductos productos={categoria} />
+        <ContenedorProductos productos={category} />
       
     </div>
   );
