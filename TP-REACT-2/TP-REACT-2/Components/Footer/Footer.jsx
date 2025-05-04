@@ -1,6 +1,5 @@
 import Logo from '../Logo/Logo';
 import BotonFooter from '../Botones/BotonFooter/BotonFooter';
-import LogoImage from '../../Imagenes/Logo/Logo2.jpg';
 
 const Footer = () => {
 
@@ -19,7 +18,7 @@ const Footer = () => {
                 {/*Columna centro*/}
                 <div className="flex flex-col items-center mt-6">
                     <div className='flex flex-col items-center w-20'> 
-                    <Logo className="w-24 sm:w-32"alt="Logo blanco" src={LogoImage}/>
+                    <Logo className="w-24 sm:w-32"alt="Logo blanco" src={"/Imagenes/Logo/Logo2.jpg"}/>
 
                     </div>
                     <hr className="w-24 border-t border-gray-400 my-4" />

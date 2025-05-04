@@ -1,10 +1,5 @@
-//import { useNavigate } from 'react-router-dom';
 import Logo from '../Logo/Logo';
 import BarraDeInicio from '../BarraDeInicio/BarraDeInicio';
-import { ROUTES } from '../../const/routes';
-//import BotonIdioma from '../../Components...QUE MAS???';
-
-import LogoImage from '../../Imagenes/Logo/Logo1.jpg';
 
 const Header = () => {
 
@@ -15,7 +10,7 @@ const Header = () => {
             <div className="w-24">
                 <Logo 
                     alt="Logo principal"
-                    src={LogoImage}
+                    src="/Imagenes/Logo/Logo1.jpg"
                 />
             </div>
 
