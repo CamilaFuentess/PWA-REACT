@@ -29,10 +29,10 @@ const Home = () => {
     return (
         <div>
                     <Titulo texto='Todas las Categorias' /> 
-            <div className="w-300 flex">
+            <div className="p-8 mt-8 mb-12 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
                 {categorias.map((categoria) => {
                     return (
-                        <div><TarjetaCat category={categoria}/> </div>
+                       <TarjetaCat category={categoria}/>
                     );
                 })}
             </div>
