@@ -3,10 +3,10 @@ import ContenedorProductos from "../../Components/ContenedorProductos/Contenedor
 import Titulo from "../../Components/Titulo/Titulo";
 import { useEffect, useState } from 'react';
 import Animacion from "../../Components/Animacion/Animacion";
-
+import { useTranslation } from "react-i18next";
 const Favoritos = () => {
   const [favoritos, setFavoritos] = useState([]);
-
+  const { t } = useTranslation();
   useEffect(() => {
     const cargarFavoritos = () => {
       const favs = JSON.parse(localStorage.getItem('favoritos')) || [];
@@ -22,11 +22,11 @@ const Favoritos = () => {
 
   return (
     <div>
-      <Titulo texto={"Favoritos"} /> 
+      <Titulo texto={t("favorites")} /> 
       {favoritos.length > 0 ? (
         <ContenedorProductos productos={favoritos} />
       ) : (
-       <Animacion texto="No hay favoritos" src="https://lottie.host/e77a65c3-25d1-423b-9dd6-e6774ff153c3/zGThR5teVM.json" />
+       <Animacion texto={t("noFavorites")} src="https://lottie.host/e77a65c3-25d1-423b-9dd6-e6774ff153c3/zGThR5teVM.json" />
       )}
     </div>
   );

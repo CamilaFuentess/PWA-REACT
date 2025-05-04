@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '../../const/routes';
-
+import { useTranslation } from "react-i18next";
 
 const TarjetaCat = ({ category }) => {
     const [esFav, setEsFav] = useState(false);
     const navigate = useNavigate();
-
+    const { t } = useTranslation();
     const clickTarjeta = (cat) => {
       navigate(`${ROUTES.category}`, { state: { cat: cat }});   
     };
@@ -21,7 +21,7 @@ const TarjetaCat = ({ category }) => {
           <div className="text-center mt-2">
             <h3 className="text-base font-semibold text-[#ebeef3]">{category.name}</h3>
             <div className='mt-4 text-center'> 
-              <button className="bg-[#f9fafc] text-[#3c3a3a] font-bold px-6 py-3 rounded-full transition transform hover:scale-105 hover:shadow-lg" onClick={() => clickTarjeta(category.name)}>Ver categoria</button>
+              <button className="bg-[#f9fafc] text-[#3c3a3a] font-bold px-6 py-3 rounded-full transition transform hover:scale-105 hover:shadow-lg" onClick={() => clickTarjeta(category.name)}>{t("viewCategorie")}</button>
             </div>
           </div>
         </div>

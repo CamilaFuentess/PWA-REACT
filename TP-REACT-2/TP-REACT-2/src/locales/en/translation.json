@@ -13,7 +13,15 @@
         "legalNotice": "Legal notice",
         "help": "Help",
         "rightsReserved": "All rights reserved"
-    }
-    
+    },
+    "lookProduct": "Look product...",
+    "viewDetail": "View detail",
+    "viewCategorie": "View category",
+    "loading": "Loading...",
+    "noResults": "No results for: \"{{filtro}}\"", 
+    "noFavorites": "There is no favorites",
+    "brand": "Brand", 
+    "model": "Model", 
+    "specifications": "Specifications"
 }
 

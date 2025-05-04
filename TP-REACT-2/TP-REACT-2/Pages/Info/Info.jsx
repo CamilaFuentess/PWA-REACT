@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Titulo from '../../Components/Titulo/Titulo';
 import { apiComputadoras, apiDetalles } from "../../services/getApi";
 import Animacion from "../../Components/Animacion/Animacion";
-
+import { useTranslation } from "react-i18next";
 import Icono from '../../Components/Icono/Icono';
 import { getFavoritos, esFavorito, toggleFavorito } from '../../src/utils/favoritos';
 
@@ -11,6 +11,7 @@ const Info = () => {
 
     const location = useLocation();
     const id = location.state?.id;
+    const { t } = useTranslation();
 
     const [loading, setLoading] = useState(true);
 
@@ -36,7 +37,7 @@ const Info = () => {
                    
     if (computadora === undefined || detalle === undefined) { 
         return (
-            <Animacion texto="Cargando..." src={"https://lottie.host/b0948dd4-c963-4263-a185-abcab8b58280/a63R6sEPRz.json"}/>
+            <Animacion texto={t("loading")} src={"https://lottie.host/b0948dd4-c963-4263-a185-abcab8b58280/a63R6sEPRz.json"}/>
         );
     }else{
         const handleToggleFavorito = () => {
@@ -59,10 +60,10 @@ const Info = () => {
                             <h2 className=" text-4xl font-bold text-[#4a5c71] mb-4">${computadora.price}</h2>  
                             <div className="box-border size-30% rounded-2xl m-1">
                                 <h1 className="text-xl font-semibold text-[#4a5c71] mb-2">{computadora.description}</h1>
-                                <h1 className="text-xl text-[#4a5c71] mb-2">Marca: {detalle.brand}</h1>
-                                <h1 className="text-xl text-[#4a5c71] mb-2">Modelo: {detalle.model}</h1>
+                                <h1 className="text-xl text-[#4a5c71] mb-2">{t("brand")}:{detalle.brand}</h1>
+                                <h1 className="text-xl text-[#4a5c71] mb-2">{t("model")}: {detalle.model}</h1>
                                 <div className="mt-4">
-                                    <h3 className="text-xl font-semibold text-[#4a5c71] mb-2">Especificaciones:</h3>
+                                    <h3 className="text-xl font-semibold text-[#4a5c71] mb-2">{t("specifications")}: </h3>
                                     <ul className="list-disc list-inside text-[#5e6c7c]">
                                         {detalle.specifications.map((item, n) => (
                                         <li key={n} className="text-md">{item}</li>

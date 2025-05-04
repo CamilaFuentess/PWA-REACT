@@ -14,7 +14,14 @@
         "legalNotice": "Aviso legal",
         "help": "Ayuda",
         "rightsReserved": "Todos los derechos reservados"
-    }
-    
-
+    },
+    "lookProduct": "Buscar producto...",
+    "viewDetail": "Ver detalle",
+    "viewCategorie": "Ver categoría", 
+    "loading": "Cargando...",
+    "noResults": "No hay resultados para: \"{{filtro}}\"", 
+    "noFavorites": "No hay favoritos",
+    "brand": "Marca", 
+    "model": "Modelo",
+    "specifications": "Especificaciones"
 }
