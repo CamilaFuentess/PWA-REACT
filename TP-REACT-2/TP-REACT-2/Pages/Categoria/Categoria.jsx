@@ -19,7 +19,6 @@ const Categoria = () => {
  
     apiCategoria(setCategoria, cat)
 
-  
     return (
       <div>
         <Titulo texto={cat} /> 

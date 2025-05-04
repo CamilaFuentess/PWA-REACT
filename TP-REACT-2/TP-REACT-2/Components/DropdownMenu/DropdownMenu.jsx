@@ -16,7 +16,7 @@ const DropdownMenu = () => {
     useEffect(() => {
         const handleClickOutside = (event) => {
             if(menuRef.current && !menuRef.current.contains(event.target)){
-                setAbierto(false);
+                setAbierto(false);                
             }
         };
 
@@ -26,7 +26,8 @@ const DropdownMenu = () => {
         };
     }, []);
 
-    const clickTarjeta = (cat) => {
+    const clickBoton = (cat) => {
+        setAbierto(false);
         navigate(`/categoria`, { state: { cat: cat }});   
       };
 
@@ -42,10 +43,10 @@ const DropdownMenu = () => {
             {/* Menú desplegable */}
             {abierto && (
                 <div className="absolute top-full mt-2 bg-[#ebeef3] shadow-lg rounded z-10">
-                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickTarjeta("Procesador")}>Procesador</button>
-                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickTarjeta("Placa")}>Placa de video</button>
-                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickTarjeta("Memoria")}>Memoria RAM</button>
-                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickTarjeta("Almacenamiento")}>Almacenamiento</button>
+                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickBoton("Procesador")}>Procesador</button>
+                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickBoton("Placa")}>Placa de video</button>
+                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickBoton("Memoria")}>Memoria RAM</button>
+                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickBoton("Almacenamiento")}>Almacenamiento</button>
                 </div>
             )}
         </div>

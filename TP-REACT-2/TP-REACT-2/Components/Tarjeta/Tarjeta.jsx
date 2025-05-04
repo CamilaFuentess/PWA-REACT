@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import Icono from '../Icono/Icono';
 import { useNavigate } from 'react-router-dom';
+import Icono from '../Icono/Icono';
 import { getFavoritos, esFavorito, toggleFavorito } from '../../src/utils/favoritos';
 
 const Tarjeta = ({ producto }) => {
