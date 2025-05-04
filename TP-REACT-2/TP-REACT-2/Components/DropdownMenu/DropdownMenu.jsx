@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import {ROUTES} from '../../const/routes';
 import BotonBarra from '../Botones/BotonBarra/BotonBarra';
 import { useTranslation } from 'react-i18next';
 
@@ -29,7 +30,7 @@ const DropdownMenu = () => {
 
     const clickBoton = (cat) => {
         setAbierto(false);
-        navigate(`/category`, { state: { cat: cat }});   
+        navigate(`${ROUTES.category}`, { state: { cat: cat }});   
       };
 
     return(

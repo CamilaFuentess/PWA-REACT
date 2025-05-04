@@ -54,3 +54,44 @@ export function apicategory (setcategory, searchValue) {
         getcategory();
     }, []);    
 }
+
+
+
+
+export function apiComponentesPaginado (setComponentes, searchValue, pagina, limite) {
+    const getComponentes = async () => {
+        try {
+            const componenteResultado = await fetch(
+                `https://6810f18027f2fdac24136e06.mockapi.io/api/v1/computadoras/${searchValue}&&page=${pagina}&&limit=${limite}`
+            );
+            const compo = await componenteResultado.json(); 
+            setComponentes(compo);
+
+        } catch (error){
+            console.log('0020', error);
+        }
+    }
+
+    useEffect(() => {
+        getComponentes();
+    }, []);
+}
+
+export function apiCompPaginadoCat (setComponentes, searchValue, cat, pagina, limite) {
+    const getComponentes = async () => {
+        try {
+            const componenteResultado = await fetch(
+                `https://6810f18027f2fdac24136e06.mockapi.io/api/v1/computadoras/?${cat}=${searchValue}&&page=${pagina}&&limit=${limite}`
+            );
+            const compo = await componenteResultado.json(); 
+            setComponentes(compo);
+
+        } catch (error){
+            console.log('0020', error);
+        }
+    }
+
+    useEffect(() => {
+        getComponentes();
+    }, []);
+}

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ROUTES } from '../../const/routes';
 
 
 const TarjetaCat = ({ category }) => {
@@ -7,7 +8,7 @@ const TarjetaCat = ({ category }) => {
     const navigate = useNavigate();
 
     const clickTarjeta = (cat) => {
-      navigate(`/category`, { state: { cat: cat }});   
+      navigate(`${ROUTES.category}`, { state: { cat: cat }});   
     };
 
     return (

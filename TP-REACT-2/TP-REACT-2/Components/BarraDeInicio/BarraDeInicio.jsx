@@ -5,6 +5,7 @@ import BotonBarra from '../Botones/BotonBarra/BotonBarra';
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
 import BotonIdioma from '../Botones/BotonIdioma/BotonIdioma';
 import { Player } from '@lottiefiles/react-lottie-player';
+import { ROUTES } from '../../const/routes';
 
 
 const BarraInicio = () => {
@@ -32,7 +33,7 @@ const BarraInicio = () => {
             <BotonBarra 
             texto={t("home")} 
             className="text-white px-4 py-2" 
-            onClick = {() => navigate('/home')}
+            onClick = {() => navigate(`${ROUTES.home}`)}
             />
 
             {/*Drop Down*/}
@@ -41,7 +42,7 @@ const BarraInicio = () => {
             <BotonBarra
             texto={t("favorites")} 
             className="text-white px-4 py-2" 
-            onClick={() => navigate('/favoritos')}
+            onClick={() => navigate(`${ROUTES.favoritos}`)}
             />
 
             <BotonIdioma 

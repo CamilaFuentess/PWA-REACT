@@ -39,9 +39,6 @@ const Info = () => {
             <Animacion texto="Cargando..." src={"https://lottie.host/b0948dd4-c963-4263-a185-abcab8b58280/a63R6sEPRz.json"}/>
         );
     }else{
-
-
-
         const handleToggleFavorito = () => {
           const nuevoEstado = toggleFavorito(computadora); 
           setEsFav(nuevoEstado);

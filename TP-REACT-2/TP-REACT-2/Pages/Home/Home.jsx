@@ -20,21 +20,24 @@ const categorys = [
 const Home = () => {
     
 const { t } = useTranslation();
+
+
+
   
-    return (
-        <div>
-                    <Titulo texto={t(`allCategories`)} /> 
-            <div className="p-8 mt-8 mb-12 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-                {categorys.map((categoria) => {
-                    return (
-                      <TarjetaCat category={{ 
-                        ...categoria, name: t(categoria.name) }} 
-                    />
-                    );
-                })}
-            </div>
+  return (
+      <div>
+        <Titulo texto={t(`allCategories`)} /> 
+        <div className="p-8 mt-8 mb-12 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+              {categorys.map((categoria) => {
+                  return (
+                    <TarjetaCat category={{ 
+                      ...categoria, name: t(categoria.name) }} 
+                  />
+                  );
+              })}
         </div>
-      );
+      </div>
+    );
 
 };
 
