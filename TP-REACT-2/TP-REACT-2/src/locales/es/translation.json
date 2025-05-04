@@ -1,34 +1,20 @@
 {
-    "Home": "Inicio",
-    "Films": "Películas",
-    "Series": "Serie",
-    "Seen/Unseen": "Visto / No visto",
-    "Gender": "Género",
-    "Action": "Acción",
-    "Comedy": "Comedia",
-    "Drama": "Drama",
-    "Terror": "Terror",
-    "Search by title or director": "Buscar por título o director",
-    "Search": "Buscar",
-    "Add movie/TV show": "Agregar película/serie",
-    "Year": "Año",
-    "Rating": "Rating",
-    "Title": "Título",
-    "Director": "Director",
-    "Type": "Tipo",
-    "Premiere": "Estreno",
-    "Eliminate": "Eliminar",
-    "Close": "Cerrar",
-    "Seen": "Visto",
-    "Unseen": "No visto",
-    "Order": "Ordenar",
-
-    "Favorites": "Favoritos",
-    "View Detail": "Ver detalles",
-    "Categories": "Categorías",
-    "About us": "Sobre nosotros",
-    "Legal notice": "Aviso legal",
-    "Help": "Ayuda"
+    
+    "allCategories": "Todas las Categorías",
+    "processor": "Procesador", 
+    "memory": "Memoria", 
+    "graphicsCard": "Placa de video", 
+    "storage": "Almacenamiento",
+    "home": "Inicio", 
+    "favorites": "Favoritos",
+    "categories": "Categorías", 
+    "footer": {
+        "innovatingSince": "Innovando desde",
+        "aboutUs": "Sobre nosotros",
+        "legalNotice": "Aviso legal",
+        "help": "Ayuda",
+        "rightsReserved": "Todos los derechos reservados"
+    }
+    
 
 }
-

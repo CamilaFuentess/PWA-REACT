@@ -1,5 +1,5 @@
 import Logo from '../Logo/Logo';
-import BarraDeInicio from '../BarraDeInicio/BarraDeInicio';
+import BarraInicio from '../BarraDeInicio/BarraDeInicio';
 
 const Header = () => {
 
@@ -16,7 +16,7 @@ const Header = () => {
 
             {/*Columnas 2 a 5: BarraDeInicio (ocupa las 4 columnas)*/}
             <div className="flex-grow">
-            <BarraDeInicio />
+            <BarraInicio />
             </div>
             
         </div>

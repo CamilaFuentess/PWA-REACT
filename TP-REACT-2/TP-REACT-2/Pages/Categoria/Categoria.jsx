@@ -3,7 +3,7 @@ import {ROUTES} from '../../const/routes';
 import ContenedorProductos from '../../Components/ContenedorProductos/ContenedorProductos';
 import Titulo from '../../Components/Titulo/Titulo';
 import { useLocation } from 'react-router-dom';
-import { apiCategoria } from "../../services/getApi";
+import { apicategory } from "../../services/getApi";
 
 
 
@@ -11,22 +11,22 @@ import { apiCategoria } from "../../services/getApi";
 
 //const { t, i18n } = useTranslation();
 
-const Categoria = () => {
+const Category = () => {
     const location = useLocation();
     const cat = location.state?.cat;
 
-    const [categoria, setCategoria] = useState();
+    const [category, setcategory] = useState();
  
-    apiCategoria(setCategoria, cat)
+    apicategory(setcategory, cat)
 
     return (
       <div>
         <Titulo texto={cat} /> 
-          <ContenedorProductos productos={categoria} />
+          <ContenedorProductos productos={category} />
        
       </div>
     );
 
 };
 
-export default Categoria;
+export default Category;

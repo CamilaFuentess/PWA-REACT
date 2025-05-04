@@ -37,20 +37,20 @@ export function apiDetalles (setDetalle, searchValue) {
         }, []);    
 }
 
-export function apiCategoria (setCategoria, searchValue) {
-    const getCategoria = async () => {
+export function apicategory (setcategory, searchValue) {
+    const getcategory = async () => {
         try {
-            const categoriaResultado = await fetch(
-                `https://6810f18027f2fdac24136e06.mockapi.io/api/v1/computadoras/?categoria=${searchValue}`
+            const categoryResultado = await fetch(
+                `https://6810f18027f2fdac24136e06.mockapi.io/api/v1/computadoras/?category=${searchValue}`
             );
-            const deta = await categoriaResultado.json(); 
-            setCategoria(deta);
+            const deta = await categoryResultado.json(); 
+            setcategory(deta);
         } catch (error){
             console.log('0020', error);
         }
     }
  
     useEffect(() => {
-        getCategoria();
+        getcategory();
     }, []);    
 }

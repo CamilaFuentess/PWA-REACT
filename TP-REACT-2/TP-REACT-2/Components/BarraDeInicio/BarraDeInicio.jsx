@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import BotonBarra from '../Botones/BotonBarra/BotonBarra';
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
 import BotonIdioma from '../Botones/BotonIdioma/BotonIdioma';
@@ -10,10 +11,12 @@ const BarraInicio = () => {
 
     const navigate = useNavigate();
     const [menuAbierto, setMenuAbierto] = useState(false);
-    const [idioma, setIdioma] = useState('es');
-
+    const { t , i18n } = useTranslation();
+    const idiomaActual = i18n.language || 'es';
+    
     const alternarIdioma = () => {
-      setIdioma(prev => (prev === 'es' ? 'en' : 'es'));
+      const nuevoIdioma = idiomaActual === 'es' ? 'en' : 'es';
+      i18n.changeLanguage(nuevoIdioma);
     };
 
 
@@ -27,7 +30,7 @@ const BarraInicio = () => {
         </div>
         <div className={`${menuAbierto ? 'flex' : 'hidden'} sm:flex flex-col sm:flex-row items-center justify-end sm:justify-around w-full mt-2 sm:mt-0`}>
             <BotonBarra 
-            texto="Inicio"
+            texto={t("home")} 
             className="text-white px-4 py-2" 
             onClick = {() => navigate('/home')}
             />
@@ -36,7 +39,7 @@ const BarraInicio = () => {
             <DropdownMenu  />
 
             <BotonBarra
-            texto="Favoritos" 
+            texto={t("favorites")} 
             className="text-white px-4 py-2" 
             onClick={() => navigate('/favoritos')}
             />
@@ -46,7 +49,7 @@ const BarraInicio = () => {
             border-2 border-[#f9fafc]
             [box-shadow:0_0_10px_#f9fafc,0_0_6px_#f9fafc]
             hover:[box-shadow:0_0_15px_#f9fafc,0_0_8px_#f9fafc]"
-            idiomaActual = {idioma}
+            idiomaActual = {idiomaActual}
             onClick = {alternarIdioma}
             />
         </div>

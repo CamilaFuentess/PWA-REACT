@@ -1,8 +1,9 @@
 import Logo from '../Logo/Logo';
 import BotonFooter from '../Botones/BotonFooter/BotonFooter';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
-
+    const { t } = useTranslation();
 
     return(
         <footer className="bg-[#262626] text-white py-4">
@@ -10,9 +11,9 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left" > 
                     {/*Columna  izquierda*/}
                     <div className="flex flex-col justify-center md:items-start items-center text-center md:text-left space-y-1">
-                        <p>Innovando desde el 2022</p>
+                        <p>{t("footer.innovatingSince")} 2022</p>
                         <p>Neuquen, Argentina</p>
-                        <p>RealTech Systems</p>
+                        <p>RealTech</p>
                     </div>
 
                 {/*Columna centro*/}
@@ -44,17 +45,17 @@ const Footer = () => {
                     </div>
                       {/*Columna derecha*/}
                 <div className="flex flex-col items-center md:items-end justify-center space-y-2">
-                    <BotonFooter texto="Sobre nosotros" />
+                    <BotonFooter texto={t("footer.aboutUs")} />
 
-                    <BotonFooter texto="Aviso legal" />
+                    <BotonFooter texto={t("footer.legalNotice")} />
 
-                    <BotonFooter texto="Ayuda" />
+                    <BotonFooter texto={t("footer.help")}  />
                 </div>
                 </div>
                 
 
                 <div className="mt-10 text-center text-xs text-gray-400">
-                    <p>&copy; {new Date().getFullYear()} RealTech. Todos los derechos reservados.</p>
+                    <p>&copy; {new Date().getFullYear()} RealTech. {t("footer.rightsReserved")}</p>
                 </div>
             </div>
         </footer>

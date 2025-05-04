@@ -15,7 +15,7 @@ import Animacion from '../Animacion/Animacion';
         
         const filtrados = productos.filter(prod =>
             prod.name.toLowerCase().includes(filtro.toLowerCase()) ||
-            prod.categoria.toLowerCase().includes(filtro.toLowerCase())
+            prod.category.toLowerCase().includes(filtro.toLowerCase())
         );
 
         return(
