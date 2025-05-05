@@ -9,15 +9,6 @@ import { useTranslation } from 'react-i18next';
         const [cargando, setCargando] = useState(true);
         const { t, i18n } = useTranslation(); 
 
-        const sinonimos = { //para buscar en ingles
-            processor: "Procesador",
-            memory: "Memoria RAM",
-            graphicscard: "Placa de video",
-            graphics: "Placa de video",
-            storage: "Almacenamiento",
-            ram: "Memoria RAM",
-        };
-
         useEffect(() => {
             if (productos && Array.isArray(productos)) {
                 const timeout = setTimeout(() => {
@@ -29,9 +20,7 @@ import { useTranslation } from 'react-i18next';
         }, [productos]);
 
         const normalizarTexto = (texto) => texto.toLowerCase();
-        const filtroTraducido =
-        i18n.language === "en" ? sinonimos[filtro.toLowerCase()] || filtro : filtro;
-
+       
         if(!productos || !Array.isArray(productos)){
             return (
                 <Animacion texto={t("loading")} src={"https://lottie.host/b0948dd4-c963-4263-a185-abcab8b58280/a63R6sEPRz.json"}/>
@@ -40,7 +29,7 @@ import { useTranslation } from 'react-i18next';
         
         const filtrados = productos.filter(prod =>
             normalizarTexto(prod.name).includes(filtro.toLowerCase()) ||
-            normalizarTexto(prod.category).includes(normalizarTexto(filtroTraducido))
+            normalizarTexto(prod.category).includes(filtro.toLowerCase())
         );
 
         const noResults = filtrados.length === 0 && filtro.length > 0;

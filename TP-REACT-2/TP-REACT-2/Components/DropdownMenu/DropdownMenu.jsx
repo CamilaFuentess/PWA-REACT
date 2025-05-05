@@ -46,10 +46,10 @@ const DropdownMenu = ({cerrarMenu}) => {
             {/* Menú desplegable */}
             {abierto && (
                 <div className="absolute top-full mt-2 bg-[#ebeef3] shadow-lg rounded z-10">
-                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickBoton("Procesador")}>{t("processor")}</button>
-                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickBoton("Placa")}>{t("graphicsCard")}</button>
-                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickBoton("Memoria")}>{t("memory")}</button>
-                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickBoton("Almacenamiento")}>{t("storage")}</button>
+                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickBoton("Procesador")}>{t("Procesador")}</button>
+                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickBoton("Placa")}>{t("Placa")}</button>
+                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickBoton("Memoria")}>{t("Memoria")}</button>
+                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickBoton("Almacenamiento")}>{t("Almacenamiento")}</button>
                 </div>
             )}
         </div>

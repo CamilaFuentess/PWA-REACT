@@ -1,10 +1,10 @@
 {
     
     "allCategories": "Todas las Categorías",
-    "processor": "Procesador", 
-    "memory": "Memoria", 
-    "graphicsCard": "Placa de video", 
-    "storage": "Almacenamiento",
+    "Procesador": "Procesadores", 
+    "Memoria": "Memorias Ram", 
+    "Placa": "Placas de video", 
+    "Almacenamiento": "Almacenamiento",
     "home": "Inicio", 
     "favorites": "Favoritos",
     "categories": "Categorías", 

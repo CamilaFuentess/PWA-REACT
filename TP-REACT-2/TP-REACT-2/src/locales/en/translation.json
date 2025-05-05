@@ -1,9 +1,9 @@
 {
     "allCategories": "All categories", 
-    "processor": "Processor", 
-    "memory": "Memory", 
-    "graphicsCard": "Graphics Card", 
-    "storage": "Storage",
+    "Procesador": "Processors", 
+    "Memoria": "Memorys", 
+    "Placa": "Graphics Cards", 
+    "Almacenamiento": "Storage",
     "home": "Home",
     "favorites": "Favorites",
     "categories": "Categories", 
