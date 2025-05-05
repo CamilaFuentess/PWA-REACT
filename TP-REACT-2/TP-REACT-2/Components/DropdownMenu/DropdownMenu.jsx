@@ -31,7 +31,7 @@ const DropdownMenu = ({cerrarMenu}) => {
     const clickBoton = (cat) => {
         setAbierto(false);
         if (cerrarMenu) cerrarMenu();
-        navigate(`${ROUTES.category}`, { state: { cat: cat }});   
+        navigate(`/category/${cat.toLowerCase()}`);
       };
 
     return(

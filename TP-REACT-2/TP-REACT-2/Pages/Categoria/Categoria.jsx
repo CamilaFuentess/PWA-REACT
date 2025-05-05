@@ -1,39 +1,20 @@
-import { useEffect, useState } from "react";
-import {ROUTES} from '../../const/routes';
 import ContenedorProductos from '../../Components/ContenedorProductos/ContenedorProductos';
 import Titulo from '../../Components/Titulo/Titulo';
-import { useLocation, useParams } from 'react-router-dom';
-import { apicategory } from "../../services/getApi";
-
-
-
-
-
-//const { t, i18n } = useTranslation();
+import { useCategory } from "../../services/getApi";
+import { useParams } from "react-router-dom";
 
 
 const Category = () => {
-    const location = useLocation();
-    const cat = location.state?.cat;
-
-  const [category, setCategory] = useState();
-  
-  apicategory(setCategory, cat)
+    const { categoryName } = useParams();
+    const category = useCategory(categoryName);
 
   return (
     <div>
-      <Titulo texto={cat} /> 
+      <Titulo texto={categoryName} /> 
         <ContenedorProductos productos={category} />
       
     </div>
   );
-    return (
-      <div>
-        <Titulo texto={cat} /> 
-          <ContenedorProductos productos={category} />
-       
-      </div>
-    );
 
 };
 

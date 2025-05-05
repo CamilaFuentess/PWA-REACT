@@ -2,7 +2,7 @@ export const ROUTES = {
     home: "/home",
     info: "/info",
     favoritos: "/favoritos",
-    category: "/category",
+    category: "/category/:categoryName",
 
     //footer
     facebook: "/facebook",

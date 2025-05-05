@@ -1,14 +1,11 @@
-import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ROUTES } from '../../const/routes';
 import { useTranslation } from "react-i18next";
 
 const TarjetaCat = ({ category }) => {
-    const [esFav, setEsFav] = useState(false);
     const navigate = useNavigate();
     const { t } = useTranslation();
     const clickTarjeta = (cat) => {
-      navigate(`${ROUTES.category}`, { state: { cat: category.name }});   
+      navigate(`/category/${cat}`); 
     };
 
     return (
