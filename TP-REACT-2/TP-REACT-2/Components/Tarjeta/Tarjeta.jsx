@@ -18,7 +18,7 @@ const Tarjeta = ({ producto }) => {
     };
 
     const clickTarjeta = (id) => {
-      navigate(`/info`, { state: { id: id }});   
+      navigate(`/info/${id}`);   
     };
 
     return (

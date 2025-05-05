@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from 'react-router-dom';
 import Titulo from '../../Components/Titulo/Titulo';
 import { apiComputadoras, apiDetalles } from "../../services/getApi";
 import Animacion from "../../Components/Animacion/Animacion";
 import { useTranslation } from "react-i18next";
 import Icono from '../../Components/Icono/Icono';
 import { getFavoritos, esFavorito, toggleFavorito } from '../../src/utils/favoritos';
+import { useParams } from "react-router-dom";
 
 const Info = () => {
 
-    const location = useLocation();
-    const id = location.state?.id;
+    const {id} = useParams();
     const { t } = useTranslation();
 
     const [loading, setLoading] = useState(true);
@@ -25,16 +24,13 @@ const Info = () => {
         return () => clearTimeout(timer); 
     }, []);
     
-    const [computadora, setComputadora] = useState();
-    const [detalle, setDetalle] = useState();
+    const computadora = apiComputadoras(id);
+    const detalle = apiDetalles(id);
 
     useEffect(() => {
         setEsFav(esFavorito(id));
       }, [id]); 
  
-    apiComputadoras(setComputadora, id)
-    apiDetalles(setDetalle, id)
-                   
     if (loading || computadora === undefined || detalle === undefined) { 
         return (
             <Animacion texto={t("loading")} src={"https://lottie.host/b0948dd4-c963-4263-a185-abcab8b58280/a63R6sEPRz.json"}/>

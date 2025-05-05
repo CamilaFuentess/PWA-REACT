@@ -1,40 +1,42 @@
 import React, { useEffect, useState } from "react";
 
-export function apiComputadoras (setComputadora, searchValue) {
-    const getComputadoras = async () => {
-        try {
-            const computadoraResultado = await fetch(
-                `https://6810f18027f2fdac24136e06.mockapi.io/api/v1/computadoras/${searchValue}`
-            );
-            const compu = await computadoraResultado.json(); 
-            setComputadora(compu);
-
-        } catch (error){
-            console.log('0020', error);
-        }
-    }
-
+export function apiComputadoras (id) {
+    const [computadora, setComputadora] = useState(null);
     useEffect(() => {
-        getComputadoras();
-    }, []);
+        const getComputadora = async () => {
+            try {
+                const computadoraResultado = await fetch(
+                    `https://6810f18027f2fdac24136e06.mockapi.io/api/v1/computadoras/${id}`
+                );
+                const compu = await computadoraResultado.json(); 
+                setComputadora(compu);
+    
+            } catch (error){
+                console.log('0020', error);
+            }
+        };
+        if (id) getComputadora();
+    }, [id]);
+    return computadora; 
 }
 
-export function apiDetalles (setDetalle, searchValue) {
-        const getDetalles = async () => {
+export function apiDetalles (id) {
+    const [detalle, setDetalle] = useState(null); 
+    useEffect(() => {
+        const getDetalle = async () => {
             try {
                 const detallesResultado = await fetch(
-                    `https://6810f18027f2fdac24136e06.mockapi.io/api/v1/detalleComputadoras/${searchValue}`
+                    `https://6810f18027f2fdac24136e06.mockapi.io/api/v1/detalleComputadoras/${id}`
                 );
                 const deta = await detallesResultado.json(); 
                 setDetalle(deta);
             } catch (error){
                 console.log('0020', error);
             }
-        }
-     
-        useEffect(() => {
-            getDetalles();
-        }, []);    
+        };
+        if (id) getDetalle();
+    }, [id]); 
+       return detalle;  
 }
 
 export function useCategory(searchValue) {
