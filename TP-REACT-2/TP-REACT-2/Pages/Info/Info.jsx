@@ -24,13 +24,21 @@ const Info = () => {
         return () => clearTimeout(timer); 
     }, []);
     
-    const computadora = apiComputadoras(id);
+    const {computadora, notFound} = apiComputadoras(id);
     const detalle = apiDetalles(id);
 
     useEffect(() => {
         setEsFav(esFavorito(id));
       }, [id]); 
- 
+
+
+      if (notFound) {
+        return (
+            <Animacion texto={t("notFound")} src={"https://lottie.host/e43e19e6-cf2d-4711-977a-c1e73150dc77/HOorGTcSAF.json"}/>
+        );
+    }
+
+
     if (loading || computadora === undefined || detalle === undefined) { 
         return (
             <Animacion texto={t("loading")} src={"https://lottie.host/b0948dd4-c963-4263-a185-abcab8b58280/a63R6sEPRz.json"}/>

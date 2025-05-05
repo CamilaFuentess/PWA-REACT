@@ -22,6 +22,7 @@
     "noFavorites": "There is no favorites",
     "brand": "Brand", 
     "model": "Model", 
-    "specifications": "Specifications"
+    "specifications": "Specifications", 
+    "notFound": "This product doesn't exist in our database"
 }
 

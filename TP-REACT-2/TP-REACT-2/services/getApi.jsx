@@ -2,22 +2,29 @@ import React, { useEffect, useState } from "react";
 
 export function apiComputadoras (id) {
     const [computadora, setComputadora] = useState(null);
+    const [notFound, setNotFound] = useState(false);
     useEffect(() => {
         const getComputadora = async () => {
             try {
                 const computadoraResultado = await fetch(
                     `https://6810f18027f2fdac24136e06.mockapi.io/api/v1/computadoras/${id}`
                 );
+                if (!computadoraResultado.ok) throw new Error("Not found");
                 const compu = await computadoraResultado.json(); 
-                setComputadora(compu);
+                if (!compu || Object.keys(compu).length === 0) {
+                    setNotFound(true);
+                } else {
+                    setComputadora(compu);
+                }
     
             } catch (error){
                 console.log('0020', error);
+                setNotFound(true);
             }
         };
         if (id) getComputadora();
     }, [id]);
-    return computadora; 
+    return {computadora, notFound}; 
 }
 
 export function apiDetalles (id) {
