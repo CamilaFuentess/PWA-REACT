@@ -8,7 +8,7 @@ const TarjetaCat = ({ category }) => {
     const navigate = useNavigate();
     const { t } = useTranslation();
     const clickTarjeta = (cat) => {
-      navigate(`${ROUTES.category}`, { state: { cat: cat }});   
+      navigate(`${ROUTES.category}`, { state: { cat: category.name }});   
     };
 
     return (
@@ -19,9 +19,9 @@ const TarjetaCat = ({ category }) => {
             <img src={category.image} className="w-full h-44 rounded-3xl object-cover"/>
           </div>
           <div className="text-center mt-2">
-            <h3 className="text-base font-semibold text-[#ebeef3]">{category.name}</h3>
+            <h3 className="text-base font-semibold text-[#ebeef3]">{category.label}</h3>
             <div className='mt-4 text-center'> 
-              <button className="bg-[#f9fafc] text-[#3c3a3a] font-bold px-6 py-3 rounded-full transition transform hover:scale-105 hover:shadow-lg" onClick={() => clickTarjeta(category.name)}>{t("viewCategorie")}</button>
+              <button className="bg-[#f9fafc] text-[#3c3a3a] font-bold px-6 py-3 rounded-full transition transform hover:scale-105 hover:shadow-lg"onClick={clickTarjeta}>{t("viewCategorie")}</button>
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@ import {ROUTES} from '../../const/routes';
 import BotonBarra from '../Botones/BotonBarra/BotonBarra';
 import { useTranslation } from 'react-i18next';
 
-const DropdownMenu = () => {
+const DropdownMenu = ({cerrarMenu}) => {
     const [abierto, setAbierto] = useState(false);
     const menuRef = useRef(null);
     const {t} = useTranslation();
@@ -30,6 +30,7 @@ const DropdownMenu = () => {
 
     const clickBoton = (cat) => {
         setAbierto(false);
+        if (cerrarMenu) cerrarMenu();
         navigate(`${ROUTES.category}`, { state: { cat: cat }});   
       };
 

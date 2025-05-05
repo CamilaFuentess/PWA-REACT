@@ -33,16 +33,16 @@ const BarraInicio = () => {
             <BotonBarra 
             texto={t("home")} 
             className="text-white px-4 py-2" 
-            onClick = {() => navigate(`${ROUTES.home}`)}
+            onClick = {() => {navigate(`${ROUTES.home}`); setMenuAbierto(false); }}
             />
 
             {/*Drop Down*/}
-            <DropdownMenu  />
+            <DropdownMenu cerrarMenu={() => setMenuAbierto(false)} />
 
             <BotonBarra
             texto={t("favorites")} 
             className="text-white px-4 py-2" 
-            onClick={() => navigate(`${ROUTES.favoritos}`)}
+            onClick={() => {navigate(`${ROUTES.favoritos}`); setMenuAbierto(false); }}
             />
 
             <BotonIdioma 

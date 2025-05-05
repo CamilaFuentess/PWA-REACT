@@ -20,7 +20,7 @@ const Info = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
         setLoading(false);
-        }, 7000);
+        }, 2000);
 
         return () => clearTimeout(timer); 
     }, []);
@@ -35,7 +35,7 @@ const Info = () => {
     apiComputadoras(setComputadora, id)
     apiDetalles(setDetalle, id)
                    
-    if (computadora === undefined || detalle === undefined) { 
+    if (loading || computadora === undefined || detalle === undefined) { 
         return (
             <Animacion texto={t("loading")} src={"https://lottie.host/b0948dd4-c963-4263-a185-abcab8b58280/a63R6sEPRz.json"}/>
         );
