@@ -9,9 +9,11 @@ const Category = () => {
     const category = useCategory(categoryName);
    const { t } = useTranslation();
 
+   const categoryMinuscula = categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
+
   return (
     <div>
-      <Titulo texto={t(categoryName)} /> 
+      <Titulo texto={t(categoryMinuscula)} /> 
         <ContenedorProductos productos={category} />
       
     </div>
