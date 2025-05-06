@@ -4,10 +4,10 @@ import BarraInicio from '../BarraDeInicio/BarraDeInicio';
 const Header = () => {
 
     return(
-        <div className="sticky top-0 z-50 bg-[#262626] flex flex-wrap items-center justify-between px-4 py-2">
+        <div className="sticky top-0 z-50 bg-[#191919] flex flex-wrap items-center justify-between px-4 py-2">
 
             {/*Columna 1: Logo*/}
-            <div className="w-24">
+            <div className="w-20">
                 <Logo 
                     alt="Logo principal"
                     src="/Imagenes/Logo/Logo1.jpg"

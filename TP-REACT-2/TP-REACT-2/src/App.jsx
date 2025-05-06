@@ -9,13 +9,11 @@ import Header from '../Components/Header/Header'
 import Footer from '../Components/Footer/Footer';
 import './App.css'
 
-
-
 function App() {
 
   return (
             <BrowserRouter>  
-    <div className="w-screen flex flex-col min-h-screen  bg-[#e1e8ef] justify-self-center">
+    <div className="w-screen flex flex-col min-h-screen  bg-[#000000] justify-self-center">
       <Header />  
       <main className='flex-grow'> 
         <Routes>

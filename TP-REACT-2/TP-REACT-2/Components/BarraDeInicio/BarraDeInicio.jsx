@@ -22,7 +22,7 @@ const BarraInicio = () => {
 
 
     return(
-     <div className='w-full'> 
+     <div className='w-full  border-b border-[#67aaf1]/20 shadow-[0_0_12px_#67aaf144] transition-all z-50'> 
       {/*menu responsive*/}
         <div className='flex justify-end sm:hidden p-4'> 
           <button className='text-white text-2xl' onClick={() => setMenuAbierto(!menuAbierto)}>
@@ -32,7 +32,7 @@ const BarraInicio = () => {
         <div className={`${menuAbierto ? 'flex' : 'hidden'} sm:flex flex-col sm:flex-row items-center justify-end sm:justify-around w-full mt-2 sm:mt-0`}>
             <BotonBarra 
             texto={t("home")} 
-            className="text-white px-4 py-2" 
+            className="text-white  px-4 py-2 transition-all duration-300 ease-in-out" 
             onClick = {() => {navigate(`${ROUTES.home}`); setMenuAbierto(false); }}
             />
 
@@ -41,7 +41,7 @@ const BarraInicio = () => {
 
             <BotonBarra
             texto={t("favorites")} 
-            className="text-white px-4 py-2" 
+            className="text-white px-4 py-2 transition-all duration-300 ease-in-out" 
             onClick={() => {navigate(`${ROUTES.favoritos}`); setMenuAbierto(false); }}
             />
 
