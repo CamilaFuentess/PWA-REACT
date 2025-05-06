@@ -63,40 +63,44 @@ const Info = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                     
                     <div className="relative rounded-2xl p-4 bg-[#2b2b2b] border border-[#67aaf1]/30 shadow-[0_4px_16px_rgba(103,170,241,0.15)] overflow-hidden">
-                    <img 
-                        src={computadora.image} 
-                        className="rounded-2xl object-contain max-h-80 w-full transform transition-transform duration-300 hover:scale-105 ring-2 ring-[#67aaf1]/20" alt={computadora.name}
-                    />
-                    <div className="absolute top-2 right-4 z-10">    
-                        <Icono activo={esFav} onClick={handleToggleFavorito} />
-                    </div>
+                        <img 
+                            src={computadora.image} 
+                            className="rounded-2xl object-contain max-h-80 w-full transform transition-transform duration-300 hover:scale-105 ring-2 ring-[#67aaf1]/20" alt={computadora.name}
+                        />
+                        <div className="absolute top-2 right-4 z-10">    
+                            <Icono activo={esFav} onClick={handleToggleFavorito} />
+                        </div>
                     </div>
                     
                     <div className="p-6 bg-[#2b2b2b] border border-[#67aaf1]/20 shadow-[0_4px_16px_rgba(103,170,241,0.1)] rounded-2xl">
-                    <h2 className="text-4xl font-bold text-[#67aaf1] mb-4">${computadora.price}</h2>
-                    <div className="rounded-2xl m-1">
-                    <h1 className="text-xl font-semibold text-[#b7c2ce] mb-2"> {t(`descriptions.${normalizar(computadora.description)}`)} </h1>
-                        <h1 className="text-xl text-[#b7c2ce] mb-2">{t("brand")}: {detalle.brand}</h1>
-                        <h1 className="text-xl text-[#b7c2ce] mb-2">{t("model")}: {detalle.model}</h1>
-                        
-                        <div className="mt-4">
-                        <h3 className="text-xl font-semibold text-[#67aaf1] mb-2">{t("specifications")}:</h3>
-                        <ul className="list-disc list-inside text-[#b7c2ce]">
-                            {detalle.specifications.map((item, n) => (
-                            <li key={n} className="text-md">{item}</li>
-                            ))}
-                        </ul>
+                        <h2 className="text-4xl font-bold text-[#67aaf1] mb-4">${computadora.price}</h2>
+                        <div className="rounded-2xl m-1">
+                            <h1 className="text-xl font-semibold text-[#b7c2ce] mb-2"> {t(`descriptions.${normalizar(computadora.description)}`)} </h1>
+                            <h1 className="text-xl text-[#b7c2ce] mb-2">{t("brand")}: {detalle.brand}</h1>
+                            <h1 className="text-xl text-[#b7c2ce] mb-2">{t("model")}: {detalle.model}</h1>
+                            
+                            <div className="mt-4">
+                                <h3 className="text-xl font-semibold text-[#67aaf1] mb-2">{t("specifications")}:</h3>
+                                <ul className="list-disc list-inside text-[#b7c2ce]">
 
 
+                                    {/*{detalle.specifications.map((item, n) => (
+                                        <li key={n} className="text-md">{t(`specs.${item}`)}</li>
+                                    ))}*/}
 
-                        
+
+                                    {detalle.specifications.map((item, n) => (
+                                        <li key={n} className="text-md">
+                                        {t(`specif.${normalizar(item)}`, item)}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                    </div>
                     </div>
                     
                 </div>
             </div>
-      
         );
     };
 };
