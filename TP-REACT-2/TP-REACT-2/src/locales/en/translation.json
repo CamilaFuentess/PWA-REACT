@@ -49,6 +49,132 @@
     "ssddealtorendimientonvmede1tbcontemperaturasmasbajasyvelocidadoptimizadaparagaming": "1TB high-performance NVMe SSD with lower temperatures and optimized speed for gaming.",
     "ssdnvmecon1tbdealmacenamientoyvelocidadesrapidasdelecturayescrituraidealparagamers": "1TB NVMe SSD with fast read and write speeds, ideal for gamers.",
     "ssdnvmede1tbconvelocidaddelectura3500mbsparamejorarelrendimientogeneraldelsistema": "1TB NVMe SSD with 3500MB/s read speed to improve overall system performance."
-  }
+  },
+
+    "specif": {
+        "cores12threads": "6 cores / 12 threads",
+        "BaseFrequency37GHz": "Base Frequency 3.7GHz",
+        "Turbofrequency46GHz": "Turbo frequency 4.6GHz",
+        "TDP65W": "TDP 65W",
+        "7nmTechnology": "7nm Technology",
+
+        "cores8P4E20threads": "12 cores (8P+4E) / 20 threads",
+        "Turbofrequency50GHz": "Turbo frequency 5.0GHz",
+        "SocketLGA1700": "Socket LGA1700",
+        "AlderLakeArchitecture": "Alder Lake Architecture",
+        "IntelTurboBoost30": "Intel Turbo Boost 3.0",
+
+        "cores8P16E32threads": "24 cores (8P+16E) / 32 threads",
+        "Turbofrequency58GHz": "Turbo frequency 5.8GHz",
+        "SocketLGA1700_2": "Socket LGA1700",
+        "RaptorLakeArchitecture": "Raptor Lake Architecture",
+        "IntelTurboBoostMax30": "Intel Turbo Boost Max 3.0",
+
+        "cores1224threads": "12 cores / 24 threads",
+        "Turbofrequency56GHz": "Turbo frequency 5.6GHz",
+        "SocketAM5": "Socket AM5",
+        "ZenArchitecture4": "Zen Architecture 4",
+        "5nmtechnology": "5nm technology",
+
+        "cores6P4E16threads": "10 cores (6P+4E) / 16 threads",
+        "Turbofrequency49GHz": "Turbo frequency 4.9GHz",
+        "SocketLGA1700_3": "Socket LGA1700",
+        "AlderLakeArchitecture_2": "Alder Lake Architecture",
+        "IntelTurboBoost30_2": "Intel Turbo Boost 3.0",
+
+        "cores816threads": "8 cores / 16 threads",
+        "Turbofrequency45GHz": "Turbo frequency 4.5GHz",
+        "SocketAM4": "Socket AM4",
+        "3DVCacheTechnology": "3D V-Cache Technology",
+        "ZenArchitecture3": "Zen Architecture 3",
+
+
+        "NVMePCIeGen4interface": "NVMe PCIe Gen4 interface",
+        "ReadUpTo7300MBs": "Read up to 7300MB/s",
+        "WriteUpTo6300MBs": "Write up to 6300MB/s",
+        "M22280format": "M.2 2280 format",
+        "WDG2Controller": "WD G2 Controller",
+
+        "PCIeGen4interface": "PCIe Gen4 interface",
+        "ReadUpTo7000MBs": "Read up to 7000MB/s",
+        "WriteUpTo5100MBs": "Write up to 5100MB/s",
+        "VNANDmemory": "V-NAND memory",
+
+        "1TB": "1TB",
+        "Read3500MBsWrite3300MBs": "Read 3500MB/s, Write 3300MB/s",
+        "NVMeM2interface": "NVMe M.2 interface",
+        "PhoenixController": "Phoenix Controller",
+
+        "Read7300MBsWrite6900MBs": "Read 7300MB/s, Write 6900MB/s",
+        "PCIeGen4interface_2": "PCIe Gen4 interface",
+        "M22280format_2": "M.2 2280 format",
+
+        "SSDNVMe": "SSD NVMe",
+        "1TBofstorage": "1TB of storage",
+        "FastReadWriteSpeeds": "Fast read and write speeds",
+        "IdealForGamers": "Ideal for gamers",
+
+        "SSDNVMe_2": "SSD NVMe",
+        "1TBofstorage_2": "1TB of storage",
+        "ReadSpeed3500MBs": "Read speed 3500MB/s",
+        "ImprovesSystemPerformance": "Improves overall system performance",
+
+
+        "16GBGDDR6X": "16GB GDDR6X",
+        "RayTracingDLSS3support": "Ray Tracing and DLSS 3 support",
+        "7680CUDAcores": "7680 CUDA cores",
+        "HDMI21DisplayPort14aconnectors": "HDMI 2.1 and DisplayPort 1.4a connectors",
+        "WindforceCooling": "Windforce Cooling",
+
+        "12GBGDDR6": "12GB GDDR6",
+        "3584CUDcores": "3584 CUD cores",
+        "BoostFrequency1807MHz": "Boost Frequency 1807 MHz",
+        "HDMI3xDisplayPortconnectors": "HDMI and 3x DisplayPort connectors",
+        "Ventus2Xthermaldesign": "Ventus 2X thermal design",
+
+        "9728CUDAcores": "9728 CUDA cores",
+        "AdvancedCooling": "Advanced cooling",
+
+        "RayTracingSupport": "Ray Tracing Support",
+        "5120FlowProcessors": "5120 Flow Processors",
+        "HDMI21DisplayPort14connectors": "HDMI 2.1 and DisplayPort 1.4 connectors",
+
+        "12GBGDDR6X": "12GB GDDR6X",
+        "RayTracingDLSSSupport": "Ray Tracing and DLSS Support",
+        "10240CUDAcores": "10240 CUDA cores",
+        "TripleFanCooling": "Triple fan cooling",
+
+        "3584CUDAcores": "3584 CUDA cores",
+        "BoostFrequency1777MHz": "Boost Frequency 1777 MHz",
+        "HDMI21_3xDisplayPortconnectors": "HDMI 2.1 and 3x DisplayPort connectors",
+        "AdvancedCooling_2": "Advanced cooling",
+
+
+        "DDR5Type": "DDR5 Type",
+        "Speed5200MHz": "Speed 5200MHz",
+        "CL40latency": "CL40 latency",
+        "Voltage125V": "Voltage 1.25V",
+        "Withheatsink": "With heatsink",
+      
+        "32GB2x16GB": "32GB (2x16GB)",
+        "Speed3600MHz": "Speed 3600MHz",
+        "CL18latency": "CL18 latency",
+        "XMPProfile": "XMP Profile",
+        "CompatiblewithIntelandAMD": "Compatible with Intel and AMD",
+      
+        "Frequency3600MHz": "Frequency 3600MHz",
+        "CL16latency": "CL16 latency",
+        "IlluminatedRGB": "Illuminated RGB",
+        "CompatiblewithAMDRyzenplatforms": "Compatible with AMD Ryzen platforms",
+      
+        "16GB1x16GB": "16GB (1x16GB)",
+        "Frequency2400MHz": "Frequency 2400MHz",
+        "CL14latency": "CL14 latency",
+        "Heatsink": "Heat sink",
+      
+        "Frequency3200MHz": "Frequency 3200MHz",
+      
+        "16GB2x8GB": "16GB (2x8GB)"
+    }
 }
 
