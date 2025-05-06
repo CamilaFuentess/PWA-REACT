@@ -38,6 +38,12 @@ const Info = () => {
         );
     }
 
+    const normalizar = (texto) =>
+        (texto || "")
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .replace(/[^a-z0-9]/g, "");
 
     if (loading || computadora === undefined || detalle === undefined) { 
         return (
@@ -69,7 +75,7 @@ const Info = () => {
                     <div className="p-6 bg-[#2b2b2b] border border-[#67aaf1]/20 shadow-[0_4px_16px_rgba(103,170,241,0.1)] rounded-2xl">
                     <h2 className="text-4xl font-bold text-[#67aaf1] mb-4">${computadora.price}</h2>
                     <div className="rounded-2xl m-1">
-                        <h1 className="text-xl font-semibold text-[#b7c2ce] mb-2">{computadora.description}</h1>
+                    <h1 className="text-xl font-semibold text-[#b7c2ce] mb-2"> {t(`descriptions.${normalizar(computadora.description)}`)} </h1>
                         <h1 className="text-xl text-[#b7c2ce] mb-2">{t("brand")}: {detalle.brand}</h1>
                         <h1 className="text-xl text-[#b7c2ce] mb-2">{t("model")}: {detalle.model}</h1>
                         
