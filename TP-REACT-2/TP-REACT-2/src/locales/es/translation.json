@@ -1,5 +1,4 @@
 {
-    
     "allCategories": "Todas las Categorías",
     "Procesador": "Procesadores", 
     "Memoria": "Memorias Ram", 
@@ -53,128 +52,116 @@
     },
 
     "specif": {
-        "cores12threads": "6 núcleos / 12 hilos",
-        "BaseFrequency37GHz": "Frecuencia base 3.7GHz",
-        "Turbofrequency46GHz": "Frecuencia turbo 4.6GHz",
-        "TDP65W": "TDP 65W",
-        "7nmTechnology": "Tecnología de 7nm",
-
-        "cores8P4E20threads": "12 núcleos (8P+4E) / 20 hilos",
-        "Turbofrequency50GHz": "Frecuencia turbo 5.0GHz",
-        "SocketLGA1700": "Socket LGA1700",
-        "AlderLakeArchitecture": "Arquitectura Alder Lake",
-        "IntelTurboBoost30": "Intel Turbo Boost 3.0",
-
-        "cores8P16E32threads": "24 núcleos (8P+16E) / 32 hilos",
-        "Turbofrequency58GHz": "Frecuencia turbo 5.8GHz",
-        "SocketLGA1700_2": "Socket LGA1700",
-        "RaptorLakeArchitecture": "Arquitectura Raptor Lake",
-        "IntelTurboBoostMax30": "Intel Turbo Boost Max 3.0",
-
-        "cores1224threads": "12 núcleos / 24 hilos",
-        "Turbofrequency56GHz": "Frecuencia turbo 5.6GHz",
-        "SocketAM5": "Socket AM5",
-        "ZenArchitecture4": "Arquitectura Zen 4",
-        "5nmtechnology": "Tecnología de 5nm",
-
-        "cores6P4E16threads": "10 núcleos (6P+4E) / 16 hilos",
-        "Turbofrequency49GHz": "Frecuencia turbo 4.9GHz",
-        "SocketLGA1700_3": "Socket LGA1700",
-        "AlderLakeArchitecture_2": "Arquitectura Alder Lake",
-        "IntelTurboBoost30_2": "Intel Turbo Boost 3.0",
-
-        "cores816threads": "8 núcleos / 16 hilos",
-        "Turbofrequency45GHz": "Frecuencia turbo 4.5GHz",
-        "SocketAM4": "Socket AM4",
-        "3DVCacheTechnology": "Tecnología 3D V-Cache",
-        "ZenArchitecture3": "Arquitectura Zen 3",
-
-
-        "NVMePCIeGen4interface": "Interfaz NVMe PCIe Gen4",
-        "ReadUpTo7300MBs": "Lectura hasta 7300MB/s",
-        "WriteUpTo6300MBs": "Escritura hasta 6300MB/s",
-        "M22280format": "Formato M.2 2280",
-        "WDG2Controller": "Controlador WD G2",
-
-        "PCIeGen4interface": "Interfaz PCIe Gen4",
-        "ReadUpTo7000MBs": "Lectura hasta 7000MB/s",
-        "WriteUpTo5100MBs": "Escritura hasta 5100MB/s",
-        "VNANDmemory": "Memoria V-NAND",
-
-        "1TB": "1TB",
-        "Read3500MBsWrite3300MBs": "Lectura 3500MB/s, Escritura 3300MB/s",
-        "NVMeM2interface": "Interfaz NVMe M.2",
-        "PhoenixController": "Controlador Phoenix",
-
-        "Read7300MBsWrite6900MBs": "Lectura 7300MB/s, Escritura 6900MB/s",
-        "PCIeGen4interface_2": "Interfaz PCIe Gen4",
-        "M22280format_2": "Formato M.2 2280",
-
-        "SSDNVMe": "SSD NVMe",
-        "1TBofstorage": "1TB de almacenamiento",
-        "FastReadWriteSpeeds": "Velocidades rápidas de lectura y escritura",
-        "IdealForGamers": "Ideal para gamers",
-
-        "SSDNVMe_2": "SSD NVMe",
-        "1TBofstorage_2": "1TB de almacenamiento",
-        "ReadSpeed3500MBs": "Velocidad de lectura 3500MB/s",
-        "ImprovesSystemPerformance": "Mejora el rendimiento general del sistema",
-
-
-        "16GBGDDR6X": "16GB GDDR6X",
-        "RayTracingDLSS3support": "Soporte Ray Tracing y DLSS 3",
-        "7680CUDAcores": "7680 núcleos CUDA",
-        "HDMI21DisplayPort14aconnectors": "Conectores HDMI 2.1 y DisplayPort 1.4a",
-        "WindforceCooling": "Refrigeración Windforce",
-
-        "12GBGDDR6": "12GB GDDR6",
-        "3584CUDcores": "3584 núcleos CUD",
-        "BoostFrequency1807MHz": "Frecuencia Boost 1807 MHz",
-        "HDMI3xDisplayPortconnectors": "Conectores HDMI y 3x DisplayPort",
-        "Ventus2Xthermaldesign": "Diseño térmico Ventus 2X",
-
-        "9728CUDAcores": "9728 núcleos CUDA",
-        "AdvancedCooling": "Refrigeración avanzada",
-
-        "RayTracingSupport": "Soporte Ray Tracing",
-        "5120FlowProcessors": "5120 procesadores de flujo",
-        "HDMI21DisplayPort14connectors": "Conectores HDMI 2.1 y DisplayPort 1.4",
-
-        "12GBGDDR6X": "12GB GDDR6X",
-        "RayTracingDLSSSupport": "Soporte Ray Tracing y DLSS",
-        "10240CUDAcores": "10240 núcleos CUDA",
-        "TripleFanCooling": "Refrigeración de triple ventilador",
-
-        "3584CUDAcores": "3584 núcleos CUDA",
-        "BoostFrequency1777MHz": "Frecuencia Boost 1777 MHz",
-        "HDMI21_3xDisplayPortconnectors": "Conectores HDMI 2.1 y 3x DisplayPort",
-        "AdvancedCooling_2": "Refrigeración avanzada",
-
-
-        "DDR5Type": "Tipo DDR5",
-        "Speed5200MHz": "Velocidad 5200MHz",
-        "CL40latency": "Latencia CL40",
-        "Voltage125V": "Voltaje 1.25V",
-        "Withheatsink": "Con disipador térmico",
-
-        "32GB2x16GB": "32GB (2x16GB)",
-        "Speed3600MHz": "Velocidad 3600MHz",
-        "CL18latency": "Latencia CL18",
-        "XMPProfile": "Perfil XMP",
-        "CompatiblewithIntelandAMD": "Compatible con Intel y AMD",
-
-        "Frequency3600MHz": "Frecuencia 3600MHz",
-        "CL16latency": "Latencia CL16",
-        "IlluminatedRGB": "RGB iluminado",
-        "CompatiblewithAMDRyzenplatforms": "Compatible con plataformas AMD Ryzen",
-
-        "16GB1x16GB": "16GB (1x16GB)",
-        "Frequency2400MHz": "Frecuencia 2400MHz",
-        "CL14latency": "Latencia CL14",
-        "Heatsink": "Disipador de calor",
-
-        "Frequency3200MHz": "Frecuencia 3200MHz",
-
-        "16GB2x8GB": "16GB (2x8GB)"
+            "cores12threads": "6 núcleos / 12 hilos",
+            "basefrequency37ghz": "Frecuencia base 3.7GHz",
+            "turbofrequency46ghz": "Frecuencia turbo 4.6GHz",
+            "tdp65w": "TDP 65W",
+            "7nmtechnology": "Tecnología de 7nm",
+        
+            "cores8p4e20threads": "12 núcleos (8P+4E) / 20 hilos",
+            "turbofrequency50ghz": "Frecuencia turbo 5.0GHz",
+            "socketlga1700": "Socket LGA1700",
+            "alderlakearchitecture": "Arquitectura Alder Lake",
+            "intelturboboost30": "Intel Turbo Boost 3.0",
+        
+            "cores8p16e32threads": "24 núcleos (8P+16E) / 32 hilos",
+            "turbofrequency58ghz": "Frecuencia turbo 5.8GHz",
+            "raptorlakearchitecture": "Arquitectura Raptor Lake",
+            "intelturboboostmax30": "Intel Turbo Boost Max 3.0",
+        
+            "cores1224threads": "12 núcleos / 24 hilos",
+            "turbofrequency56ghz": "Frecuencia turbo 5.6GHz",
+            "socketam5": "Socket AM5",
+            "zenarchitecture4": "Arquitectura Zen 4",
+            "5nmtechnology": "Tecnología de 5nm",
+        
+            "cores6p4e16threads": "10 núcleos (6P+4E) / 16 hilos",
+            "turbofrequency49ghz": "Frecuencia turbo 4.9GHz",
+        
+            "cores816threads": "8 núcleos / 16 hilos",
+            "turbofrequency45ghz": "Frecuencia turbo 4.5GHz",
+            "socketam4": "Socket AM4",
+            "3dvcachetechnology": "Tecnología 3D V-Cache",
+            "zenarchitecture3": "Arquitectura Zen 3",
+        
+            "nvmepciegen4interface": "Interfaz NVMe PCIe Gen4",
+            "readupto7300mbs": "Lectura hasta 7300MB/s",
+            "writeupto6300mbs": "Escritura hasta 6300MB/s",
+            "m22280format": "Formato M.2 2280",
+            "wdg2controller": "Controlador WD G2",
+        
+            "pciegen4interface": "Interfaz PCIe Gen4",
+            "readupto7000mbs": "Lectura hasta 7000MB/s",
+            "writeupto5100mbs": "Escritura hasta 5100MB/s",
+            "vnandmemory": "Memoria V-NAND",
+        
+            "1tb": "1TB",
+            "read3500mbswrite3300mbs": "Lectura 3500MB/s, Escritura 3300MB/s",
+            "nvmem2interface": "Interfaz NVMe M.2",
+            "phoenixcontroller": "Controlador Phoenix",
+        
+            "read7300mbswrite6900mbs": "Lectura 7300MB/s, Escritura 6900MB/s",
+        
+            "ssdnvme": "SSD NVMe",
+            "1tbofstorage": "1TB de almacenamiento",
+            "fastreadwritespeeds": "Velocidades rápidas de lectura y escritura",
+            "idealforgamers": "Ideal para gamers",
+        
+            "readspeed3500mbs": "Velocidad de lectura 3500MB/s",
+            "improvessystemperformance": "Mejora el rendimiento general del sistema",
+        
+            "16gbgddr6x": "16GB GDDR6X",
+            "raytracingdlss3support": "Soporte Ray Tracing y DLSS 3",
+            "7680cudacores": "7680 núcleos CUDA",
+            "hdmi21displayport14aconnectors": "Conectores HDMI 2.1 y DisplayPort 1.4a",
+            "windforcecooling": "Refrigeración Windforce",
+        
+            "12gbgddr6": "12GB GDDR6",
+            "3584cudcores": "3584 núcleos CUD",
+            "boostfrequency1807mhz": "Frecuencia Boost 1807 MHz",
+            "hdmi3xdisplayportconnectors": "Conectores HDMI y 3x DisplayPort",
+            "ventus2xthermaldesign": "Diseño térmico Ventus 2X",
+        
+            "9728cudacores": "9728 núcleos CUDA",
+            "advancedcooling": "Refrigeración avanzada",
+        
+            "raytracingsupport": "Soporte Ray Tracing",
+            "5120flowprocessors": "5120 procesadores de flujo",
+            "hdmi21displayport14connectors": "Conectores HDMI 2.1 y DisplayPort 1.4",
+        
+            "12gbgddr6x": "12GB GDDR6X",
+            "raytracingdlssupport": "Soporte Ray Tracing y DLSS",
+            "10240cudacores": "10240 núcleos CUDA",
+            "triplefancooling": "Refrigeración de triple ventilador",
+        
+            "3584cudacores": "3584 núcleos CUDA",
+            "boostfrequency1777mhz": "Frecuencia Boost 1777 MHz",
+            "hdmi21_3xdisplayportconnectors": "Conectores HDMI 2.1 y 3x DisplayPort",
+        
+            "ddr5type": "Tipo DDR5",
+            "speed5200mhz": "Velocidad 5200MHz",
+            "cl40latency": "Latencia CL40",
+            "voltage125v": "Voltaje 1.25V",
+            "withheatsink": "Con disipador térmico",
+        
+            "32gb2x16gb": "32GB (2x16GB)",
+            "speed3600mhz": "Velocidad 3600MHz",
+            "cl18latency": "Latencia CL18",
+            "xmpprofile": "Perfil XMP",
+            "compatiblewithintelandamd": "Compatible con Intel y AMD",
+        
+            "frequency3600mhz": "Frecuencia 3600MHz",
+            "cl16latency": "Latencia CL16",
+            "illuminatedrgb": "RGB iluminado",
+            "compatiblewithamdryzenplatforms": "Compatible con plataformas AMD Ryzen",
+        
+            "16gb1x16gb": "16GB (1x16GB)",
+            "frequency2400mhz": "Frecuencia 2400MHz",
+            "cl14latency": "Latencia CL14",
+            "heatsink": "Disipador de calor",
+        
+            "frequency3200mhz": "Frecuencia 3200MHz",
+        
+            "16gb2x8gb": "16GB (2x8GB)"
     }
 }
