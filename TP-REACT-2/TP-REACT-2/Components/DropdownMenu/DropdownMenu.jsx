@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {ROUTES} from '../../const/routes';
 import BotonBarra from '../Botones/BotonBarra/BotonBarra';
 import { useTranslation } from 'react-i18next';
+import categorys from '../../src/utils/categorys';
 
 const DropdownMenu = ({cerrarMenu}) => {
     const [abierto, setAbierto] = useState(false);
@@ -28,10 +28,10 @@ const DropdownMenu = ({cerrarMenu}) => {
         };
     }, []);
 
-    const clickBoton = (cat) => {
+    const clickBoton = (label) => {
         setAbierto(false);
         if (cerrarMenu) cerrarMenu();
-        navigate(`/category/${cat.toLowerCase()}`);
+        navigate(`/category/${label}`);
       };
 
     return(
@@ -46,10 +46,15 @@ const DropdownMenu = ({cerrarMenu}) => {
             {/* Menú desplegable */}
             {abierto && (
                 <div className="absolute top-full mt-2 bg-[#ebeef3] shadow-lg rounded z-10">
-                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickBoton("Procesador")}>{t("Procesador")}</button>
-                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickBoton("Placa")}>{t("Placa")}</button>
-                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickBoton("Memoria")}>{t("Memoria")}</button>
-                    <button className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left" onClick={() => clickBoton("Almacenamiento")}>{t("Almacenamiento")}</button>
+                  {categorys.map((cat) => (
+                        <button
+                            key={cat.label}
+                            className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left"
+                            onClick={() => clickBoton(cat.label)}
+                        >
+                            {t(cat.name)}
+                        </button>
+                    ))}
                 </div>
             )}
         </div>

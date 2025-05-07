@@ -3,18 +3,18 @@ import Titulo from '../../Components/Titulo/Titulo';
 import { useCategory } from "../../services/getApi";
 import { useParams } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
+import categorys from '../../src/utils/categorys';
 
 const Category = () => {
     const { categoryName } = useParams();
-    const category = useCategory(categoryName);
    const { t } = useTranslation();
 
-   const categoryMinuscula = categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
-
+   const category = categorys.find(cat => cat.label === categoryName);
+   const productos = useCategory(category.label);
   return (
     <div>
-      <Titulo texto={t(categoryMinuscula)} /> 
-        <ContenedorProductos productos={category} />
+      <Titulo texto={t(category.name)} /> 
+        <ContenedorProductos productos={productos} />
       
     </div>
   );
