@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export function apiComputadoras (id) {
-    const [computadora, setComputadora] = useState(null);
     const [notFound, setNotFound] = useState(false);
+    const [computadora, setComputadora] = useState(null);
     useEffect(() => {
         const getComputadora = async () => {
             try {
@@ -48,15 +48,20 @@ export function apiDetalles (id) {
 
 export function useCategory(searchValue) {
     const [data, setData] = useState([]);
-  
+    const [notFound, setNotFound] = useState(false);
     useEffect(() => {
       const getCategory = async () => {
         try {
           const res = await fetch(
             `https://6810f18027f2fdac24136e06.mockapi.io/api/v1/computadoras/?category=${searchValue}`
           );
+          if (!res.ok) throw new Error("Not found");
           const result = await res.json();
-          setData(result);
+          if (!result || Object.keys(result).length === 0) {
+            setNotFound(true);
+        } else {
+            setData(result);
+        }
         } catch (error) {
           console.error("Error cargando categoría:", error);
         }
@@ -65,7 +70,7 @@ export function useCategory(searchValue) {
       if (searchValue) getCategory();
     }, [searchValue]);
   
-    return data;
+    return {data, notFound};
   }
 
 

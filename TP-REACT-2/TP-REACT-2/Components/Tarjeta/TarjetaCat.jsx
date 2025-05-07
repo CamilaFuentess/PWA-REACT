@@ -21,7 +21,7 @@ const TarjetaCat = ({ category }) => {
               <button className="bg-[#000000] text-[#67aaf1] font-bold px-6 py-3 rounded-full 
              border border-[#67aaf1]
              hover:bg-[#67aaf1] hover:text-black 
-             transition transform hover:scale-105 hover:shadow-[0_0_15px_#67aaf1aa]"onClick={clickTarjeta(category.label)}>{t("viewCategorie")}</button>
+             transition transform hover:scale-105 hover:shadow-[0_0_15px_#67aaf1aa]" onClick={() => clickTarjeta(category.label)}>{t("viewCategorie")}</button>
             </div>
           </div>
         </div>

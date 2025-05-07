@@ -18,6 +18,7 @@ const BarraInicio = () => {
     const alternarIdioma = () => {
       const nuevoIdioma = idiomaActual === 'es' ? 'en' : 'es';
       i18n.changeLanguage(nuevoIdioma);
+      localStorage.setItem('idioma', nuevoIdioma);
     };
 
 
