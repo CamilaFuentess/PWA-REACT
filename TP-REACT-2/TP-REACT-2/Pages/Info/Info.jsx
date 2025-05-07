@@ -89,6 +89,17 @@ const Info = () => {
                                     ))}*/}
 
 
+                                    {/*{detalle.specifications.map((item, n) => {
+                                    const clave = normalizar(item);
+                                    console.log("Buscando clave:", `specif.${clave}`);
+                                    return (
+                                        <li key={n} className="text-md">
+                                        {t(`specif.${clave}`, item)}
+                                        </li>
+                                    );
+                                    })}*/}
+
+
                                     {detalle.specifications.map((item, n) => (
                                         <li key={n} className="text-md">
                                         {t(`specif.${normalizar(item)}`, item)}
