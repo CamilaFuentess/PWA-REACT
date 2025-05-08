@@ -32,7 +32,7 @@ const DropdownMenu = ({cerrarMenu}) => {
         setAbierto(false);
         if (cerrarMenu) cerrarMenu();
         navigate(`/category/${label}`);
-      };
+    };
 
     return(
         <div className="relative" ref={menuRef}>
@@ -45,11 +45,11 @@ const DropdownMenu = ({cerrarMenu}) => {
 
             {/* Menú desplegable */}
             {abierto && (
-                <div className="absolute top-full mt-2 bg-[#ebeef3] shadow-lg rounded z-10">
-                  {categorys.map((cat) => (
+                <div className="absolute top-full mt-2 bg-[#262626] shadow-lg rounded z-10">
+                    {categorys.map((cat) => (
                         <button
                             key={cat.label}
-                            className="block px-4 py-2 text-black hover:bg-gray-200 w-full text-left"
+                            className="text-[#f9fafc] font-mono mx-auto font-bold transition duration-300 text-[1.4rem]  [text-shadow:0_0_2px_#ffffff] hover:[text-shadow:0_0_4px_#ffffff,0_0_8px_#ffffff] bg-[#262626]"
                             onClick={() => clickBoton(cat.label)}
                         >
                             {t(cat.name)}
