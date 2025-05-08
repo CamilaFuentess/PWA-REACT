@@ -7,10 +7,10 @@ const Header = () => {
         <div className="sticky top-0 z-50 bg-[#191919] flex flex-wrap items-center justify-between px-4 py-2">
 
             {/*Columna 1: Logo*/}
-            <div className="w-20">
+            <div className="w-20 pr-4">
                 <Logo 
                     alt="Logo principal"
-                    src="/Imagenes/Logo/Logo1.jpg"
+                    src="/Imagenes/Logo/Logo_principal_transparente.png"
                 />
             </div>
 

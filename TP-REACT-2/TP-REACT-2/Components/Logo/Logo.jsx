@@ -3,9 +3,7 @@ import React from "react";
 
 const Logo = ({alt, src }) => {
     return(
-        <div className="items-center p-2 bg-sky-500/40 self-center box-content rounded-2xl">
-            <img src={src} alt={alt}/>
-        </div>
+        <img className="items-center p-1 self-center box-content rounded-2xl rounded-full object-cover" src={src} alt={alt}/>
 
     )
 };

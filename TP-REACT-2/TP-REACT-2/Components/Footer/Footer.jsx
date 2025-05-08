@@ -17,40 +17,39 @@ const Footer = () => {
                     </div>
 
                 {/*Columna centro*/}
-                <div className="flex flex-col items-center mt-6">
-                    <div className='flex flex-col items-center w-20'> 
-                    <Logo className="w-24 sm:w-32"alt="Logo blanco" src={"/Imagenes/Logo/Logo2.jpg"}/>
-
-                    </div>
-                    <hr className="w-24 border-t border-[#67aaf1]/30 my-4" />
-                    <div className="flex gap-4 mt-2 ">
-                        <div className="bg-[#3c7ec4] border border-[#67aaf1]/20 rounded-full p-1 w-10 h-10 flex items-center justify-center">
-                            <img src="https://images.icon-icons.com/2428/PNG/512/facebook_black_logo_icon_147136.png"
-                            onClick={() => window.open('https://www.facebook.com', '_blank')}  className="w-10 h-8 cursor-pointer "
-                            />
+                    <div className="flex flex-col items-center mt-6">
+                        <div className='flex flex-col items-center w-20'> 
+                        <Logo className="w-24 sm:w-32 rounded-full object-cover" alt="Logo blanco" src={"/Imagenes/Logo/Logo_redondo_1.jpg"}/>
                         </div>
+                        <hr className="w-24 border-t border-[#67aaf1]/30 my-4" />
+                        <div className="flex gap-4 mt-2 ">
+                            <div className="bg-[#3c7ec4] border border-[#67aaf1]/20 rounded-full p-1 w-10 h-10 flex items-center justify-center">
+                                <img src="https://images.icon-icons.com/2428/PNG/512/facebook_black_logo_icon_147136.png"
+                                onClick={() => window.open('https://www.facebook.com', '_blank')}  className="w-10 h-8 cursor-pointer "
+                                />
+                            </div>
 
-                        <div className="bg-[#3c7ec4] border border-[#67aaf1]/20 rounded-full p-1 w-10 h-10 flex items-center justify-center">
-                            <img src="https://images.icon-icons.com/2973/PNG/512/twitter_logo_icon_186904.png"
-                                onClick={() => window.open('https://www.twitter.com', '_blank')} className="w-8 h-8  cursor-pointer "
-                            />
-                        </div>
-                        
-                        <div className="bg-[#3c7ec4] border border-[#67aaf1]/20 rounded-full p-1 w-10 h-10 flex items-center justify-center">
-                            <img src="https://images.icon-icons.com/2428/PNG/512/instagram_black_logo_icon_147122.png"
-                                onClick={() => window.open('https://www.instagram.com', '_blank')}  className="w-10 h-10 object-contain cursor-pointer "
-                            />
+                            <div className="bg-[#3c7ec4] border border-[#67aaf1]/20 rounded-full p-1 w-10 h-10 flex items-center justify-center">
+                                <img src="https://images.icon-icons.com/2973/PNG/512/twitter_logo_icon_186904.png"
+                                    onClick={() => window.open('https://www.twitter.com', '_blank')} className="w-8 h-8  cursor-pointer "
+                                />
+                            </div>
+                            
+                            <div className="bg-[#3c7ec4] border border-[#67aaf1]/20 rounded-full p-1 w-10 h-10 flex items-center justify-center">
+                                <img src="https://images.icon-icons.com/2428/PNG/512/instagram_black_logo_icon_147122.png"
+                                    onClick={() => window.open('https://www.instagram.com', '_blank')}  className="w-10 h-10 object-contain cursor-pointer "
+                                />
+                            </div>
                         </div>
                     </div>
+                    {/*Columna derecha*/}
+                    <div className="flex flex-col items-center md:items-end justify-center space-y-2">
+                        <BotonFooter texto={t("footer.aboutUs")} />
+
+                        <BotonFooter texto={t("footer.legalNotice")} />
+
+                        <BotonFooter texto={t("footer.help")}  />
                     </div>
-                      {/*Columna derecha*/}
-                <div className="flex flex-col items-center md:items-end justify-center space-y-2">
-                    <BotonFooter texto={t("footer.aboutUs")} />
-
-                    <BotonFooter texto={t("footer.legalNotice")} />
-
-                    <BotonFooter texto={t("footer.help")}  />
-                </div>
                 </div>
                 
 
